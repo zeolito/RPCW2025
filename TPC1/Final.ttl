@@ -1,0 +1,5860 @@
+@prefix : <http://rpcw.di.uminho.pt/pedro/2025/tpc1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/pedro/2025/tpc1/> .
+
+
+<http://rpcw.di.uminho.pt/pedro/2025/tpc1> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#fez_exame
+:fez_exame rdf:type owl:ObjectProperty ;
+           rdfs:domain :Pessoa ;
+           rdfs:range :Exame .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#pratica_modal
+:pratica_modal rdf:type owl:ObjectProperty ;
+               rdfs:domain :Pessoa ;
+               rdfs:range :Modal .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#clube
+:clube rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa ;
+       rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#data
+:data rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Exame ;
+      rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa ;
+       rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#federado
+:federado rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Pessoa ;
+          rdfs:range xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#idade
+:idade rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa ;
+       rdfs:range xsd:short .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Pessoa ;
+      rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#resultado
+:resultado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Exame ;
+           rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1/Exame
+:Exame rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1/Modal
+:Modal rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1/Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Emily_T
+:Emily_T rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_0 ;
+         :pratica_modal :Futebol ;
+         :clube "GDGoma" ;
+         :email "emily.terrell@gdgoma.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Emily Terrell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_0
+:Exame_0 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-27" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Futebol
+:Futebol rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Medina_H
+:Medina_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_1 ;
+         :pratica_modal :Triatlo ;
+         :clube "AVCfamalicão" ;
+         :email "medina.hartman@avcfamalicão.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Medina Hartman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_1
+:Exame_1 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-17" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Triatlo
+:Triatlo rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Andrews_R
+:Andrews_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_2 ;
+         :pratica_modal :Badminton ;
+         :clube "ABCbraga" ;
+         :email "andrews.rivas@abcbraga.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Andrews Rivas" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_2
+:Exame_2 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Badminton
+:Badminton rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Marcella_C
+:Marcella_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_3 ;
+         :pratica_modal :Ciclismo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "marcella.combs@clube de orientação do minho.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Marcella Combs" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_3
+:Exame_3 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-12" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Ciclismo
+:Ciclismo rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mendoza_B
+:Mendoza_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_4 ;
+         :pratica_modal :Patinagem ;
+         :clube "SCBraga" ;
+         :email "mendoza.buckner@scbraga.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Mendoza Buckner" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_4
+:Exame_4 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-13" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Patinagem
+:Patinagem rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sellers_C
+:Sellers_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_5 ;
+         :pratica_modal :Triatlo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "sellers.copeland@clube de orientação do minho.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Sellers Copeland" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_5
+:Exame_5 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-25" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bernard_S
+:Bernard_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_6 ;
+         :pratica_modal :Badminton ;
+         :clube "AVCfamalicão" ;
+         :email "bernard.stokes@avcfamalicão.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Bernard Stokes" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_6
+:Exame_6 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Alfreda_R
+:Alfreda_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_7 ;
+         :pratica_modal :Triatlo ;
+         :clube "ABCbraga" ;
+         :email "alfreda.raymond@abcbraga.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Alfreda Raymond" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_7
+:Exame_7 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-03-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Alston_G
+:Alston_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_8 ;
+         :pratica_modal :Triatlo ;
+         :clube "SCBraga" ;
+         :email "alston.green@scbraga.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Alston Green" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_8
+:Exame_8 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-29" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Paige_M
+:Paige_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_9 ;
+         :pratica_modal :Parapente ;
+         :clube "ACDRcrespos" ;
+         :email "paige.mccarthy@acdrcrespos.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Paige Mccarthy" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_9
+:Exame_9 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-27" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Parapente
+:Parapente rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Claudine_G
+:Claudine_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_10 ;
+         :pratica_modal :Orientação ;
+         :clube "ACRroriz" ;
+         :email "claudine.gill@acrroriz.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Claudine Gill" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_10
+:Exame_10 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Orientação
+:Orientação rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Summer_C
+:Summer_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_11 ;
+         :pratica_modal :Esgrima ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "summer.calhoun@clube de orientação do minho.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Summer Calhoun" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_11
+:Exame_11 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-03" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Esgrima
+:Esgrima rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Slater_D
+:Slater_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_12 ;
+         :pratica_modal :BTT ;
+         :clube "Vitoria" ;
+         :email "slater.david@vitoria.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Slater David" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_12
+:Exame_12 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_BTT
+:BTT rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ophelia_B
+:Ophelia_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_13 ;
+         :pratica_modal :Atletismo ;
+         :clube "AmigosMontanha" ;
+         :email "ophelia.boyd@amigosmontanha.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Ophelia Boyd" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_13
+:Exame_13 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-03" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Atletismo
+:Atletismo rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Evans_S
+:Evans_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_14 ;
+         :pratica_modal :Orientação ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "evans.singleton@clube de orientação do minho.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Evans Singleton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_14
+:Exame_14 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-02" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Church_B
+:Church_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_15 ;
+         :pratica_modal :Orientação ;
+         :clube "Vitoria" ;
+         :email "church.bishop@vitoria.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Church Bishop" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_15
+:Exame_15 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-07" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Woodard_B
+:Woodard_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_16 ;
+         :pratica_modal :SUP ;
+         :clube "EDViana" ;
+         :email "woodard.bennett@edviana.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Woodard Bennett" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_16
+:Exame_16 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-13" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_SUP
+:SUP rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Vasquez_M
+:Vasquez_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_17 ;
+         :pratica_modal :Basquetebol ;
+         :clube "Vitoria" ;
+         :email "vasquez.michael@vitoria.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Vasquez Michael" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_17
+:Exame_17 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-15" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Basquetebol
+:Basquetebol rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Holloway_M
+:Holloway_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_18 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AVCfamalicão" ;
+         :email "holloway.maxwell@avcfamalicão.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Holloway Maxwell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_18
+:Exame_18 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Michele_B
+:Michele_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_19 ;
+         :pratica_modal :Karaté ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "michele.barber@clube de orientação do minho.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Michele Barber" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_19
+:Exame_19 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-02-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Karaté
+:Karaté rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Chambers_B
+:Chambers_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_20 ;
+         :pratica_modal :SUP ;
+         :clube "Vitoria" ;
+         :email "chambers.burton@vitoria.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Chambers Burton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_20
+:Exame_20 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-01" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Massey_G
+:Massey_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_21 ;
+         :pratica_modal :BTT ;
+         :clube "AmigosMontanha" ;
+         :email "massey.goodman@amigosmontanha.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Massey Goodman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_21
+:Exame_21 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-03-26" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Klein_C
+:Klein_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_22 ;
+         :pratica_modal :Futebol ;
+         :clube "SCBraga" ;
+         :email "klein.cameron@scbraga.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Klein Cameron" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_22
+:Exame_22 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-26" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lambert_M
+:Lambert_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_23 ;
+         :pratica_modal :Basquetebol ;
+         :clube "ACDRcrespos" ;
+         :email "lambert.mueller@acdrcrespos.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Lambert Mueller" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_23
+:Exame_23 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ewing_D
+:Ewing_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_24 ;
+         :pratica_modal :Ciclismo ;
+         :clube "ACDRcrespos" ;
+         :email "ewing.drake@acdrcrespos.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Ewing Drake" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_24
+:Exame_24 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-15" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lester_M
+:Lester_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_25 ;
+         :pratica_modal :Dança ;
+         :clube "ACDRcrespos" ;
+         :email "lester.manning@acdrcrespos.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Lester Manning" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_25
+:Exame_25 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Dança
+:Dança rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Nina_F
+:Nina_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_26 ;
+         :pratica_modal :Futebol ;
+         :clube "AmigosMontanha" ;
+         :email "nina.fowler@amigosmontanha.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Nina Fowler" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_26
+:Exame_26 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-16" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lynn_S
+:Lynn_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_27 ;
+         :pratica_modal :SUP ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "lynn.shaw@clube de orientação do minho.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Lynn Shaw" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_27
+:Exame_27 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Betty_B
+:Betty_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_28 ;
+         :pratica_modal :Badminton ;
+         :clube "ABCbraga" ;
+         :email "betty.blake@abcbraga.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Betty Blake" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_28
+:Exame_28 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-13" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Oneill_R
+:Oneill_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_29 ;
+         :pratica_modal :Andebol ;
+         :clube "EDViana" ;
+         :email "oneill.roth@edviana.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Oneill Roth" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_29
+:Exame_29 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-23" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Andebol
+:Andebol rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Roxanne_M
+:Roxanne_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_30 ;
+         :pratica_modal :Badminton ;
+         :clube "Vitoria" ;
+         :email "roxanne.miles@vitoria.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Roxanne Miles" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_30
+:Exame_30 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-03" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Cecelia_A
+:Cecelia_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_31 ;
+         :pratica_modal :Futebol ;
+         :clube "AmigosMontanha" ;
+         :email "cecelia.adams@amigosmontanha.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Cecelia Adams" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_31
+:Exame_31 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-20" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Irma_J
+:Irma_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_32 ;
+         :pratica_modal :Atletismo ;
+         :clube "EDViana" ;
+         :email "irma.jacobs@edviana.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Irma Jacobs" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_32
+:Exame_32 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Angelia_N
+:Angelia_N rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_33 ;
+         :pratica_modal :Orientação ;
+         :clube "EDViana" ;
+         :email "angelia.noel@edviana.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Angelia Noel" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_33
+:Exame_33 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-23" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sallie_S
+:Sallie_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_34 ;
+         :pratica_modal :Ciclismo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "sallie.shaffer@clube de orientação do minho.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Sallie Shaffer" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_34
+:Exame_34 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-02" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jordan_B
+:Jordan_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_35 ;
+         :pratica_modal :SUP ;
+         :clube "Vitoria" ;
+         :email "jordan.bonner@vitoria.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Jordan Bonner" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_35
+:Exame_35 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-22" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bartlett_S
+:Bartlett_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_36 ;
+         :pratica_modal :Atletismo ;
+         :clube "GDGoma" ;
+         :email "bartlett.sexton@gdgoma.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Bartlett Sexton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_36
+:Exame_36 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-17" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Opal_S
+:Opal_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_37 ;
+         :pratica_modal :Basquetebol ;
+         :clube "AVCfamalicão" ;
+         :email "opal.stewart@avcfamalicão.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Opal Stewart" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_37
+:Exame_37 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-27" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ola_G
+:Ola_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_38 ;
+         :pratica_modal :Equitação ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "ola.glover@clube de orientação do minho.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Ola Glover" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_38
+:Exame_38 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-26" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Equitação
+:Equitação rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Shelia_Y
+:Shelia_Y rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_39 ;
+         :pratica_modal :Orientação ;
+         :clube "SCBraga" ;
+         :email "shelia.york@scbraga.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Shelia York" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_39
+:Exame_39 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-11-21" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Raquel_R
+:Raquel_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_40 ;
+         :pratica_modal :Patinagem ;
+         :clube "ABCbraga" ;
+         :email "raquel.ratliff@abcbraga.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Raquel Ratliff" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_40
+:Exame_40 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-31" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Burke_W
+:Burke_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_41 ;
+         :pratica_modal :Parapente ;
+         :clube "AmigosMontanha" ;
+         :email "burke.weeks@amigosmontanha.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Burke Weeks" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_41
+:Exame_41 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-14" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Best_F
+:Best_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_42 ;
+         :pratica_modal :Ciclismo ;
+         :clube "GDGoma" ;
+         :email "best.french@gdgoma.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Best French" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_42
+:Exame_42 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Fowler_A
+:Fowler_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_43 ;
+         :pratica_modal :Esgrima ;
+         :clube "AmigosMontanha" ;
+         :email "fowler.alvarez@amigosmontanha.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Fowler Alvarez" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_43
+:Exame_43 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Terri_A
+:Terri_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_44 ;
+         :pratica_modal :Esgrima ;
+         :clube "AVCfamalicão" ;
+         :email "terri.avila@avcfamalicão.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Terri Avila" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_44
+:Exame_44 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-16" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Alford_S
+:Alford_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_45 ;
+         :pratica_modal :Badminton ;
+         :clube "AVCfamalicão" ;
+         :email "alford.small@avcfamalicão.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Alford Small" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_45
+:Exame_45 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-14" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Key_A
+:Key_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_46 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AmigosMontanha" ;
+         :email "key.arnold@amigosmontanha.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Key Arnold" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_46
+:Exame_46 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-01" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Nguyen_D
+:Nguyen_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_47 ;
+         :pratica_modal :BTT ;
+         :clube "AmigosMontanha" ;
+         :email "nguyen.diaz@amigosmontanha.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Nguyen Diaz" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_47
+:Exame_47 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-16" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sherry_M
+:Sherry_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_48 ;
+         :pratica_modal :Atletismo ;
+         :clube "AVCfamalicão" ;
+         :email "sherry.morales@avcfamalicão.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Sherry Morales" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_48
+:Exame_48 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-04" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Crane_B
+:Crane_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_49 ;
+         :pratica_modal :BTT ;
+         :clube "Vitoria" ;
+         :email "crane.ballard@vitoria.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Crane Ballard" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_49
+:Exame_49 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-11" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Terry_C
+:Terry_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_50 ;
+         :pratica_modal :Karaté ;
+         :clube "SCBraga" ;
+         :email "terry.chaney@scbraga.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Terry Chaney" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_50
+:Exame_50 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sheppard_B
+:Sheppard_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_51 ;
+         :pratica_modal :Karaté ;
+         :clube "AVCfamalicão" ;
+         :email "sheppard.bryant@avcfamalicão.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Sheppard Bryant" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_51
+:Exame_51 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Janis_M
+:Janis_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_52 ;
+         :pratica_modal :BTT ;
+         :clube "ABCbraga" ;
+         :email "janis.mckinney@abcbraga.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Janis Mckinney" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_52
+:Exame_52 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-03" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sue_W
+:Sue_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_53 ;
+         :pratica_modal :Andebol ;
+         :clube "Vitoria" ;
+         :email "sue.waters@vitoria.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Sue Waters" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_53
+:Exame_53 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-10" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Cynthia_P
+:Cynthia_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_54 ;
+         :pratica_modal :Equitação ;
+         :clube "ACRroriz" ;
+         :email "cynthia.page@acrroriz.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Cynthia Page" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_54
+:Exame_54 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Montgomery_R
+:Montgomery_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_55 ;
+         :pratica_modal :Atletismo ;
+         :clube "Vitoria" ;
+         :email "montgomery.rhodes@vitoria.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Montgomery Rhodes" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_55
+:Exame_55 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-14" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Claire_J
+:Claire_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_56 ;
+         :pratica_modal :Basquetebol ;
+         :clube "ACDRcrespos" ;
+         :email "claire.joyce@acdrcrespos.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Claire Joyce" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_56
+:Exame_56 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-03-22" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Evangelina_K
+:Evangelina_K rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_57 ;
+         :pratica_modal :Ciclismo ;
+         :clube "ACDRcrespos" ;
+         :email "evangelina.key@acdrcrespos.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Evangelina Key" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_57
+:Exame_57 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-16" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Effie_G
+:Effie_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_58 ;
+         :pratica_modal :Andebol ;
+         :clube "ACRroriz" ;
+         :email "effie.gibson@acrroriz.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Effie Gibson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_58
+:Exame_58 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-24" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Maureen_C
+:Maureen_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_59 ;
+         :pratica_modal :Patinagem ;
+         :clube "AmigosMontanha" ;
+         :email "maureen.cobb@amigosmontanha.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Maureen Cobb" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_59
+:Exame_59 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-03-16" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Dee_H
+:Dee_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_60 ;
+         :pratica_modal :Parapente ;
+         :clube "AVCfamalicão" ;
+         :email "dee.holman@avcfamalicão.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Dee Holman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_60
+:Exame_60 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Larson_M
+:Larson_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_61 ;
+         :pratica_modal :Andebol ;
+         :clube "GDGoma" ;
+         :email "larson.morin@gdgoma.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Larson Morin" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_61
+:Exame_61 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-13" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ursula_M
+:Ursula_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_62 ;
+         :pratica_modal :Dança ;
+         :clube "AmigosMontanha" ;
+         :email "ursula.martinez@amigosmontanha.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Ursula Martinez" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_62
+:Exame_62 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#English_C
+:English_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_63 ;
+         :pratica_modal :Basquetebol ;
+         :clube "GDGoma" ;
+         :email "english.clemons@gdgoma.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "English Clemons" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_63
+:Exame_63 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-10" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Stella_J
+:Stella_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_64 ;
+         :pratica_modal :Badminton ;
+         :clube "ACDRcrespos" ;
+         :email "stella.jackson@acdrcrespos.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Stella Jackson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_64
+:Exame_64 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-28" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Haley_J
+:Haley_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_65 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AVCfamalicão" ;
+         :email "haley.joseph@avcfamalicão.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Haley Joseph" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_65
+:Exame_65 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-01" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Kelsey_R
+:Kelsey_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_66 ;
+         :pratica_modal :Patinagem ;
+         :clube "Vitoria" ;
+         :email "kelsey.roberts@vitoria.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Kelsey Roberts" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_66
+:Exame_66 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Watson_L
+:Watson_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_67 ;
+         :pratica_modal :Dança ;
+         :clube "GDGoma" ;
+         :email "watson.lynch@gdgoma.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Watson Lynch" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_67
+:Exame_67 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-26" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Chasity_C
+:Chasity_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_68 ;
+         :pratica_modal :Karaté ;
+         :clube "EDViana" ;
+         :email "chasity.coffey@edviana.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Chasity Coffey" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_68
+:Exame_68 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-14" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Paula_D
+:Paula_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_69 ;
+         :pratica_modal :Dança ;
+         :clube "EDViana" ;
+         :email "paula.delaney@edviana.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Paula Delaney" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_69
+:Exame_69 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-26" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Galloway_S
+:Galloway_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_70 ;
+         :pratica_modal :Futebol ;
+         :clube "ACRroriz" ;
+         :email "galloway.sanders@acrroriz.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Galloway Sanders" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_70
+:Exame_70 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-27" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tina_B
+:Tina_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_71 ;
+         :pratica_modal :SUP ;
+         :clube "ACDRcrespos" ;
+         :email "tina.blankenship@acdrcrespos.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Tina Blankenship" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_71
+:Exame_71 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Whitehead_M
+:Whitehead_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_72 ;
+         :pratica_modal :Parapente ;
+         :clube "AVCfamalicão" ;
+         :email "whitehead.montgomery@avcfamalicão.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Whitehead Montgomery" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_72
+:Exame_72 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-11" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Dominguez_C
+:Dominguez_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_73 ;
+         :pratica_modal :Equitação ;
+         :clube "ABCbraga" ;
+         :email "dominguez.chambers@abcbraga.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Dominguez Chambers" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_73
+:Exame_73 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Booth_E
+:Booth_E rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_74 ;
+         :pratica_modal :Triatlo ;
+         :clube "SCBraga" ;
+         :email "booth.eaton@scbraga.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Booth Eaton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_74
+:Exame_74 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-23" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Joanna_G
+:Joanna_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_75 ;
+         :pratica_modal :Parapente ;
+         :clube "AmigosMontanha" ;
+         :email "joanna.grant@amigosmontanha.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Joanna Grant" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_75
+:Exame_75 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-14" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jeri_P
+:Jeri_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_76 ;
+         :pratica_modal :Orientação ;
+         :clube "ACRroriz" ;
+         :email "jeri.pearson@acrroriz.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Jeri Pearson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_76
+:Exame_76 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-28" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sanchez_M
+:Sanchez_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_77 ;
+         :pratica_modal :Ciclismo ;
+         :clube "ACDRcrespos" ;
+         :email "sanchez.mcgee@acdrcrespos.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Sanchez Mcgee" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_77
+:Exame_77 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-13" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Magdalena_F
+:Magdalena_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_78 ;
+         :pratica_modal :Esgrima ;
+         :clube "ACDRcrespos" ;
+         :email "magdalena.francis@acdrcrespos.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Magdalena Francis" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_78
+:Exame_78 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-02" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Morris_P
+:Morris_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_79 ;
+         :pratica_modal :Badminton ;
+         :clube "AVCfamalicão" ;
+         :email "morris.poole@avcfamalicão.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Morris Poole" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_79
+:Exame_79 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-19" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Rodriguez_G
+:Rodriguez_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_80 ;
+         :pratica_modal :Triatlo ;
+         :clube "GDGoma" ;
+         :email "rodriguez.gonzalez@gdgoma.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Rodriguez Gonzalez" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_80
+:Exame_80 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-16" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Christine_R
+:Christine_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_81 ;
+         :pratica_modal :Orientação ;
+         :clube "GDGoma" ;
+         :email "christine.rice@gdgoma.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Christine Rice" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_81
+:Exame_81 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-18" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Valdez_H
+:Valdez_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_82 ;
+         :pratica_modal :Karaté ;
+         :clube "AmigosMontanha" ;
+         :email "valdez.harper@amigosmontanha.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Valdez Harper" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_82
+:Exame_82 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-10" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Berta_C
+:Berta_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_83 ;
+         :pratica_modal :Atletismo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "berta.clay@clube de orientação do minho.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Berta Clay" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_83
+:Exame_83 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-24" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bonnie_S
+:Bonnie_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_84 ;
+         :pratica_modal :Equitação ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "bonnie.sandoval@clube de orientação do minho.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Bonnie Sandoval" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_84
+:Exame_84 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-18" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Stein_W
+:Stein_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_85 ;
+         :pratica_modal :Atletismo ;
+         :clube "EDViana" ;
+         :email "stein.wiggins@edviana.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Stein Wiggins" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_85
+:Exame_85 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-24" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tanya_M
+:Tanya_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_86 ;
+         :pratica_modal :SUP ;
+         :clube "GDGoma" ;
+         :email "tanya.mcclain@gdgoma.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Tanya Mcclain" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_86
+:Exame_86 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Perry_S
+:Perry_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_87 ;
+         :pratica_modal :Atletismo ;
+         :clube "Vitoria" ;
+         :email "perry.sanford@vitoria.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Perry Sanford" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_87
+:Exame_87 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-23" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Maxine_R
+:Maxine_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_88 ;
+         :pratica_modal :Badminton ;
+         :clube "AmigosMontanha" ;
+         :email "maxine.rutledge@amigosmontanha.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Maxine Rutledge" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_88
+:Exame_88 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-10" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tucker_M
+:Tucker_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_89 ;
+         :pratica_modal :Badminton ;
+         :clube "SCBraga" ;
+         :email "tucker.morse@scbraga.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Tucker Morse" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_89
+:Exame_89 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-01" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Thelma_S
+:Thelma_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_90 ;
+         :pratica_modal :Badminton ;
+         :clube "ACRroriz" ;
+         :email "thelma.schmidt@acrroriz.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Thelma Schmidt" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_90
+:Exame_90 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-17" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Charles_K
+:Charles_K rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_91 ;
+         :pratica_modal :BTT ;
+         :clube "ACDRcrespos" ;
+         :email "charles.kim@acdrcrespos.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Charles Kim" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_91
+:Exame_91 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-24" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Duncan_D
+:Duncan_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_92 ;
+         :pratica_modal :Karaté ;
+         :clube "AmigosMontanha" ;
+         :email "duncan.davidson@amigosmontanha.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Duncan Davidson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_92
+:Exame_92 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-27" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Gertrude_D
+:Gertrude_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_93 ;
+         :pratica_modal :Badminton ;
+         :clube "ACRroriz" ;
+         :email "gertrude.dillon@acrroriz.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Gertrude Dillon" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_93
+:Exame_93 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-07" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Brennan_S
+:Brennan_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_94 ;
+         :pratica_modal :BTT ;
+         :clube "Vitoria" ;
+         :email "brennan.santana@vitoria.me" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Brennan Santana" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_94
+:Exame_94 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-06" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ball_B
+:Ball_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_95 ;
+         :pratica_modal :Parapente ;
+         :clube "AmigosMontanha" ;
+         :email "ball.barlow@amigosmontanha.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Ball Barlow" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_95
+:Exame_95 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Oneil_B
+:Oneil_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_96 ;
+         :pratica_modal :Triatlo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "oneil.baxter@clube de orientação do minho.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Oneil Baxter" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_96
+:Exame_96 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-10" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Helena_M
+:Helena_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_97 ;
+         :pratica_modal :Andebol ;
+         :clube "Vitoria" ;
+         :email "helena.mayo@vitoria.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Helena Mayo" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_97
+:Exame_97 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Martin_B
+:Martin_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_98 ;
+         :pratica_modal :Patinagem ;
+         :clube "ACRroriz" ;
+         :email "martin.brewer@acrroriz.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Martin Brewer" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_98
+:Exame_98 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-10" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Wilder_G
+:Wilder_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_99 ;
+         :pratica_modal :Badminton ;
+         :clube "Vitoria" ;
+         :email "wilder.greene@vitoria.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Wilder Greene" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_99
+:Exame_99 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-13" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Harrison_F
+:Harrison_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_0 ;
+         :pratica_modal :Esgrima ;
+         :clube "EDViana" ;
+         :email "harrison.finch@edviana.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Harrison Finch" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_0
+:Exame_0 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-23" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jordan_A
+:Jordan_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_1 ;
+         :pratica_modal :Atletismo ;
+         :clube "EDViana" ;
+         :email "jordan.alvarez@edviana.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Jordan Alvarez" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_1
+:Exame_1 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-01" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lane_N
+:Lane_N rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_2 ;
+         :pratica_modal :Patinagem ;
+         :clube "ABCbraga" ;
+         :email "lane.norton@abcbraga.io" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Lane Norton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_2
+:Exame_2 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-27" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Carrillo_M
+:Carrillo_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_3 ;
+         :pratica_modal :Esgrima ;
+         :clube "SCBraga" ;
+         :email "carrillo.munoz@scbraga.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Carrillo Munoz" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_3
+:Exame_3 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-06" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Barrett_F
+:Barrett_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_4 ;
+         :pratica_modal :BTT ;
+         :clube "AVCfamalicão" ;
+         :email "barrett.frederick@avcfamalicão.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Barrett Frederick" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_4
+:Exame_4 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-18" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Harmon_S
+:Harmon_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_5 ;
+         :pratica_modal :Badminton ;
+         :clube "AmigosMontanha" ;
+         :email "harmon.stone@amigosmontanha.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Harmon Stone" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_5
+:Exame_5 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Chandra_P
+:Chandra_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_6 ;
+         :pratica_modal :Patinagem ;
+         :clube "AmigosMontanha" ;
+         :email "chandra.potts@amigosmontanha.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Chandra Potts" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_6
+:Exame_6 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-18" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#John_W
+:John_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_7 ;
+         :pratica_modal :Badminton ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "john.warner@clube de orientação do minho.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "John Warner" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_7
+:Exame_7 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-12" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Casey_B
+:Casey_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_8 ;
+         :pratica_modal :Patinagem ;
+         :clube "ABCbraga" ;
+         :email "casey.bowman@abcbraga.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Casey Bowman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_8
+:Exame_8 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mccullough_P
+:Mccullough_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_9 ;
+         :pratica_modal :Triatlo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "mccullough.pena@clube de orientação do minho.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Mccullough Pena" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_9
+:Exame_9 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-23" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Brianna_B
+:Brianna_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_10 ;
+         :pratica_modal :Triatlo ;
+         :clube "ACDRcrespos" ;
+         :email "brianna.bentley@acdrcrespos.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Brianna Bentley" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_10
+:Exame_10 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-27" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Nixon_H
+:Nixon_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_11 ;
+         :pratica_modal :Ténis ;
+         :clube "AVCfamalicão" ;
+         :email "nixon.hendrix@avcfamalicão.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Nixon Hendrix" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_11
+:Exame_11 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-26" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_Ténis
+:Ténis rdf:type owl:NamedIndividual ,
+                  :Modal .
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Buckner_L
+:Buckner_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_12 ;
+         :pratica_modal :Esgrima ;
+         :clube "EDViana" ;
+         :email "buckner.luna@edviana.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Buckner Luna" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_12
+:Exame_12 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Britt_Z
+:Britt_Z rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_13 ;
+         :pratica_modal :Ténis ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "britt.zamora@clube de orientação do minho.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Britt Zamora" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_13
+:Exame_13 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hendrix_B
+:Hendrix_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_14 ;
+         :pratica_modal :Karaté ;
+         :clube "SCBraga" ;
+         :email "hendrix.bauer@scbraga.io" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Hendrix Bauer" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_14
+:Exame_14 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-14" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Travis_S
+:Travis_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_15 ;
+         :pratica_modal :Ténis ;
+         :clube "EDViana" ;
+         :email "travis.sampson@edviana.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Travis Sampson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_15
+:Exame_15 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-30" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Darla_W
+:Darla_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_16 ;
+         :pratica_modal :Triatlo ;
+         :clube "GDGoma" ;
+         :email "darla.ware@gdgoma.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Darla Ware" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_16
+:Exame_16 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-11-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Peters_V
+:Peters_V rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_17 ;
+         :pratica_modal :Ténis ;
+         :clube "ACRroriz" ;
+         :email "peters.vaughn@acrroriz.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Peters Vaughn" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_17
+:Exame_17 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-17" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lawrence_H
+:Lawrence_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_18 ;
+         :pratica_modal :Futebol ;
+         :clube "GDGoma" ;
+         :email "lawrence.herman@gdgoma.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Lawrence Herman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_18
+:Exame_18 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Chang_O
+:Chang_O rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_19 ;
+         :pratica_modal :Triatlo ;
+         :clube "EDViana" ;
+         :email "chang.oneill@edviana.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Chang Oneill" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_19
+:Exame_19 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-26" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Patrick_M
+:Patrick_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_20 ;
+         :pratica_modal :BTT ;
+         :clube "EDViana" ;
+         :email "patrick.mcintyre@edviana.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Patrick Mcintyre" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_20
+:Exame_20 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-20" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Joyce_E
+:Joyce_E rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_21 ;
+         :pratica_modal :Andebol ;
+         :clube "AmigosMontanha" ;
+         :email "joyce.evans@amigosmontanha.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Joyce Evans" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_21
+:Exame_21 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Larsen_V
+:Larsen_V rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_22 ;
+         :pratica_modal :Triatlo ;
+         :clube "SCBraga" ;
+         :email "larsen.villarreal@scbraga.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Larsen Villarreal" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_22
+:Exame_22 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-03" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Morrow_Y
+:Morrow_Y rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_23 ;
+         :pratica_modal :Basquetebol ;
+         :clube "ACDRcrespos" ;
+         :email "morrow.yang@acdrcrespos.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Morrow Yang" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_23
+:Exame_23 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Dunn_H
+:Dunn_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_24 ;
+         :pratica_modal :Andebol ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "dunn.horn@clube de orientação do minho.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Dunn Horn" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_24
+:Exame_24 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-04" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Viola_M
+:Viola_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_25 ;
+         :pratica_modal :Esgrima ;
+         :clube "EDViana" ;
+         :email "viola.medina@edviana.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Viola Medina" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_25
+:Exame_25 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-04" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Valdez_B
+:Valdez_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_26 ;
+         :pratica_modal :Parapente ;
+         :clube "ACDRcrespos" ;
+         :email "valdez.barnes@acdrcrespos.io" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Valdez Barnes" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_26
+:Exame_26 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-14" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sweet_G
+:Sweet_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_27 ;
+         :pratica_modal :Esgrima ;
+         :clube "AVCfamalicão" ;
+         :email "sweet.gibbs@avcfamalicão.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Sweet Gibbs" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_27
+:Exame_27 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Addie_H
+:Addie_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_28 ;
+         :pratica_modal :Ténis ;
+         :clube "ACRroriz" ;
+         :email "addie.hayes@acrroriz.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Addie Hayes" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_28
+:Exame_28 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-17" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#May_H
+:May_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_29 ;
+         :pratica_modal :SUP ;
+         :clube "AmigosMontanha" ;
+         :email "may.holt@amigosmontanha.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "May Holt" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_29
+:Exame_29 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Christensen_B
+:Christensen_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_30 ;
+         :pratica_modal :Esgrima ;
+         :clube "ABCbraga" ;
+         :email "christensen.boyd@abcbraga.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Christensen Boyd" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_30
+:Exame_30 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-31" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Workman_F
+:Workman_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_31 ;
+         :pratica_modal :Andebol ;
+         :clube "AmigosMontanha" ;
+         :email "workman.franks@amigosmontanha.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Workman Franks" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_31
+:Exame_31 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-18" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lucile_U
+:Lucile_U rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_32 ;
+         :pratica_modal :Andebol ;
+         :clube "AVCfamalicão" ;
+         :email "lucile.underwood@avcfamalicão.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Lucile Underwood" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_32
+:Exame_32 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-05" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Heath_B
+:Heath_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_33 ;
+         :pratica_modal :Esgrima ;
+         :clube "AmigosMontanha" ;
+         :email "heath.bishop@amigosmontanha.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Heath Bishop" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_33
+:Exame_33 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Rosales_M
+:Rosales_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_34 ;
+         :pratica_modal :Badminton ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "rosales.mejia@clube de orientação do minho.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Rosales Mejia" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_34
+:Exame_34 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-12" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ray_H
+:Ray_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_35 ;
+         :pratica_modal :Atletismo ;
+         :clube "Vitoria" ;
+         :email "ray.howe@vitoria.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Ray Howe" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_35
+:Exame_35 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-02" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Suarez_C
+:Suarez_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_36 ;
+         :pratica_modal :Atletismo ;
+         :clube "ACDRcrespos" ;
+         :email "suarez.campbell@acdrcrespos.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Suarez Campbell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_36
+:Exame_36 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-05" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Shaffer_L
+:Shaffer_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_37 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AVCfamalicão" ;
+         :email "shaffer.le@avcfamalicão.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Shaffer Le" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_37
+:Exame_37 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-20" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Justine_W
+:Justine_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_38 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AVCfamalicão" ;
+         :email "justine.wise@avcfamalicão.io" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Justine Wise" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_38
+:Exame_38 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Villarreal_T
+:Villarreal_T rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_39 ;
+         :pratica_modal :Triatlo ;
+         :clube "AVCfamalicão" ;
+         :email "villarreal.tucker@avcfamalicão.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Villarreal Tucker" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_39
+:Exame_39 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-14" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Monica_N
+:Monica_N rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_40 ;
+         :pratica_modal :Badminton ;
+         :clube "ACRroriz" ;
+         :email "monica.neal@acrroriz.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Monica Neal" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_40
+:Exame_40 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-05" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lloyd_D
+:Lloyd_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_41 ;
+         :pratica_modal :Patinagem ;
+         :clube "ABCbraga" ;
+         :email "lloyd.dotson@abcbraga.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Lloyd Dotson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_41
+:Exame_41 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mccray_B
+:Mccray_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_42 ;
+         :pratica_modal :Dança ;
+         :clube "Vitoria" ;
+         :email "mccray.barker@vitoria.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Mccray Barker" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_42
+:Exame_42 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-29" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sellers_H
+:Sellers_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_43 ;
+         :pratica_modal :Parapente ;
+         :clube "SCBraga" ;
+         :email "sellers.hunter@scbraga.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Sellers Hunter" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_43
+:Exame_43 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-14" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Cathryn_F
+:Cathryn_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_44 ;
+         :pratica_modal :Patinagem ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "cathryn.fletcher@clube de orientação do minho.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Cathryn Fletcher" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_44
+:Exame_44 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-31" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Dee_L
+:Dee_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_45 ;
+         :pratica_modal :Basquetebol ;
+         :clube "Vitoria" ;
+         :email "dee.lowery@vitoria.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Dee Lowery" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_45
+:Exame_45 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-02-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Freeman_W
+:Freeman_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_46 ;
+         :pratica_modal :Triatlo ;
+         :clube "ACRroriz" ;
+         :email "freeman.wyatt@acrroriz.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Freeman Wyatt" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_46
+:Exame_46 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Guy_D
+:Guy_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_47 ;
+         :pratica_modal :Karaté ;
+         :clube "ABCbraga" ;
+         :email "guy.drake@abcbraga.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Guy Drake" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_47
+:Exame_47 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mendez_G
+:Mendez_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_48 ;
+         :pratica_modal :Triatlo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "mendez.good@clube de orientação do minho.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Mendez Good" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_48
+:Exame_48 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-01" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Burnett_H
+:Burnett_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_49 ;
+         :pratica_modal :Parapente ;
+         :clube "ACRroriz" ;
+         :email "burnett.hogan@acrroriz.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Burnett Hogan" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_49
+:Exame_49 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-03" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jamie_C
+:Jamie_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_50 ;
+         :pratica_modal :Futebol ;
+         :clube "ABCbraga" ;
+         :email "jamie.cherry@abcbraga.io" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Jamie Cherry" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_50
+:Exame_50 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-03" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bird_N
+:Bird_N rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_51 ;
+         :pratica_modal :Karaté ;
+         :clube "ACRroriz" ;
+         :email "bird.noble@acrroriz.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Bird Noble" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_51
+:Exame_51 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-06" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Burgess_B
+:Burgess_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_52 ;
+         :pratica_modal :Patinagem ;
+         :clube "ABCbraga" ;
+         :email "burgess.bradshaw@abcbraga.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Burgess Bradshaw" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_52
+:Exame_52 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Laura_J
+:Laura_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_53 ;
+         :pratica_modal :Parapente ;
+         :clube "ACRroriz" ;
+         :email "laura.jacobson@acrroriz.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Laura Jacobson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_53
+:Exame_53 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Blair_S
+:Blair_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_54 ;
+         :pratica_modal :Badminton ;
+         :clube "SCBraga" ;
+         :email "blair.sherman@scbraga.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Blair Sherman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_54
+:Exame_54 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-06" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bobbi_H
+:Bobbi_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_55 ;
+         :pratica_modal :Esgrima ;
+         :clube "SCBraga" ;
+         :email "bobbi.hawkins@scbraga.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Bobbi Hawkins" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_55
+:Exame_55 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-01" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Montoya_A
+:Montoya_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_56 ;
+         :pratica_modal :Basquetebol ;
+         :clube "ACRroriz" ;
+         :email "montoya.anthony@acrroriz.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Montoya Anthony" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_56
+:Exame_56 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-21" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hooper_K
+:Hooper_K rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_57 ;
+         :pratica_modal :BTT ;
+         :clube "ACRroriz" ;
+         :email "hooper.kirby@acrroriz.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Hooper Kirby" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_57
+:Exame_57 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Wolfe_B
+:Wolfe_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_58 ;
+         :pratica_modal :Esgrima ;
+         :clube "AVCfamalicão" ;
+         :email "wolfe.baird@avcfamalicão.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Wolfe Baird" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_58
+:Exame_58 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lamb_G
+:Lamb_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_59 ;
+         :pratica_modal :SUP ;
+         :clube "AVCfamalicão" ;
+         :email "lamb.graham@avcfamalicão.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Lamb Graham" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_59
+:Exame_59 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-03" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Valentine_F
+:Valentine_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_60 ;
+         :pratica_modal :BTT ;
+         :clube "ABCbraga" ;
+         :email "valentine.fitzgerald@abcbraga.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Valentine Fitzgerald" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_60
+:Exame_60 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-22" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Herminia_M
+:Herminia_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_61 ;
+         :pratica_modal :Andebol ;
+         :clube "AmigosMontanha" ;
+         :email "herminia.mooney@amigosmontanha.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Herminia Mooney" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_61
+:Exame_61 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-26" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Golden_H
+:Golden_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_62 ;
+         :pratica_modal :Badminton ;
+         :clube "AVCfamalicão" ;
+         :email "golden.hopkins@avcfamalicão.io" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Golden Hopkins" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_62
+:Exame_62 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-08" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lancaster_A
+:Lancaster_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_63 ;
+         :pratica_modal :Triatlo ;
+         :clube "Vitoria" ;
+         :email "lancaster.andrews@vitoria.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Lancaster Andrews" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_63
+:Exame_63 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Elena_S
+:Elena_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_64 ;
+         :pratica_modal :Futebol ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "elena.sullivan@clube de orientação do minho.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Elena Sullivan" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_64
+:Exame_64 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-15" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Deana_R
+:Deana_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_65 ;
+         :pratica_modal :Andebol ;
+         :clube "ACRroriz" ;
+         :email "deana.ramsey@acrroriz.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Deana Ramsey" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_65
+:Exame_65 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-26" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mayra_R
+:Mayra_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_66 ;
+         :pratica_modal :Patinagem ;
+         :clube "ACDRcrespos" ;
+         :email "mayra.rose@acdrcrespos.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Mayra Rose" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_66
+:Exame_66 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-01" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tina_S
+:Tina_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_67 ;
+         :pratica_modal :SUP ;
+         :clube "Vitoria" ;
+         :email "tina.salinas@vitoria.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Tina Salinas" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_67
+:Exame_67 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-27" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sheila_C
+:Sheila_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_68 ;
+         :pratica_modal :Triatlo ;
+         :clube "AVCfamalicão" ;
+         :email "sheila.caldwell@avcfamalicão.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Sheila Caldwell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_68
+:Exame_68 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-24" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hudson_D
+:Hudson_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_69 ;
+         :pratica_modal :Orientação ;
+         :clube "EDViana" ;
+         :email "hudson.duffy@edviana.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Hudson Duffy" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_69
+:Exame_69 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-02" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Guzman_D
+:Guzman_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_70 ;
+         :pratica_modal :Orientação ;
+         :clube "ABCbraga" ;
+         :email "guzman.douglas@abcbraga.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Guzman Douglas" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_70
+:Exame_70 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-22" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ethel_B
+:Ethel_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_71 ;
+         :pratica_modal :Orientação ;
+         :clube "ACRroriz" ;
+         :email "ethel.bartlett@acrroriz.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Ethel Bartlett" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_71
+:Exame_71 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Doyle_O
+:Doyle_O rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_72 ;
+         :pratica_modal :Esgrima ;
+         :clube "AmigosMontanha" ;
+         :email "doyle.odom@amigosmontanha.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Doyle Odom" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_72
+:Exame_72 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-13" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Araceli_C
+:Araceli_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_73 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AVCfamalicão" ;
+         :email "araceli.castaneda@avcfamalicão.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Araceli Castaneda" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_73
+:Exame_73 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-02" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Fuentes_W
+:Fuentes_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_74 ;
+         :pratica_modal :Atletismo ;
+         :clube "SCBraga" ;
+         :email "fuentes.walker@scbraga.io" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Fuentes Walker" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_74
+:Exame_74 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-04" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sarah_M
+:Sarah_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_75 ;
+         :pratica_modal :Basquetebol ;
+         :clube "ACDRcrespos" ;
+         :email "sarah.moore@acdrcrespos.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Sarah Moore" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_75
+:Exame_75 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Cheryl_W
+:Cheryl_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_76 ;
+         :pratica_modal :Orientação ;
+         :clube "GDGoma" ;
+         :email "cheryl.watson@gdgoma.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Cheryl Watson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_76
+:Exame_76 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Langley_V
+:Langley_V rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_77 ;
+         :pratica_modal :Andebol ;
+         :clube "ACRroriz" ;
+         :email "langley.velez@acrroriz.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Langley Velez" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_77
+:Exame_77 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Alisa_M
+:Alisa_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_78 ;
+         :pratica_modal :Futebol ;
+         :clube "GDGoma" ;
+         :email "alisa.morrison@gdgoma.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Alisa Morrison" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_78
+:Exame_78 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Malinda_M
+:Malinda_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_79 ;
+         :pratica_modal :Ciclismo ;
+         :clube "ABCbraga" ;
+         :email "malinda.merritt@abcbraga.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Malinda Merritt" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_79
+:Exame_79 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lenora_K
+:Lenora_K rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_80 ;
+         :pratica_modal :Triatlo ;
+         :clube "ABCbraga" ;
+         :email "lenora.kane@abcbraga.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Lenora Kane" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_80
+:Exame_80 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Cabrera_C
+:Cabrera_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_81 ;
+         :pratica_modal :Futebol ;
+         :clube "AVCfamalicão" ;
+         :email "cabrera.curtis@avcfamalicão.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Cabrera Curtis" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_81
+:Exame_81 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Roseann_B
+:Roseann_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_82 ;
+         :pratica_modal :BTT ;
+         :clube "ABCbraga" ;
+         :email "roseann.benjamin@abcbraga.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Roseann Benjamin" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_82
+:Exame_82 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-28" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Stafford_R
+:Stafford_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_83 ;
+         :pratica_modal :Parapente ;
+         :clube "ACDRcrespos" ;
+         :email "stafford.ray@acdrcrespos.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Stafford Ray" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_83
+:Exame_83 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jewel_T
+:Jewel_T rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_84 ;
+         :pratica_modal :Patinagem ;
+         :clube "ACRroriz" ;
+         :email "jewel.trevino@acrroriz.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Jewel Trevino" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_84
+:Exame_84 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-18" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mckenzie_W
+:Mckenzie_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_85 ;
+         :pratica_modal :Ténis ;
+         :clube "ACRroriz" ;
+         :email "mckenzie.woods@acrroriz.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Mckenzie Woods" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_85
+:Exame_85 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-04" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jean_C
+:Jean_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_86 ;
+         :pratica_modal :Triatlo ;
+         :clube "GDGoma" ;
+         :email "jean.conley@gdgoma.io" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Jean Conley" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_86
+:Exame_86 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-10" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Conway_A
+:Conway_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_87 ;
+         :pratica_modal :BTT ;
+         :clube "SCBraga" ;
+         :email "conway.alexander@scbraga.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Conway Alexander" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_87
+:Exame_87 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-14" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Maryann_J
+:Maryann_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_88 ;
+         :pratica_modal :Andebol ;
+         :clube "ACDRcrespos" ;
+         :email "maryann.joyce@acdrcrespos.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Maryann Joyce" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_88
+:Exame_88 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ayers_C
+:Ayers_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_89 ;
+         :pratica_modal :Ciclismo ;
+         :clube "GDGoma" ;
+         :email "ayers.carroll@gdgoma.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Ayers Carroll" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_89
+:Exame_89 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-31" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bonita_M
+:Bonita_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_90 ;
+         :pratica_modal :Esgrima ;
+         :clube "GDGoma" ;
+         :email "bonita.mccormick@gdgoma.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Bonita Mccormick" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_90
+:Exame_90 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Kathy_K
+:Kathy_K rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_91 ;
+         :pratica_modal :Karaté ;
+         :clube "EDViana" ;
+         :email "kathy.kramer@edviana.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Kathy Kramer" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_91
+:Exame_91 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-28" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tonia_B
+:Tonia_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_92 ;
+         :pratica_modal :Basquetebol ;
+         :clube "EDViana" ;
+         :email "tonia.bryan@edviana.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Tonia Bryan" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_92
+:Exame_92 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-10" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Barker_M
+:Barker_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_93 ;
+         :pratica_modal :Triatlo ;
+         :clube "AVCfamalicão" ;
+         :email "barker.mercer@avcfamalicão.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Barker Mercer" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_93
+:Exame_93 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-02-02" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mcfarland_T
+:Mcfarland_T rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_94 ;
+         :pratica_modal :Equitação ;
+         :clube "AmigosMontanha" ;
+         :email "mcfarland.tyson@amigosmontanha.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Mcfarland Tyson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_94
+:Exame_94 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-19" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Meagan_C
+:Meagan_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_95 ;
+         :pratica_modal :SUP ;
+         :clube "SCBraga" ;
+         :email "meagan.carter@scbraga.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Meagan Carter" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_95
+:Exame_95 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-19" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Catalina_W
+:Catalina_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_96 ;
+         :pratica_modal :Futebol ;
+         :clube "ABCbraga" ;
+         :email "catalina.webb@abcbraga.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Catalina Webb" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_96
+:Exame_96 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-25" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Moses_S
+:Moses_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_97 ;
+         :pratica_modal :Esgrima ;
+         :clube "ABCbraga" ;
+         :email "moses.sargent@abcbraga.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Moses Sargent" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_97
+:Exame_97 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-31" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Preston_M
+:Preston_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_98 ;
+         :pratica_modal :Karaté ;
+         :clube "AVCfamalicão" ;
+         :email "preston.mccall@avcfamalicão.io" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Preston Mccall" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_98
+:Exame_98 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-19" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Christian_C
+:Christian_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_99 ;
+         :pratica_modal :Atletismo ;
+         :clube "ACDRcrespos" ;
+         :email "christian.clements@acdrcrespos.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Christian Clements" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_99
+:Exame_99 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jeanine_H
+:Jeanine_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_0 ;
+         :pratica_modal :Patinagem ;
+         :clube "AVCfamalicão" ;
+         :email "jeanine.hester@avcfamalicão.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Jeanine Hester" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_0
+:Exame_0 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tonia_E
+:Tonia_E rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_1 ;
+         :pratica_modal :Andebol ;
+         :clube "AVCfamalicão" ;
+         :email "tonia.espinoza@avcfamalicão.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Tonia Espinoza" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_1
+:Exame_1 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Alyssa_H
+:Alyssa_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_2 ;
+         :pratica_modal :SUP ;
+         :clube "SCBraga" ;
+         :email "alyssa.howard@scbraga.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Alyssa Howard" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_2
+:Exame_2 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-25" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Merrill_F
+:Merrill_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_3 ;
+         :pratica_modal :Badminton ;
+         :clube "AmigosMontanha" ;
+         :email "merrill.fulton@amigosmontanha.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Merrill Fulton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_3
+:Exame_3 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jaime_E
+:Jaime_E rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_4 ;
+         :pratica_modal :Dança ;
+         :clube "ABCbraga" ;
+         :email "jaime.erickson@abcbraga.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Jaime Erickson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_4
+:Exame_4 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-01" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Felicia_S
+:Felicia_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_5 ;
+         :pratica_modal :Futebol ;
+         :clube "ACDRcrespos" ;
+         :email "felicia.skinner@acdrcrespos.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Felicia Skinner" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_5
+:Exame_5 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Margaret_B
+:Margaret_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_6 ;
+         :pratica_modal :Karaté ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "margaret.bray@clube de orientação do minho.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Margaret Bray" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_6
+:Exame_6 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-12" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Etta_C
+:Etta_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_7 ;
+         :pratica_modal :SUP ;
+         :clube "AVCfamalicão" ;
+         :email "etta.cotton@avcfamalicão.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Etta Cotton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_7
+:Exame_7 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-03-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Kelley_D
+:Kelley_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_8 ;
+         :pratica_modal :Equitação ;
+         :clube "AVCfamalicão" ;
+         :email "kelley.davidson@avcfamalicão.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Kelley Davidson" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_8
+:Exame_8 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-18" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Crawford_M
+:Crawford_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_9 ;
+         :pratica_modal :Ciclismo ;
+         :clube "SCBraga" ;
+         :email "crawford.merritt@scbraga.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Crawford Merritt" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_9
+:Exame_9 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-18" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Kim_B
+:Kim_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_10 ;
+         :pratica_modal :Badminton ;
+         :clube "AVCfamalicão" ;
+         :email "kim.buck@avcfamalicão.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Kim Buck" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_10
+:Exame_10 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Gilda_S
+:Gilda_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_11 ;
+         :pratica_modal :Dança ;
+         :clube "SCBraga" ;
+         :email "gilda.schmidt@scbraga.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Gilda Schmidt" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_11
+:Exame_11 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-01" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mcintosh_A
+:Mcintosh_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_12 ;
+         :pratica_modal :Basquetebol ;
+         :clube "Vitoria" ;
+         :email "mcintosh.aguirre@vitoria.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Mcintosh Aguirre" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_12
+:Exame_12 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ida_B
+:Ida_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_13 ;
+         :pratica_modal :Dança ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "ida.bradshaw@clube de orientação do minho.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Ida Bradshaw" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_13
+:Exame_13 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-25" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jefferson_P
+:Jefferson_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_14 ;
+         :pratica_modal :Dança ;
+         :clube "EDViana" ;
+         :email "jefferson.pacheco@edviana.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Jefferson Pacheco" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_14
+:Exame_14 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-08" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Olson_H
+:Olson_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_15 ;
+         :pratica_modal :Equitação ;
+         :clube "ACRroriz" ;
+         :email "olson.hickman@acrroriz.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Olson Hickman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_15
+:Exame_15 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-14" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Malinda_M
+:Malinda_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_16 ;
+         :pratica_modal :Futebol ;
+         :clube "SCBraga" ;
+         :email "malinda.mccall@scbraga.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Malinda Mccall" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_16
+:Exame_16 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-09" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Raquel_D
+:Raquel_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_17 ;
+         :pratica_modal :Triatlo ;
+         :clube "ACRroriz" ;
+         :email "raquel.dejesus@acrroriz.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Raquel Dejesus" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_17
+:Exame_17 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-06" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Daniel_C
+:Daniel_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_18 ;
+         :pratica_modal :Patinagem ;
+         :clube "GDGoma" ;
+         :email "daniel.chambers@gdgoma.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Daniel Chambers" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_18
+:Exame_18 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-02-06" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Samantha_S
+:Samantha_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_19 ;
+         :pratica_modal :Triatlo ;
+         :clube "ACRroriz" ;
+         :email "samantha.sharp@acrroriz.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Samantha Sharp" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_19
+:Exame_19 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-21" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Robert_H
+:Robert_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_20 ;
+         :pratica_modal :Basquetebol ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "robert.herman@clube de orientação do minho.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Robert Herman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_20
+:Exame_20 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Olive_C
+:Olive_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_21 ;
+         :pratica_modal :Dança ;
+         :clube "AVCfamalicão" ;
+         :email "olive.chapman@avcfamalicão.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Olive Chapman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_21
+:Exame_21 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-20" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mccoy_B
+:Mccoy_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_22 ;
+         :pratica_modal :SUP ;
+         :clube "AmigosMontanha" ;
+         :email "mccoy.blackburn@amigosmontanha.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Mccoy Blackburn" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_22
+:Exame_22 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-04-30" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lambert_F
+:Lambert_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_23 ;
+         :pratica_modal :SUP ;
+         :clube "Vitoria" ;
+         :email "lambert.ferrell@vitoria.me" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Lambert Ferrell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_23
+:Exame_23 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-10" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Small_C
+:Small_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_24 ;
+         :pratica_modal :Dança ;
+         :clube "Vitoria" ;
+         :email "small.coffey@vitoria.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Small Coffey" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_24
+:Exame_24 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hicks_D
+:Hicks_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_25 ;
+         :pratica_modal :Ciclismo ;
+         :clube "ABCbraga" ;
+         :email "hicks.daniels@abcbraga.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Hicks Daniels" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_25
+:Exame_25 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-03" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Meghan_C
+:Meghan_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_26 ;
+         :pratica_modal :Andebol ;
+         :clube "EDViana" ;
+         :email "meghan.cabrera@edviana.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Meghan Cabrera" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_26
+:Exame_26 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-23" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hubbard_H
+:Hubbard_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_27 ;
+         :pratica_modal :Esgrima ;
+         :clube "GDGoma" ;
+         :email "hubbard.hart@gdgoma.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Hubbard Hart" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_27
+:Exame_27 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-12" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Chelsea_G
+:Chelsea_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_28 ;
+         :pratica_modal :Andebol ;
+         :clube "AVCfamalicão" ;
+         :email "chelsea.gallegos@avcfamalicão.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Chelsea Gallegos" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_28
+:Exame_28 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-25" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Natalie_F
+:Natalie_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_29 ;
+         :pratica_modal :Esgrima ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "natalie.figueroa@clube de orientação do minho.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Natalie Figueroa" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_29
+:Exame_29 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-16" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hayes_W
+:Hayes_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_30 ;
+         :pratica_modal :Futebol ;
+         :clube "EDViana" ;
+         :email "hayes.ward@edviana.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Hayes Ward" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_30
+:Exame_30 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-20" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Graves_M
+:Graves_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_31 ;
+         :pratica_modal :Esgrima ;
+         :clube "ABCbraga" ;
+         :email "graves.mccray@abcbraga.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Graves Mccray" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_31
+:Exame_31 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-13" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mavis_R
+:Mavis_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_32 ;
+         :pratica_modal :Karaté ;
+         :clube "AmigosMontanha" ;
+         :email "mavis.riley@amigosmontanha.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Mavis Riley" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_32
+:Exame_32 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-27" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Salas_J
+:Salas_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_33 ;
+         :pratica_modal :Parapente ;
+         :clube "AmigosMontanha" ;
+         :email "salas.joseph@amigosmontanha.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Salas Joseph" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_33
+:Exame_33 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Carly_P
+:Carly_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_34 ;
+         :pratica_modal :Futebol ;
+         :clube "EDViana" ;
+         :email "carly.peck@edviana.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Carly Peck" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_34
+:Exame_34 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Ramirez_B
+:Ramirez_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_35 ;
+         :pratica_modal :Orientação ;
+         :clube "Vitoria" ;
+         :email "ramirez.blevins@vitoria.me" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Ramirez Blevins" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_35
+:Exame_35 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-16" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Parks_S
+:Parks_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_36 ;
+         :pratica_modal :Orientação ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "parks.saunders@clube de orientação do minho.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Parks Saunders" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_36
+:Exame_36 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-31" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Leanne_A
+:Leanne_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_37 ;
+         :pratica_modal :Futebol ;
+         :clube "AmigosMontanha" ;
+         :email "leanne.armstrong@amigosmontanha.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Leanne Armstrong" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_37
+:Exame_37 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-13" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Kline_S
+:Kline_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_38 ;
+         :pratica_modal :Equitação ;
+         :clube "AVCfamalicão" ;
+         :email "kline.stark@avcfamalicão.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Kline Stark" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_38
+:Exame_38 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-03-22" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Elliott_G
+:Elliott_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_39 ;
+         :pratica_modal :Dança ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "elliott.guzman@clube de orientação do minho.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Elliott Guzman" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_39
+:Exame_39 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-18" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Liz_B
+:Liz_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_40 ;
+         :pratica_modal :Orientação ;
+         :clube "ABCbraga" ;
+         :email "liz.baldwin@abcbraga.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Liz Baldwin" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_40
+:Exame_40 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-06" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Warner_B
+:Warner_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_41 ;
+         :pratica_modal :Parapente ;
+         :clube "GDGoma" ;
+         :email "warner.bullock@gdgoma.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Warner Bullock" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_41
+:Exame_41 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-10-16" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Santana_H
+:Santana_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_42 ;
+         :pratica_modal :Futebol ;
+         :clube "SCBraga" ;
+         :email "santana.harper@scbraga.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Santana Harper" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_42
+:Exame_42 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-18" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Imelda_O
+:Imelda_O rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_43 ;
+         :pratica_modal :Atletismo ;
+         :clube "AVCfamalicão" ;
+         :email "imelda.odonnell@avcfamalicão.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Imelda Odonnell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_43
+:Exame_43 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-01-18" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lila_C
+:Lila_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_44 ;
+         :pratica_modal :Futebol ;
+         :clube "AmigosMontanha" ;
+         :email "lila.curry@amigosmontanha.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Lila Curry" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_44
+:Exame_44 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-24" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Milagros_E
+:Milagros_E rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_45 ;
+         :pratica_modal :Patinagem ;
+         :clube "ACDRcrespos" ;
+         :email "milagros.ellis@acdrcrespos.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 21 ;
+         :nome "Milagros Ellis" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_45
+:Exame_45 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-02-06" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Stafford_H
+:Stafford_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_46 ;
+         :pratica_modal :Dança ;
+         :clube "ACDRcrespos" ;
+         :email "stafford.hale@acdrcrespos.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Stafford Hale" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_46
+:Exame_46 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-15" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Blevins_C
+:Blevins_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_47 ;
+         :pratica_modal :Triatlo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "blevins.cline@clube de orientação do minho.me" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Blevins Cline" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_47
+:Exame_47 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-05" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Marisol_O
+:Marisol_O rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_48 ;
+         :pratica_modal :Parapente ;
+         :clube "ACDRcrespos" ;
+         :email "marisol.owen@acdrcrespos.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Marisol Owen" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_48
+:Exame_48 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-15" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mcintyre_W
+:Mcintyre_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_49 ;
+         :pratica_modal :Atletismo ;
+         :clube "ABCbraga" ;
+         :email "mcintyre.walsh@abcbraga.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Mcintyre Walsh" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_49
+:Exame_49 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-02" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Valarie_S
+:Valarie_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_50 ;
+         :pratica_modal :Futebol ;
+         :clube "ACDRcrespos" ;
+         :email "valarie.silva@acdrcrespos.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Valarie Silva" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_50
+:Exame_50 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-06" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Jimmie_B
+:Jimmie_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_51 ;
+         :pratica_modal :Atletismo ;
+         :clube "AVCfamalicão" ;
+         :email "jimmie.beck@avcfamalicão.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Jimmie Beck" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_51
+:Exame_51 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-06" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Amparo_P
+:Amparo_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_52 ;
+         :pratica_modal :Futebol ;
+         :clube "ACDRcrespos" ;
+         :email "amparo.price@acdrcrespos.co.uk" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Amparo Price" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_52
+:Exame_52 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-30" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Susanna_L
+:Susanna_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_53 ;
+         :pratica_modal :Orientação ;
+         :clube "EDViana" ;
+         :email "susanna.lowery@edviana.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Susanna Lowery" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_53
+:Exame_53 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-24" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Flynn_H
+:Flynn_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_54 ;
+         :pratica_modal :Atletismo ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "flynn.huber@clube de orientação do minho.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Flynn Huber" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_54
+:Exame_54 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-23" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Elaine_A
+:Elaine_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_55 ;
+         :pratica_modal :Equitação ;
+         :clube "ACDRcrespos" ;
+         :email "elaine.allen@acdrcrespos.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Elaine Allen" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_55
+:Exame_55 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-29" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Gwen_P
+:Gwen_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_56 ;
+         :pratica_modal :Karaté ;
+         :clube "AmigosMontanha" ;
+         :email "gwen.pate@amigosmontanha.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Gwen Pate" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_56
+:Exame_56 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-24" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Leila_S
+:Leila_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_57 ;
+         :pratica_modal :Parapente ;
+         :clube "ACRroriz" ;
+         :email "leila.solis@acrroriz.net" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Leila Solis" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_57
+:Exame_57 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-19" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mercedes_H
+:Mercedes_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_58 ;
+         :pratica_modal :Dança ;
+         :clube "GDGoma" ;
+         :email "mercedes.heath@gdgoma.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Mercedes Heath" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_58
+:Exame_58 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-04-17" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Althea_F
+:Althea_F rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_59 ;
+         :pratica_modal :Basquetebol ;
+         :clube "EDViana" ;
+         :email "althea.fitzpatrick@edviana.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Althea Fitzpatrick" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_59
+:Exame_59 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-03" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Arlene_M
+:Arlene_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_60 ;
+         :pratica_modal :Orientação ;
+         :clube "Vitoria" ;
+         :email "arlene.morton@vitoria.name" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Arlene Morton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_60
+:Exame_60 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mosley_G
+:Mosley_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_61 ;
+         :pratica_modal :BTT ;
+         :clube "SCBraga" ;
+         :email "mosley.gonzales@scbraga.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Mosley Gonzales" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_61
+:Exame_61 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-26" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Torres_H
+:Torres_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_62 ;
+         :pratica_modal :Dança ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "torres.hardy@clube de orientação do minho.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Torres Hardy" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_62
+:Exame_62 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-31" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Annmarie_P
+:Annmarie_P rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_63 ;
+         :pratica_modal :Dança ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "annmarie.petersen@clube de orientação do minho.org" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Annmarie Petersen" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_63
+:Exame_63 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-13" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Osborn_G
+:Osborn_G rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_64 ;
+         :pratica_modal :Karaté ;
+         :clube "ACRroriz" ;
+         :email "osborn.green@acrroriz.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Osborn Green" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_64
+:Exame_64 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-03" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Davenport_D
+:Davenport_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_65 ;
+         :pratica_modal :Patinagem ;
+         :clube "ACRroriz" ;
+         :email "davenport.dominguez@acrroriz.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Davenport Dominguez" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_65
+:Exame_65 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-26" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Barton_M
+:Barton_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_66 ;
+         :pratica_modal :Parapente ;
+         :clube "AmigosMontanha" ;
+         :email "barton.massey@amigosmontanha.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 26 ;
+         :nome "Barton Massey" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_66
+:Exame_66 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-12-20" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Holly_B
+:Holly_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_67 ;
+         :pratica_modal :Orientação ;
+         :clube "ACDRcrespos" ;
+         :email "holly.bowen@acdrcrespos.us" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Holly Bowen" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_67
+:Exame_67 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-09" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Dennis_C
+:Dennis_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_68 ;
+         :pratica_modal :Atletismo ;
+         :clube "AmigosMontanha" ;
+         :email "dennis.crawford@amigosmontanha.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Dennis Crawford" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_68
+:Exame_68 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-28" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Oliver_M
+:Oliver_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_69 ;
+         :pratica_modal :Ténis ;
+         :clube "SCBraga" ;
+         :email "oliver.mcleod@scbraga.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 25 ;
+         :nome "Oliver Mcleod" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_69
+:Exame_69 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-05-25" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tameka_O
+:Tameka_O rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_70 ;
+         :pratica_modal :Ciclismo ;
+         :clube "Vitoria" ;
+         :email "tameka.orr@vitoria.tv" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Tameka Orr" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_70
+:Exame_70 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-03-01" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Foster_S
+:Foster_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_71 ;
+         :pratica_modal :Patinagem ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "foster.strickland@clube de orientação do minho.me" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Foster Strickland" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_71
+:Exame_71 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-28" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Marlene_R
+:Marlene_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_72 ;
+         :pratica_modal :Ténis ;
+         :clube "SCBraga" ;
+         :email "marlene.rodgers@scbraga.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 27 ;
+         :nome "Marlene Rodgers" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_72
+:Exame_72 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-26" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Shari_M
+:Shari_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_73 ;
+         :pratica_modal :Andebol ;
+         :clube "ACDRcrespos" ;
+         :email "shari.mathews@acdrcrespos.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Shari Mathews" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_73
+:Exame_73 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-04-12" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Josie_R
+:Josie_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_74 ;
+         :pratica_modal :Badminton ;
+         :clube "ACDRcrespos" ;
+         :email "josie.rasmussen@acdrcrespos.info" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Josie Rasmussen" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_74
+:Exame_74 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-05-07" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Shelton_W
+:Shelton_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_75 ;
+         :pratica_modal :Parapente ;
+         :clube "EDViana" ;
+         :email "shelton.walton@edviana.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Shelton Walton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_75
+:Exame_75 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-06-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Odonnell_R
+:Odonnell_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_76 ;
+         :pratica_modal :BTT ;
+         :clube "GDGoma" ;
+         :email "odonnell.russell@gdgoma.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Odonnell Russell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_76
+:Exame_76 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-21" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Elba_L
+:Elba_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_77 ;
+         :pratica_modal :SUP ;
+         :clube "ACRroriz" ;
+         :email "elba.le@acrroriz.biz" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Elba Le" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_77
+:Exame_77 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-04" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Sweet_W
+:Sweet_W rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_78 ;
+         :pratica_modal :Equitação ;
+         :clube "GDGoma" ;
+         :email "sweet.woodward@gdgoma.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Sweet Woodward" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_78
+:Exame_78 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-20" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Wilkins_C
+:Wilkins_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_79 ;
+         :pratica_modal :Dança ;
+         :clube "ACRroriz" ;
+         :email "wilkins.cummings@acrroriz.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 33 ;
+         :nome "Wilkins Cummings" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_79
+:Exame_79 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-02-24" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Rogers_N
+:Rogers_N rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_80 ;
+         :pratica_modal :BTT ;
+         :clube "ACDRcrespos" ;
+         :email "rogers.noel@acdrcrespos.com" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 35 ;
+         :nome "Rogers Noel" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_80
+:Exame_80 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-04" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Hodges_A
+:Hodges_A rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_81 ;
+         :pratica_modal :Andebol ;
+         :clube "ABCbraga" ;
+         :email "hodges.ashley@abcbraga.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Hodges Ashley" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_81
+:Exame_81 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-03-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Curtis_D
+:Curtis_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_82 ;
+         :pratica_modal :Parapente ;
+         :clube "AmigosMontanha" ;
+         :email "curtis.dillon@amigosmontanha.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 29 ;
+         :nome "Curtis Dillon" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_82
+:Exame_82 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-12-19" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Lelia_O
+:Lelia_O rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_83 ;
+         :pratica_modal :Ténis ;
+         :clube "GDGoma" ;
+         :email "lelia.oliver@gdgoma.me" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Lelia Oliver" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_83
+:Exame_83 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-02-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Fuentes_R
+:Fuentes_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_84 ;
+         :pratica_modal :BTT ;
+         :clube "SCBraga" ;
+         :email "fuentes.rogers@scbraga.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Fuentes Rogers" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_84
+:Exame_84 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-02-07" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Carole_L
+:Carole_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_85 ;
+         :pratica_modal :Orientação ;
+         :clube "AmigosMontanha" ;
+         :email "carole.lindsey@amigosmontanha.ca" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 34 ;
+         :nome "Carole Lindsey" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_85
+:Exame_85 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-28" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Martinez_J
+:Martinez_J rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_86 ;
+         :pratica_modal :SUP ;
+         :clube "ABCbraga" ;
+         :email "martinez.johns@abcbraga.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Martinez Johns" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_86
+:Exame_86 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-07-27" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Kellie_H
+:Kellie_H rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_87 ;
+         :pratica_modal :Equitação ;
+         :clube "SCBraga" ;
+         :email "kellie.holland@scbraga.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Kellie Holland" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_87
+:Exame_87 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-21" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Mathis_K
+:Mathis_K rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_88 ;
+         :pratica_modal :Futebol ;
+         :clube "EDViana" ;
+         :email "mathis.kirk@edviana.co.uk" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Mathis Kirk" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_88
+:Exame_88 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-06-27" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bertha_S
+:Bertha_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_89 ;
+         :pratica_modal :Orientação ;
+         :clube "GDGoma" ;
+         :email "bertha.shelton@gdgoma.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 28 ;
+         :nome "Bertha Shelton" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_89
+:Exame_89 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-10-22" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Bonnie_D
+:Bonnie_D rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_90 ;
+         :pratica_modal :Ténis ;
+         :clube "SCBraga" ;
+         :email "bonnie.diaz@scbraga.biz" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Bonnie Diaz" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_90
+:Exame_90 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-01-08" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Becker_T
+:Becker_T rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_91 ;
+         :pratica_modal :Futebol ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "becker.talley@clube de orientação do minho.us" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Becker Talley" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_91
+:Exame_91 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-08-23" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Zelma_B
+:Zelma_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_92 ;
+         :pratica_modal :Equitação ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "zelma.bell@clube de orientação do minho.com" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Zelma Bell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_92
+:Exame_92 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-08-11" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Stanton_C
+:Stanton_C rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_93 ;
+         :pratica_modal :BTT ;
+         :clube "EDViana" ;
+         :email "stanton.cox@edviana.net" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 22 ;
+         :nome "Stanton Cox" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_93
+:Exame_93 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2019-09-29" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Cindy_S
+:Cindy_S rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_94 ;
+         :pratica_modal :Ciclismo ;
+         :clube "AVCfamalicão" ;
+         :email "cindy.shepherd@avcfamalicão.tv" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 23 ;
+         :nome "Cindy Shepherd" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_94
+:Exame_94 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-07-15" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Knapp_B
+:Knapp_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_95 ;
+         :pratica_modal :Futebol ;
+         :clube "ABCbraga" ;
+         :email "knapp.buckner@abcbraga.me" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Knapp Buckner" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_95
+:Exame_95 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-09-20" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Callahan_M
+:Callahan_M rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_96 ;
+         :pratica_modal :Parapente ;
+         :clube "ABCbraga" ;
+         :email "callahan.mitchell@abcbraga.name" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 24 ;
+         :nome "Callahan Mitchell" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_96
+:Exame_96 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-11-27" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Allie_L
+:Allie_L rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_97 ;
+         :pratica_modal :Equitação ;
+         :clube "ACRroriz" ;
+         :email "allie.lyons@acrroriz.ca" ;
+         :federado "false"^^xsd:boolean ;
+         :idade 31 ;
+         :nome "Allie Lyons" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_97
+:Exame_97 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-10" ;
+         :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Tammy_B
+:Tammy_B rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_98 ;
+         :pratica_modal :Futebol ;
+         :clube "ACDRcrespos" ;
+         :email "tammy.bryant@acdrcrespos.info" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 32 ;
+         :nome "Tammy Bryant" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_98
+:Exame_98 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2020-05-08" ;
+         :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Carissa_R
+:Carissa_R rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :fez_exame :Exame_99 ;
+         :pratica_modal :Esgrima ;
+         :clube "Clube de Orientação do Minho" ;
+         :email "carissa.rosario@clube de orientação do minho.org" ;
+         :federado "true"^^xsd:boolean ;
+         :idade 30 ;
+         :nome "Carissa Rosario" .
+
+
+###  http://rpcw.di.uminho.pt/pedro/2025/tpc1#Exame_99
+:Exame_99 rdf:type owl:NamedIndividual ,
+                  :Exame ;
+         :data "2021-01-02" ;
+         :resultado "true"^^xsd:boolean .
+
