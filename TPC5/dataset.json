@@ -1,0 +1,2725 @@
+{
+  "actors": {
+    "http://dbpedia.org/resource/Mandy_Moore": {
+      "name": "Mandy Moore",
+      "birthDate": "1984-04-10",
+      "origin": "Nashua, New Hampshire, U.S.",
+      "id": "http://dbpedia.org/resource/Mandy_Moore"
+    },
+    "http://dbpedia.org/resource/Daryl_Hannah": {
+      "name": "Daryl Hannah",
+      "birthDate": "1960-12-03",
+      "origin": "Chicago, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/Daryl_Hannah"
+    },
+    "http://dbpedia.org/resource/Shane_West": {
+      "name": "Shane West",
+      "birthDate": "1978-06-10",
+      "origin": "Baton Rouge, Louisiana, U.S.",
+      "id": "http://dbpedia.org/resource/Shane_West"
+    },
+    "http://dbpedia.org/resource/Parviz_Parastui": {
+      "name": "Parviz Parastui",
+      "birthDate": "1955-06-24",
+      "origin": "http://dbpedia.org/resource/Kabudrahang",
+      "id": "http://dbpedia.org/resource/Parviz_Parastui"
+    },
+    "http://dbpedia.org/resource/Bernie_Mac": {
+      "name": "Bernie Mac",
+      "birthDate": "1957-10-05",
+      "origin": "Chicago, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/Bernie_Mac"
+    },
+    "http://dbpedia.org/resource/Leon_Robinson": {
+      "name": "Leon",
+      "birthDate": "1962-03-08",
+      "origin": "New York City, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Leon_Robinson"
+    },
+    "http://dbpedia.org/resource/Tonya_Pinkins": {
+      "name": "Tonya Pinkins",
+      "birthDate": "1962-05-30",
+      "origin": "Chicago, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/Tonya_Pinkins"
+    },
+    "http://dbpedia.org/resource/Tupac_Shakur": {
+      "name": "Tupac Shakur",
+      "birthDate": "1971-06-16",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Tupac_Shakur"
+    },
+    "http://dbpedia.org/resource/Edward_Earle": {
+      "name": "Edward Earle",
+      "birthDate": "1882-07-16",
+      "origin": "Toronto, Ontario, Canada",
+      "id": "http://dbpedia.org/resource/Edward_Earle"
+    },
+    "http://dbpedia.org/resource/Enid_Bennett": {
+      "name": "Enid Bennett",
+      "birthDate": "1893-07-15",
+      "origin": "York, Western Australia, Australia",
+      "id": "http://dbpedia.org/resource/Enid_Bennett"
+    },
+    "http://dbpedia.org/resource/Gayne_Whitman": {
+      "name": "Gayne Whitman",
+      "birthDate": "1890-03-19",
+      "origin": "http://dbpedia.org/resource/Chicago,_Illinois",
+      "id": "http://dbpedia.org/resource/Gayne_Whitman"
+    },
+    "http://dbpedia.org/resource/Bill_Irwin": {
+      "name": "Bill Irwin",
+      "birthDate": "1950-04-11",
+      "origin": "http://dbpedia.org/resource/California",
+      "id": "http://dbpedia.org/resource/Bill_Irwin"
+    },
+    "http://dbpedia.org/resource/Ellen_Burstyn": {
+      "name": "Ellen Burstyn",
+      "birthDate": "1932-12-07",
+      "origin": "Detroit, Michigan, U.S.",
+      "id": "http://dbpedia.org/resource/Ellen_Burstyn"
+    },
+    "http://dbpedia.org/resource/Anne_Hathaway": {
+      "name": "Anne Hathaway",
+      "birthDate": "1982-11-12",
+      "origin": "Brooklyn, New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Anne_Hathaway"
+    },
+    "http://dbpedia.org/resource/Jessica_Chastain": {
+      "name": "Jessica Chastain",
+      "birthDate": "1977-03-24",
+      "origin": "Sacramento, California, U.S.",
+      "id": "http://dbpedia.org/resource/Jessica_Chastain"
+    },
+    "http://dbpedia.org/resource/Ben_Cross": {
+      "name": "Ben Cross",
+      "birthDate": "1947-12-16",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Ben_Cross"
+    },
+    "http://dbpedia.org/resource/Wilson_Gunaratne": {
+      "name": "Wilson Gunaratne",
+      "birthDate": "1949-03-09",
+      "origin": "http://dbpedia.org/resource/Kadawatha",
+      "id": "http://dbpedia.org/resource/Wilson_Gunaratne"
+    },
+    "http://dbpedia.org/resource/Bette_Midler": {
+      "name": "Bette Midler",
+      "birthDate": "1945-12-01",
+      "origin": "http://dbpedia.org/resource/Honolulu",
+      "id": "http://dbpedia.org/resource/Bette_Midler"
+    },
+    "http://dbpedia.org/resource/Frederic_Forrest": {
+      "name": "Frederic Forrest",
+      "birthDate": "1936-12-23",
+      "origin": "Waxahachie, Texas, U.S.",
+      "id": "http://dbpedia.org/resource/Frederic_Forrest"
+    },
+    "http://dbpedia.org/resource/Alan_Bates": {
+      "name": "Alan Bates",
+      "birthDate": "1934-02-17",
+      "origin": "Allestree, Derby, England",
+      "id": "http://dbpedia.org/resource/Alan_Bates"
+    },
+    "http://dbpedia.org/resource/Matt_Damon": {
+      "name": "Matt Damon",
+      "birthDate": "1970-10-08",
+      "origin": "Cambridge, Massachusetts, US",
+      "id": "http://dbpedia.org/resource/Matt_Damon"
+    },
+    "http://dbpedia.org/resource/Wagner_Moura": {
+      "name": "Wagner Moura",
+      "birthDate": "1976-06-27",
+      "origin": "Salvador, Bahia, Brazil",
+      "id": "http://dbpedia.org/resource/Wagner_Moura"
+    },
+    "http://dbpedia.org/resource/William_Fichtner": {
+      "name": "William Fichtner",
+      "birthDate": "1956-11-27",
+      "origin": "Long Island, New York, U.S.",
+      "id": "http://dbpedia.org/resource/William_Fichtner"
+    },
+    "http://dbpedia.org/resource/Alice_Braga": {
+      "name": "Alice Braga",
+      "birthDate": "1983-04-15",
+      "origin": "São Paulo, Brazil",
+      "id": "http://dbpedia.org/resource/Alice_Braga"
+    },
+    "http://dbpedia.org/resource/Jodie_Foster": {
+      "name": "Jodie Foster",
+      "birthDate": "1962-11-19",
+      "origin": "Los Angeles, California, U.S.",
+      "id": "http://dbpedia.org/resource/Jodie_Foster"
+    },
+    "http://dbpedia.org/resource/Lydia_Hearst": {
+      "name": "Lydia Hearst",
+      "birthDate": "1984-09-19",
+      "origin": "Wilton, Connecticut, U.S.",
+      "id": "http://dbpedia.org/resource/Lydia_Hearst"
+    },
+    "http://dbpedia.org/resource/Nick_Vallelonga": {
+      "name": "Nick Vallelonga",
+      "birthDate": "1959-09-13",
+      "origin": "The Bronx, New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Nick_Vallelonga"
+    },
+    "http://dbpedia.org/resource/Bill_Tung": {
+      "name": "Bill Tung",
+      "birthDate": "1933-03-30",
+      "origin": "http://dbpedia.org/resource/Hong_Kong",
+      "id": "http://dbpedia.org/resource/Bill_Tung"
+    },
+    "http://dbpedia.org/resource/Gloria_Yip": {
+      "name": "Gloria Yip Wan-Yee",
+      "birthDate": "1973-01-13",
+      "origin": "http://dbpedia.org/resource/Hong_Kong",
+      "id": "http://dbpedia.org/resource/Gloria_Yip"
+    },
+    "http://dbpedia.org/resource/Anita_Mui": {
+      "name": "Anita Mui",
+      "birthDate": "1963-10-10",
+      "origin": "http://dbpedia.org/resource/British_Hong_Kong",
+      "id": "http://dbpedia.org/resource/Anita_Mui"
+    },
+    "http://dbpedia.org/resource/Gua_Ah-leh": {
+      "name": "Gua Ah-leh",
+      "birthDate": "1944-06-02",
+      "origin": "http://dbpedia.org/resource/Hunan",
+      "id": "http://dbpedia.org/resource/Gua_Ah-leh"
+    },
+    "http://dbpedia.org/resource/Clotilde_Hesme": {
+      "name": "Clotilde Hesme",
+      "birthDate": "1979-07-30",
+      "origin": "Troyes, Aube, France",
+      "id": "http://dbpedia.org/resource/Clotilde_Hesme"
+    },
+    "http://dbpedia.org/resource/Louis_Garrel": {
+      "name": "Louis Garrel",
+      "birthDate": "1983-06-14",
+      "origin": "Paris, France",
+      "id": "http://dbpedia.org/resource/Louis_Garrel"
+    },
+    "http://dbpedia.org/resource/Ludivine_Sagnier": {
+      "name": "Ludivine Sagnier",
+      "birthDate": "1979-07-03",
+      "origin": "La Celle-Saint-Cloud, Yvelines, France",
+      "id": "http://dbpedia.org/resource/Ludivine_Sagnier"
+    },
+    "http://dbpedia.org/resource/Chiara_Mastroianni": {
+      "name": "Chiara Mastroianni",
+      "birthDate": "1972-05-28",
+      "origin": "http://dbpedia.org/resource/Paris,_France",
+      "id": "http://dbpedia.org/resource/Chiara_Mastroianni"
+    },
+    "http://dbpedia.org/resource/Julia_Roberts": {
+      "name": "Julia Roberts",
+      "birthDate": "1967-10-28",
+      "origin": "Smyrna, Georgia, U.S.",
+      "id": "http://dbpedia.org/resource/Julia_Roberts"
+    },
+    "http://dbpedia.org/resource/Lily_Collins": {
+      "name": "Lily Collins",
+      "birthDate": "1989-03-18",
+      "origin": "Guildford, Surrey, England",
+      "id": "http://dbpedia.org/resource/Lily_Collins"
+    },
+    "http://dbpedia.org/resource/Armie_Hammer": {
+      "name": "Armie Hammer",
+      "birthDate": "1986-08-28",
+      "origin": "Santa Monica, California, U.S.",
+      "id": "http://dbpedia.org/resource/Armie_Hammer"
+    },
+    "http://dbpedia.org/resource/Mare_Winningham": {
+      "name": "Mare Winningham",
+      "birthDate": "1959-05-16",
+      "origin": "Phoenix, Arizona, U.S.",
+      "id": "http://dbpedia.org/resource/Mare_Winningham"
+    },
+    "http://dbpedia.org/resource/Sarah_Polley": {
+      "name": "Sarah Polley",
+      "birthDate": "1979-01-08",
+      "origin": "http://dbpedia.org/resource/Canada",
+      "id": "http://dbpedia.org/resource/Sarah_Polley"
+    },
+    "http://dbpedia.org/resource/Julie_Christie": {
+      "name": "Julie Christie",
+      "birthDate": "1940-04-14",
+      "origin": "http://dbpedia.org/resource/Colonial_Assam",
+      "id": "http://dbpedia.org/resource/Julie_Christie"
+    },
+    "http://dbpedia.org/resource/Javier_Cámara": {
+      "name": "Javier Cámara",
+      "birthDate": "1967-01-19",
+      "origin": "Albelda de Iregua, Spain",
+      "id": "http://dbpedia.org/resource/Javier_Cámara"
+    },
+    "http://dbpedia.org/resource/Colm_Feore": {
+      "name": "Colm Feore",
+      "birthDate": "1958-08-22",
+      "origin": "Boston, Massachusetts, U.S.",
+      "id": "http://dbpedia.org/resource/Colm_Feore"
+    },
+    "http://dbpedia.org/resource/Angelina_Jolie": {
+      "name": "Angelina Jolie",
+      "birthDate": "1975-06-04",
+      "origin": "Los Angeles, California, U.S.",
+      "id": "http://dbpedia.org/resource/Angelina_Jolie"
+    },
+    "http://dbpedia.org/resource/Amy_Ryan": {
+      "name": "Amy Ryan",
+      "birthDate": "1968-05-03",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Amy_Ryan"
+    },
+    "http://dbpedia.org/resource/Jeffrey_Donovan": {
+      "name": "Jeffrey Donovan",
+      "birthDate": "1968-05-11",
+      "origin": "Amesbury, Massachusetts, U.S.",
+      "id": "http://dbpedia.org/resource/Jeffrey_Donovan"
+    },
+    "http://dbpedia.org/resource/John_Malkovich": {
+      "name": "John Malkovich",
+      "birthDate": "1953-12-09",
+      "origin": "Christopher, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/John_Malkovich"
+    },
+    "http://dbpedia.org/resource/Betty_Astell": {
+      "name": "Betty Astell",
+      "birthDate": "1912-05-23",
+      "origin": "Willesden, Middlesex, England, UK",
+      "id": "http://dbpedia.org/resource/Betty_Astell"
+    },
+    "http://dbpedia.org/resource/Jon_Pertwee": {
+      "name": "Jon Pertwee",
+      "birthDate": "1919-07-07",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Jon_Pertwee"
+    },
+    "http://dbpedia.org/resource/Cyril_Fletcher": {
+      "name": "Cyril Fletcher",
+      "birthDate": "1913-06-25",
+      "origin": "Watford, Hertfordshire, England",
+      "id": "http://dbpedia.org/resource/Cyril_Fletcher"
+    },
+    "http://dbpedia.org/resource/Laurence_Naismith": {
+      "name": "Laurence Naismith",
+      "birthDate": "1908-12-14",
+      "origin": "Thames Ditton, Surrey, England",
+      "id": "http://dbpedia.org/resource/Laurence_Naismith"
+    },
+    "http://dbpedia.org/resource/Dane_DeHaan": {
+      "name": "Dane DeHaan",
+      "birthDate": "1986-02-06",
+      "origin": "Allentown, Pennsylvania, U.S.",
+      "id": "http://dbpedia.org/resource/Dane_DeHaan"
+    },
+    "http://dbpedia.org/resource/Joel_Edgerton": {
+      "name": "Joel Edgerton",
+      "birthDate": "1974-06-23",
+      "origin": "Blacktown, New South Wales, Australia",
+      "id": "http://dbpedia.org/resource/Joel_Edgerton"
+    },
+    "http://dbpedia.org/resource/Dulquer_Salmaan": {
+      "name": "Dulquer Salmaan",
+      "birthDate": "1986-07-28",
+      "origin": "http://dbpedia.org/resource/Kerala",
+      "id": "http://dbpedia.org/resource/Dulquer_Salmaan"
+    },
+    "http://dbpedia.org/resource/Soubin_Shahir": {
+      "name": "Soubin Shahir",
+      "birthDate": "1983-10-12",
+      "origin": "Cochin, Kerala, India",
+      "id": "http://dbpedia.org/resource/Soubin_Shahir"
+    },
+    "http://dbpedia.org/resource/Nedumudi_Venu": {
+      "name": "Nedumudi Venu",
+      "birthDate": "1948-05-22",
+      "origin": "http://dbpedia.org/resource/Travancore",
+      "id": "http://dbpedia.org/resource/Nedumudi_Venu"
+    },
+    "http://dbpedia.org/resource/Angela_Bassett": {
+      "name": "Angela Bassett",
+      "birthDate": "1958-08-16",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Angela_Bassett"
+    },
+    "http://dbpedia.org/resource/Curtis_Armstrong": {
+      "name": "Curtis Armstrong",
+      "birthDate": "1953-11-27",
+      "origin": "Detroit, Michigan, U.S.",
+      "id": "http://dbpedia.org/resource/Curtis_Armstrong"
+    },
+    "http://dbpedia.org/resource/Keke_Palmer": {
+      "name": "Keke Palmer",
+      "birthDate": "1993-08-26",
+      "origin": "Robbins, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/Keke_Palmer"
+    },
+    "http://dbpedia.org/resource/Laurence_Fishburne": {
+      "name": "Laurence Fishburne",
+      "birthDate": "1961-07-30",
+      "origin": "Augusta, Georgia, U.S.",
+      "id": "http://dbpedia.org/resource/Laurence_Fishburne"
+    },
+    "http://dbpedia.org/resource/Bleuette_Bernon": {
+      "name": "Bleuette Bernon",
+      "birthDate": "1878-06-06",
+      "origin": "14",
+      "id": "http://dbpedia.org/resource/Bleuette_Bernon"
+    },
+    "http://dbpedia.org/resource/Georges_Méliès": {
+      "name": "Georges Méliès",
+      "birthDate": "1861-12-08",
+      "origin": "http://dbpedia.org/resource/Paris",
+      "id": "http://dbpedia.org/resource/Georges_Méliès"
+    },
+    "http://dbpedia.org/resource/Mohanlal": {
+      "name": "Mohanlal",
+      "birthDate": "1960-05-21",
+      "origin": "Trivandrum, Kerala, India",
+      "id": "http://dbpedia.org/resource/Mohanlal"
+    },
+    "http://dbpedia.org/resource/Murali_(Malayalam_actor)": {
+      "name": "Murali",
+      "birthDate": "1954-05-25",
+      "origin": "Kudavattoor, State of Travancore-Cochin , India",
+      "id": "http://dbpedia.org/resource/Murali_(Malayalam_actor)"
+    },
+    "http://dbpedia.org/resource/Lakshmi_(actress)": {
+      "name": "Lakshmi",
+      "birthDate": "1952-12-13",
+      "origin": "Madras, Madras State, India",
+      "id": "http://dbpedia.org/resource/Lakshmi_(actress)"
+    },
+    "http://dbpedia.org/resource/Joe_Don_Baker": {
+      "name": "Joe Don Baker",
+      "birthDate": "1936-02-12",
+      "origin": "Groesbeck, Texas, U.S.",
+      "id": "http://dbpedia.org/resource/Joe_Don_Baker"
+    },
+    "http://dbpedia.org/resource/Bradley_Cooper": {
+      "name": "Bradley Cooper",
+      "birthDate": "1975-01-05",
+      "origin": "Abington Township, Pennsylvania, U.S.",
+      "id": "http://dbpedia.org/resource/Bradley_Cooper"
+    },
+    "http://dbpedia.org/resource/David_Dencik": {
+      "name": "David Dencik",
+      "birthDate": "1974-10-31",
+      "origin": "Stockholm, Sweden",
+      "id": "http://dbpedia.org/resource/David_Dencik"
+    },
+    "http://dbpedia.org/resource/Rhys_Ifans": {
+      "name": "Rhys Ifans biography and credits",
+      "birthDate": "1967-07-22",
+      "origin": "http://dbpedia.org/resource/Wales",
+      "id": "http://dbpedia.org/resource/Rhys_Ifans"
+    },
+    "http://dbpedia.org/resource/Toby_Jones": {
+      "name": "Toby Jones",
+      "birthDate": "1966-09-07",
+      "origin": "Hammersmith, London, England",
+      "id": "http://dbpedia.org/resource/Toby_Jones"
+    },
+    "http://dbpedia.org/resource/Dean_Shek": {
+      "name": "Dean Shek",
+      "birthDate": "1949-06-17",
+      "origin": "Beijing, China",
+      "id": "http://dbpedia.org/resource/Dean_Shek"
+    },
+    "http://dbpedia.org/resource/Joyce_Godenzi": {
+      "name": "Joyce Godenzi",
+      "birthDate": "1965-05-28",
+      "origin": "http://dbpedia.org/resource/British_Hong_Kong",
+      "id": "http://dbpedia.org/resource/Joyce_Godenzi"
+    },
+    "http://dbpedia.org/resource/Jacky_Cheung": {
+      "name": "Jacky Cheung",
+      "birthDate": "1961-07-10",
+      "origin": "http://dbpedia.org/resource/Quarry_Bay",
+      "id": "http://dbpedia.org/resource/Jacky_Cheung"
+    },
+    "http://dbpedia.org/resource/Deborah_Kara_Unger": {
+      "name": "Deborah Kara Unger",
+      "birthDate": "1966-05-12",
+      "origin": "Vancouver, British Columbia, Canada",
+      "id": "http://dbpedia.org/resource/Deborah_Kara_Unger"
+    },
+    "http://dbpedia.org/resource/Holly_Hunter": {
+      "name": "Holly Hunter",
+      "birthDate": "1958-03-20",
+      "origin": "Conyers, Georgia, U.S.",
+      "id": "http://dbpedia.org/resource/Holly_Hunter"
+    },
+    "http://dbpedia.org/resource/James_Spader": {
+      "name": "James Spader",
+      "birthDate": "1960-02-07",
+      "origin": "Boston, Massachusetts, U.S.",
+      "id": "http://dbpedia.org/resource/James_Spader"
+    },
+    "http://dbpedia.org/resource/Saba_Mubarak": {
+      "name": "Saba Mubarak",
+      "birthDate": "1976-04-10",
+      "origin": "http://dbpedia.org/resource/Jordan",
+      "id": "http://dbpedia.org/resource/Saba_Mubarak"
+    },
+    "http://dbpedia.org/resource/Ali_Suliman": {
+      "name": "Ali Suliman",
+      "birthDate": "1977-10-10",
+      "origin": "http://dbpedia.org/resource/Palestine",
+      "id": "http://dbpedia.org/resource/Ali_Suliman"
+    },
+    "http://dbpedia.org/resource/Bruce_Campbell": {
+      "name": "Bruce Campbell",
+      "birthDate": "1958-06-22",
+      "origin": "Royal Oak, Michigan, U.S.",
+      "id": "http://dbpedia.org/resource/Bruce_Campbell"
+    },
+    "http://dbpedia.org/resource/Payal_Rajput": {
+      "name": "Payal Rajput",
+      "birthDate": "1990-12-05",
+      "origin": "Delhi, India",
+      "id": "http://dbpedia.org/resource/Payal_Rajput"
+    },
+    "http://dbpedia.org/resource/Ninja_(singer)": {
+      "name": "Ninja",
+      "birthDate": "1991-03-06",
+      "origin": "Ludhiana, Punjab, India",
+      "id": "http://dbpedia.org/resource/Ninja_(singer)"
+    },
+    "http://dbpedia.org/resource/Beverly_Garland": {
+      "name": "Beverly Garland",
+      "birthDate": "1926-10-17",
+      "origin": "Santa Cruz, California, U.S.",
+      "id": "http://dbpedia.org/resource/Beverly_Garland"
+    },
+    "http://dbpedia.org/resource/Allison_Hayes": {
+      "name": "Allison Hayes",
+      "birthDate": "1930-03-06",
+      "origin": "Charleston, West Virginia, U.S.",
+      "id": "http://dbpedia.org/resource/Allison_Hayes"
+    },
+    "http://dbpedia.org/resource/Paul_Anka": {
+      "name": "Paul Anka",
+      "birthDate": "1941-07-30",
+      "origin": "Ottawa, Ontario, Canada",
+      "id": "http://dbpedia.org/resource/Paul_Anka"
+    },
+    "http://dbpedia.org/resource/Anna_Magnani": {
+      "name": "Anna Magnani",
+      "birthDate": "1908-03-07",
+      "origin": "http://dbpedia.org/resource/Rome",
+      "id": "http://dbpedia.org/resource/Anna_Magnani"
+    },
+    "http://dbpedia.org/resource/Nikolaj_Coster-Waldau": {
+      "name": "Nikolaj Coster-Waldau",
+      "birthDate": "1970-07-27",
+      "origin": "Rudkøbing, Denmark",
+      "id": "http://dbpedia.org/resource/Nikolaj_Coster-Waldau"
+    },
+    "http://dbpedia.org/resource/Naomi_Watts": {
+      "name": "Naomi Watts",
+      "birthDate": "1968-09-28",
+      "origin": "Shoreham, Kent, England",
+      "id": "http://dbpedia.org/resource/Naomi_Watts"
+    },
+    "http://dbpedia.org/resource/Sean_Penn": {
+      "name": "Sean Penn",
+      "birthDate": "1960-08-17",
+      "origin": "Santa Monica, California, U.S.",
+      "id": "http://dbpedia.org/resource/Sean_Penn"
+    },
+    "http://dbpedia.org/resource/Rouhollah_Zamani": {
+      "name": "Rouhollah Zamani",
+      "birthDate": "2005-08-15",
+      "origin": "Nowjeh Deh, Ardabil, Iran",
+      "id": "http://dbpedia.org/resource/Rouhollah_Zamani"
+    },
+    "http://dbpedia.org/resource/Ali_Nassirian": {
+      "name": "Ali Nassirian",
+      "birthDate": "1935-02-04",
+      "origin": "Tehran, Iran",
+      "id": "http://dbpedia.org/resource/Ali_Nassirian"
+    },
+    "http://dbpedia.org/resource/Javad_Ezzati": {
+      "name": "Javad Ezzati",
+      "birthDate": "1982-01-10",
+      "origin": "Tehran, Iran",
+      "id": "http://dbpedia.org/resource/Javad_Ezzati"
+    },
+    "http://dbpedia.org/resource/Sam_Riley": {
+      "name": "Sam Riley",
+      "birthDate": "1980-01-08",
+      "origin": "Menston, Bradford, West Yorkshire, England",
+      "id": "http://dbpedia.org/resource/Sam_Riley"
+    },
+    "http://dbpedia.org/resource/Elisabeth_Moss": {
+      "name": "Elisabeth Moss",
+      "birthDate": "1982-07-24",
+      "origin": "Los Angeles, California, US",
+      "id": "http://dbpedia.org/resource/Elisabeth_Moss"
+    },
+    "http://dbpedia.org/resource/Garrett_Hedlund": {
+      "name": "Garrett Hedlund",
+      "birthDate": "1984-09-03",
+      "origin": "Roseau, Minnesota, U.S.",
+      "id": "http://dbpedia.org/resource/Garrett_Hedlund"
+    },
+    "http://dbpedia.org/resource/Tom_Sturridge": {
+      "name": "Tom Sturridge",
+      "birthDate": "1985-12-21",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Tom_Sturridge"
+    },
+    "http://dbpedia.org/resource/Blake_Lively": {
+      "name": "Blake Lively",
+      "birthDate": "1987-08-25",
+      "origin": "Los Angeles, California, U.S.",
+      "id": "http://dbpedia.org/resource/Blake_Lively"
+    },
+    "http://dbpedia.org/resource/Lewis_Black": {
+      "name": "Lewis Black",
+      "birthDate": "1948-08-30",
+      "origin": "Washington, D.C., U.S.",
+      "id": "http://dbpedia.org/resource/Lewis_Black"
+    },
+    "http://dbpedia.org/resource/Justin_Long": {
+      "name": "Justin Long",
+      "birthDate": "1978-06-02",
+      "origin": "Fairfield, Connecticut, U.S.",
+      "id": "http://dbpedia.org/resource/Justin_Long"
+    },
+    "http://dbpedia.org/resource/Penelope_Ann_Miller": {
+      "name": "Penelope Ann Miller",
+      "birthDate": "1964-01-13",
+      "origin": "Los Angeles, California, U.S.",
+      "id": "http://dbpedia.org/resource/Penelope_Ann_Miller"
+    },
+    "http://dbpedia.org/resource/Al_Pacino": {
+      "name": "Al Pacino",
+      "birthDate": "1940-04-25",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Al_Pacino"
+    },
+    "http://dbpedia.org/resource/Samantha_Morton": {
+      "name": "Samantha Morton",
+      "birthDate": "1977-05-13",
+      "origin": "Nottingham, Nottinghamshire, England",
+      "id": "http://dbpedia.org/resource/Samantha_Morton"
+    },
+    "http://dbpedia.org/resource/Alexandra_Maria_Lara": {
+      "name": "Alexandra Maria Lara",
+      "birthDate": "1978-11-12",
+      "origin": "Bucharest, Romania",
+      "id": "http://dbpedia.org/resource/Alexandra_Maria_Lara"
+    },
+    "http://dbpedia.org/resource/Sandrine_Bonnaire": {
+      "name": "Sandrine Bonnaire",
+      "birthDate": "1967-05-31",
+      "origin": "Gannat, Allier, France",
+      "id": "http://dbpedia.org/resource/Sandrine_Bonnaire"
+    },
+    "http://dbpedia.org/resource/Bohdan_Stupka": {
+      "name": "Bohdan Stupka",
+      "birthDate": "1941-08-27",
+      "origin": "Kulykiv",
+      "id": "http://dbpedia.org/resource/Bohdan_Stupka"
+    },
+    "http://dbpedia.org/resource/Hubert_Saint-Macary": {
+      "name": "Hubert Saint-Macary",
+      "birthDate": "1949-05-18",
+      "origin": "Orléans, France",
+      "id": "http://dbpedia.org/resource/Hubert_Saint-Macary"
+    },
+    "http://dbpedia.org/resource/Catherine_Deneuve": {
+      "name": "Catherine Deneuve",
+      "birthDate": "1943-10-22",
+      "origin": "Paris, France",
+      "id": "http://dbpedia.org/resource/Catherine_Deneuve"
+    },
+    "http://dbpedia.org/resource/Tatyana_Dogileva": {
+      "name": "Tatyana Dogileva",
+      "birthDate": "1957-02-27",
+      "origin": "http://dbpedia.org/resource/Moscow",
+      "id": "http://dbpedia.org/resource/Tatyana_Dogileva"
+    },
+    "http://dbpedia.org/resource/John_Thaw": {
+      "name": "John Thaw",
+      "birthDate": "1942-01-03",
+      "origin": "Gorton, Manchester, England",
+      "id": "http://dbpedia.org/resource/John_Thaw"
+    },
+    "http://dbpedia.org/resource/Paul_Rhys": {
+      "name": "Paul Rhys",
+      "birthDate": "1963-12-19",
+      "origin": "Neath, Glamorgan, Wales, UK",
+      "id": "http://dbpedia.org/resource/Paul_Rhys"
+    },
+    "http://dbpedia.org/resource/Robert_Downey_Jr.": {
+      "name": "Robert Downey Jr.",
+      "birthDate": "1965-04-04",
+      "origin": "Manhattan, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Robert_Downey_Jr."
+    },
+    "http://dbpedia.org/resource/Geraldine_Chaplin": {
+      "name": "Geraldine Chaplin",
+      "birthDate": "1944-07-31",
+      "origin": "Santa Monica, California, U.S.",
+      "id": "http://dbpedia.org/resource/Geraldine_Chaplin"
+    },
+    "http://dbpedia.org/resource/Carmel_Myers": {
+      "name": "Carmel Myers",
+      "birthDate": "1899-04-09",
+      "origin": "San Francisco, California, U.S.",
+      "id": "http://dbpedia.org/resource/Carmel_Myers"
+    },
+    "http://dbpedia.org/resource/Fred_Kohler": {
+      "name": "Fred Kohler",
+      "birthDate": "1888-04-20",
+      "origin": "Kansas City, Missouri, U.S.",
+      "id": "http://dbpedia.org/resource/Fred_Kohler"
+    },
+    "http://dbpedia.org/resource/John_B._O'Brien": {
+      "name": "John B. O'Brien",
+      "birthDate": "1884-12-13",
+      "origin": "Roanoke, Virginia, USA",
+      "id": "http://dbpedia.org/resource/John_B._O'Brien"
+    },
+    "http://dbpedia.org/resource/Ron_Rifkin": {
+      "name": "Ron Rifkin",
+      "birthDate": "1939-10-31",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Ron_Rifkin"
+    },
+    "http://dbpedia.org/resource/Linda_Hunt": {
+      "name": "Linda Hunt",
+      "birthDate": "1945-04-02",
+      "origin": "Morristown, New Jersey, U.S.",
+      "id": "http://dbpedia.org/resource/Linda_Hunt"
+    },
+    "http://dbpedia.org/resource/Kathy_Bates": {
+      "name": "Kathy Bates",
+      "birthDate": "1948-06-28",
+      "origin": "Memphis, Tennessee, U.S.",
+      "id": "http://dbpedia.org/resource/Kathy_Bates"
+    },
+    "http://dbpedia.org/resource/Kevin_Costner": {
+      "name": "Kevin Costner",
+      "birthDate": "1955-01-18",
+      "origin": "Lynwood, California, U.S.",
+      "id": "http://dbpedia.org/resource/Kevin_Costner"
+    },
+    "http://dbpedia.org/resource/Penélope_Cruz": {
+      "name": "Penélope Cruz",
+      "birthDate": "1974-04-28",
+      "origin": "Alcobendas, Spain",
+      "id": "http://dbpedia.org/resource/Penélope_Cruz"
+    },
+    "http://dbpedia.org/resource/Sacha_Baron_Cohen": {
+      "name": "Sacha Baron Cohen",
+      "birthDate": "1971-10-13",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Sacha_Baron_Cohen"
+    },
+    "http://dbpedia.org/resource/Gabourey_Sidibe": {
+      "name": "Gabourey Sidibe",
+      "birthDate": "1983-05-06",
+      "origin": "http://dbpedia.org/resource/U.S.",
+      "id": "http://dbpedia.org/resource/Gabourey_Sidibe"
+    },
+    "http://dbpedia.org/resource/Isla_Fisher": {
+      "name": "Isla Fisher",
+      "birthDate": "1976-02-03",
+      "origin": "http://dbpedia.org/resource/Muscat",
+      "id": "http://dbpedia.org/resource/Isla_Fisher"
+    },
+    "http://dbpedia.org/resource/Mark_Strong": {
+      "name": "Mark Strong",
+      "birthDate": "1963-08-05",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Mark_Strong"
+    },
+    "http://dbpedia.org/resource/Billy_Connolly": {
+      "name": "Billy Connolly",
+      "birthDate": "1942-11-24",
+      "origin": "Anderston, Glasgow, Scotland",
+      "id": "http://dbpedia.org/resource/Billy_Connolly"
+    },
+    "http://dbpedia.org/resource/Ringo_Starr": {
+      "name": "Ringo Starr",
+      "birthDate": "1940-07-07",
+      "origin": "Liverpool, England",
+      "id": "http://dbpedia.org/resource/Ringo_Starr"
+    },
+    "http://dbpedia.org/resource/Valerie_Perrine": {
+      "name": "Valerie Perrine",
+      "birthDate": "1943-09-03",
+      "origin": "Galveston, Texas, U.S.",
+      "id": "http://dbpedia.org/resource/Valerie_Perrine"
+    },
+    "http://dbpedia.org/resource/George_Harrison": {
+      "name": "George Harrison",
+      "birthDate": "1943-02-25",
+      "origin": "Liverpool, England",
+      "id": "http://dbpedia.org/resource/George_Harrison"
+    },
+    "http://dbpedia.org/resource/Robert_Loggia": {
+      "name": "Robert Loggia",
+      "birthDate": "1930-01-03",
+      "origin": "Staten Island, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Robert_Loggia"
+    },
+    "http://dbpedia.org/resource/Judd_Nelson": {
+      "name": "Judd Nelson",
+      "birthDate": "1959-11-28",
+      "origin": "Portland, Maine, U.S.",
+      "id": "http://dbpedia.org/resource/Judd_Nelson"
+    },
+    "http://dbpedia.org/resource/Leo_Rossi": {
+      "name": "Leo Rossi",
+      "birthDate": "1946-06-26",
+      "origin": "Trenton, New Jersey, U.S.",
+      "id": "http://dbpedia.org/resource/Leo_Rossi"
+    },
+    "http://dbpedia.org/resource/Van_Heflin": {
+      "name": "Van Heflin",
+      "birthDate": "1908-12-13",
+      "origin": "Walters, Oklahoma, U.S.",
+      "id": "http://dbpedia.org/resource/Van_Heflin"
+    },
+    "http://dbpedia.org/resource/Viveca_Lindfors": {
+      "name": "Viveca Lindfors",
+      "birthDate": "1920-12-29",
+      "origin": "Uppsala, Sweden",
+      "id": "http://dbpedia.org/resource/Viveca_Lindfors"
+    },
+    "http://dbpedia.org/resource/Geoffrey_Horne": {
+      "name": "Geoffrey Horne",
+      "birthDate": "1933-08-22",
+      "origin": "http://dbpedia.org/resource/Buenos_Aires",
+      "id": "http://dbpedia.org/resource/Geoffrey_Horne"
+    },
+    "http://dbpedia.org/resource/Silvana_Mangano": {
+      "name": "Silvana Mangano",
+      "birthDate": "1930-04-21",
+      "origin": "http://dbpedia.org/resource/Rome",
+      "id": "http://dbpedia.org/resource/Silvana_Mangano"
+    },
+    "http://dbpedia.org/resource/Romaine_Fielding": {
+      "name": "Romaine Fielding",
+      "birthDate": "1867-05-22",
+      "origin": "http://dbpedia.org/resource/Riceville,_Iowa",
+      "id": "http://dbpedia.org/resource/Romaine_Fielding"
+    },
+    "http://dbpedia.org/resource/Regina_Hall": {
+      "name": "Regina Hall",
+      "birthDate": "1970-12-12",
+      "origin": "Washington, D.C., U.S.",
+      "id": "http://dbpedia.org/resource/Regina_Hall"
+    },
+    "http://dbpedia.org/resource/Richard_Roundtree": {
+      "name": "Richard Roundtree",
+      "birthDate": "1942-07-09",
+      "origin": "New Rochelle, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Richard_Roundtree"
+    },
+    "http://dbpedia.org/resource/Yukio_Mishima": {
+      "name": "Yukio Mishima",
+      "birthDate": "1925-01-14",
+      "origin": "Nagazumi-cho 2-chome, Yotsuya-ku, Tokyo City, Tokyo Prefecture, Empire of Japan",
+      "id": "http://dbpedia.org/resource/Yukio_Mishima"
+    },
+    "http://dbpedia.org/resource/Ayako_Wakao": {
+      "name": "Ayako Wakao",
+      "birthDate": "1933-11-08",
+      "origin": "http://dbpedia.org/resource/Tokyo",
+      "id": "http://dbpedia.org/resource/Ayako_Wakao"
+    },
+    "http://dbpedia.org/resource/Leon_Isaac_Kennedy": {
+      "name": "Leon Isaac Kennedy",
+      "birthDate": "1948-06-01",
+      "origin": "Cleveland, Ohio, U.S.",
+      "id": "http://dbpedia.org/resource/Leon_Isaac_Kennedy"
+    },
+    "http://dbpedia.org/resource/Isabelle_Huppert": {
+      "name": "Isabelle Huppert",
+      "birthDate": "1953-03-16",
+      "origin": "Paris, France",
+      "id": "http://dbpedia.org/resource/Isabelle_Huppert"
+    },
+    "http://dbpedia.org/resource/Emma_Stone": {
+      "name": "Emma Stone",
+      "birthDate": "1988-11-06",
+      "origin": "Scottsdale, Arizona, U.S.",
+      "id": "http://dbpedia.org/resource/Emma_Stone"
+    },
+    "http://dbpedia.org/resource/Olivia_Colman": {
+      "name": "Olivia Colman",
+      "birthDate": "1974-01-30",
+      "origin": "Norwich, Norfolk, England",
+      "id": "http://dbpedia.org/resource/Olivia_Colman"
+    },
+    "http://dbpedia.org/resource/William_B._Davidson": {
+      "name": "William B. Davidson",
+      "birthDate": "1888-06-16",
+      "origin": "Dobbs Ferry, New York, U.S.",
+      "id": "http://dbpedia.org/resource/William_B._Davidson"
+    },
+    "http://dbpedia.org/resource/Jewel_Carmen": {
+      "name": "Jewel Carmen",
+      "birthDate": "1897-07-13",
+      "origin": "Portland, Oregon, U.S.",
+      "id": "http://dbpedia.org/resource/Jewel_Carmen"
+    },
+    "http://dbpedia.org/resource/Kenneth_Harlan": {
+      "name": "Kenneth Harlan",
+      "birthDate": "1895-07-26",
+      "origin": "Boston, Massachusetts, U.S.",
+      "id": "http://dbpedia.org/resource/Kenneth_Harlan"
+    },
+    "http://dbpedia.org/resource/William_Baldwin": {
+      "name": "William Baldwin",
+      "birthDate": "1963-02-21",
+      "origin": "Massapequa, New York, U.S.",
+      "id": "http://dbpedia.org/resource/William_Baldwin"
+    },
+    "http://dbpedia.org/resource/Jamie_Lee_Curtis": {
+      "name": "Jamie Lee Curtis",
+      "birthDate": "1958-11-22",
+      "origin": "Santa Monica, California, U.S.",
+      "id": "http://dbpedia.org/resource/Jamie_Lee_Curtis"
+    },
+    "http://dbpedia.org/resource/Donald_Sutherland": {
+      "name": "Donald Sutherland",
+      "birthDate": "1935-07-17",
+      "origin": "http://dbpedia.org/resource/Canada",
+      "id": "http://dbpedia.org/resource/Donald_Sutherland"
+    },
+    "http://dbpedia.org/resource/Marshall_Bell": {
+      "name": "Marshall Bell",
+      "birthDate": "1942-09-28",
+      "origin": "Tulsa, Oklahoma, U.S.",
+      "id": "http://dbpedia.org/resource/Marshall_Bell"
+    },
+    "http://dbpedia.org/resource/G._V._Prakash_Kumar": {
+      "name": "G. V. Prakash Kumar",
+      "birthDate": "1987-06-13",
+      "origin": "Madras, Tamil Nadu, India",
+      "id": "http://dbpedia.org/resource/G._V._Prakash_Kumar"
+    },
+    "http://dbpedia.org/resource/Nikki_Galrani": {
+      "name": "Nikki Galrani",
+      "birthDate": "1992-01-03",
+      "origin": "Bangalore, Karnataka, India",
+      "id": "http://dbpedia.org/resource/Nikki_Galrani"
+    },
+    "http://dbpedia.org/resource/Georges_Khabbaz": {
+      "name": "Georges Khabbaz",
+      "birthDate": "1976-11-05",
+      "origin": "http://dbpedia.org/resource/Hasbaya",
+      "id": "http://dbpedia.org/resource/Georges_Khabbaz"
+    },
+    "http://dbpedia.org/resource/Mona_Zaki": {
+      "name": "Mona Zaki",
+      "birthDate": "1976-11-18",
+      "origin": "Cairo, Egypt",
+      "id": "http://dbpedia.org/resource/Mona_Zaki"
+    },
+    "http://dbpedia.org/resource/Nadine_Labaki": {
+      "name": "Nadine Labaki",
+      "birthDate": "1974-02-18",
+      "origin": "Baabdat, Mount Lebanon, Lebanon",
+      "id": "http://dbpedia.org/resource/Nadine_Labaki"
+    },
+    "http://dbpedia.org/resource/Adel_Karam": {
+      "name": "Adel Karam",
+      "birthDate": "1972-08-20",
+      "origin": "Beirut, Lebanon",
+      "id": "http://dbpedia.org/resource/Adel_Karam"
+    },
+    "http://dbpedia.org/resource/Julissa": {
+      "name": "Julissa",
+      "birthDate": "1944-04-08",
+      "origin": "http://dbpedia.org/resource/Federal_district",
+      "id": "http://dbpedia.org/resource/Julissa"
+    },
+    "http://dbpedia.org/resource/Enrique_Álvarez_Félix": {
+      "name": "Enrique Álvarez Félix",
+      "birthDate": "1934-04-05",
+      "origin": "http://dbpedia.org/resource/Mexico",
+      "id": "http://dbpedia.org/resource/Enrique_Álvarez_Félix"
+    },
+    "http://dbpedia.org/resource/Guillermo_Murray": {
+      "name": "Guillermo Murray",
+      "birthDate": "1927-06-15",
+      "origin": "Colón, Buenos Aires, Argentina",
+      "id": "http://dbpedia.org/resource/Guillermo_Murray"
+    },
+    "http://dbpedia.org/resource/Ed_O'Neill": {
+      "name": "Ed O'Neill",
+      "birthDate": "1946-04-12",
+      "origin": "Youngstown, Ohio, U.S.",
+      "id": "http://dbpedia.org/resource/Ed_O'Neill"
+    },
+    "http://dbpedia.org/resource/JoBeth_Williams": {
+      "name": "JoBeth Williams",
+      "birthDate": "1948-12-06",
+      "origin": "http://dbpedia.org/resource/United_States",
+      "id": "http://dbpedia.org/resource/JoBeth_Williams"
+    },
+    "http://dbpedia.org/resource/Fred_Clark": {
+      "name": "Fred Clark",
+      "birthDate": "1914-03-19",
+      "origin": "Lincoln, California, U.S.",
+      "id": "http://dbpedia.org/resource/Fred_Clark"
+    },
+    "http://dbpedia.org/resource/Gloria_Swanson": {
+      "name": "Gloria Swanson",
+      "birthDate": "1899-03-27",
+      "origin": "Chicago, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/Gloria_Swanson"
+    },
+    "http://dbpedia.org/resource/Hans_Conried": {
+      "name": "Hans Conried",
+      "birthDate": "1917-04-15",
+      "origin": "Baltimore, Maryland, U.S.",
+      "id": "http://dbpedia.org/resource/Hans_Conried"
+    },
+    "http://dbpedia.org/resource/Margaret_Dumont": {
+      "name": "Margaret Dumont",
+      "birthDate": "1882-10-20",
+      "origin": "Brooklyn, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Margaret_Dumont"
+    },
+    "http://dbpedia.org/resource/Matt_Schulze": {
+      "name": "Matt Schulze",
+      "birthDate": "1972-07-03",
+      "origin": "St. Louis, Missouri, U.S.",
+      "id": "http://dbpedia.org/resource/Matt_Schulze"
+    },
+    "http://dbpedia.org/resource/Monet_Mazur": {
+      "name": "Monet Mazur",
+      "birthDate": "1976-04-17",
+      "origin": "Los Angeles, California, U.S.",
+      "id": "http://dbpedia.org/resource/Monet_Mazur"
+    },
+    "http://dbpedia.org/resource/Adam_Scott_(actor)": {
+      "name": "Adam Scott",
+      "birthDate": "1973-04-03",
+      "origin": "Santa Cruz, California, U.S.",
+      "id": "http://dbpedia.org/resource/Adam_Scott_(actor)"
+    },
+    "http://dbpedia.org/resource/Jaime_Pressly": {
+      "name": "Jaime Pressly",
+      "birthDate": "1977-07-30",
+      "origin": "Kinston, North Carolina, U.S.",
+      "id": "http://dbpedia.org/resource/Jaime_Pressly"
+    },
+    "http://dbpedia.org/resource/Jay_Hernandez": {
+      "name": "Jay Hernandez",
+      "birthDate": "1978-02-20",
+      "origin": "Montebello, California,  U.S.",
+      "id": "http://dbpedia.org/resource/Jay_Hernandez"
+    },
+    "http://dbpedia.org/resource/Emmanuelle_Vaugier": {
+      "name": "Emmanuelle Vaugier",
+      "birthDate": "1976-06-23",
+      "origin": "Vancouver, British Columbia, Canada",
+      "id": "http://dbpedia.org/resource/Emmanuelle_Vaugier"
+    },
+    "http://dbpedia.org/resource/Cuba_Gooding_Jr.": {
+      "name": "Cuba Gooding Jr.",
+      "birthDate": "1968-01-02",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Cuba_Gooding_Jr."
+    },
+    "http://dbpedia.org/resource/Groucho_Marx": {
+      "name": "Groucho Marx",
+      "birthDate": "1890-10-02",
+      "origin": "Manhattan, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Groucho_Marx"
+    },
+    "http://dbpedia.org/resource/Harpo_Marx": {
+      "name": "Harpo Marx",
+      "birthDate": "1888-11-23",
+      "origin": "Manhattan, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Harpo_Marx"
+    },
+    "http://dbpedia.org/resource/John_Wood_(English_actor)": {
+      "name": "John Wood",
+      "birthDate": "1930-07-05",
+      "origin": "Derbyshire, England",
+      "id": "http://dbpedia.org/resource/John_Wood_(English_actor)"
+    },
+    "http://dbpedia.org/resource/Matthew_Broderick": {
+      "name": "Matthew Broderick",
+      "birthDate": "1962-03-21",
+      "origin": "Manhattan, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Matthew_Broderick"
+    },
+    "http://dbpedia.org/resource/Ally_Sheedy": {
+      "name": "Ally Sheedy",
+      "birthDate": "1962-06-13",
+      "origin": "New York City, U.S.",
+      "id": "http://dbpedia.org/resource/Ally_Sheedy"
+    },
+    "http://dbpedia.org/resource/Dabney_Coleman": {
+      "name": "Dabney Coleman",
+      "birthDate": "1932-01-03",
+      "origin": "Austin, Texas, U.S.",
+      "id": "http://dbpedia.org/resource/Dabney_Coleman"
+    },
+    "http://dbpedia.org/resource/Paul_Fix": {
+      "name": "Paul Fix",
+      "birthDate": "1901-03-13",
+      "origin": "Dobbs Ferry, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Paul_Fix"
+    },
+    "http://dbpedia.org/resource/Ruth_White_(actress)": {
+      "name": "Ruth White",
+      "birthDate": "1914-04-24",
+      "origin": "Perth Amboy, New Jersey, U.S.",
+      "id": "http://dbpedia.org/resource/Ruth_White_(actress)"
+    },
+    "http://dbpedia.org/resource/Frank_Overton": {
+      "name": "Frank Overton",
+      "birthDate": "1918-03-12",
+      "origin": "Babylon, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Frank_Overton"
+    },
+    "http://dbpedia.org/resource/Brock_Peters": {
+      "name": "Brock Peters",
+      "birthDate": "1927-07-02",
+      "origin": "Harlem, New York City, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Brock_Peters"
+    },
+    "http://dbpedia.org/resource/Gregory_Peck": {
+      "name": "Gregory Peck",
+      "birthDate": "1916-04-05",
+      "origin": "San Diego, California, U.S.",
+      "id": "http://dbpedia.org/resource/Gregory_Peck"
+    },
+    "http://dbpedia.org/resource/John_Simm": {
+      "name": "John Simm",
+      "birthDate": "1970-07-10",
+      "origin": "Leeds, West Riding of Yorkshire, England",
+      "id": "http://dbpedia.org/resource/John_Simm"
+    },
+    "http://dbpedia.org/resource/Cristian_Solimeno": {
+      "name": "Cristian Solimeno",
+      "birthDate": "1975-04-27",
+      "origin": "http://dbpedia.org/resource/England",
+      "id": "http://dbpedia.org/resource/Cristian_Solimeno"
+    },
+    "http://dbpedia.org/resource/Linal_Haft": {
+      "name": "Linal Haft",
+      "birthDate": "1945-03-23",
+      "origin": "Leeds, England",
+      "id": "http://dbpedia.org/resource/Linal_Haft"
+    },
+    "http://dbpedia.org/resource/Ashley_Walters_(actor)": {
+      "name": "Asher D",
+      "birthDate": "1982-06-30",
+      "origin": "",
+      "id": "http://dbpedia.org/resource/Ashley_Walters_(actor)"
+    },
+    "http://dbpedia.org/resource/M._G._Ramachandran": {
+      "name": "M. G. Ramachandran",
+      "birthDate": "1917-01-17",
+      "origin": "http://dbpedia.org/resource/British_Ceylon",
+      "id": "http://dbpedia.org/resource/M._G._Ramachandran"
+    },
+    "http://dbpedia.org/resource/J._Jayalalithaa": {
+      "name": "J. Jayalalithaa",
+      "birthDate": "1948-02-24",
+      "origin": "http://dbpedia.org/resource/Melukote",
+      "id": "http://dbpedia.org/resource/J._Jayalalithaa"
+    },
+    "http://dbpedia.org/resource/Vanessa_Paradis": {
+      "name": "Vanessa Paradis",
+      "birthDate": "1972-12-22",
+      "origin": "Saint-Maur-des-Fossés, Val-de-Marne, France",
+      "id": "http://dbpedia.org/resource/Vanessa_Paradis"
+    },
+    "http://dbpedia.org/resource/Evelyne_Brochu": {
+      "name": "Evelyne Brochu",
+      "birthDate": "1982-11-17",
+      "origin": "Quebec City, Quebec, Canada",
+      "id": "http://dbpedia.org/resource/Evelyne_Brochu"
+    },
+    "http://dbpedia.org/resource/Kevin_Parent": {
+      "name": "Kevin Parent",
+      "birthDate": "1972-12-12",
+      "origin": "Greenfield Park, Quebec, Canada",
+      "id": "http://dbpedia.org/resource/Kevin_Parent"
+    },
+    "http://dbpedia.org/resource/Brian_Dennehy": {
+      "name": "Brian Dennehy",
+      "birthDate": "1938-07-09",
+      "origin": "Bridgeport, Connecticut, U.S.",
+      "id": "http://dbpedia.org/resource/Brian_Dennehy"
+    },
+    "http://dbpedia.org/resource/Gene_Hackman": {
+      "name": "Gene Hackman",
+      "birthDate": "1930-01-30",
+      "origin": "San Bernardino, California, U.S.",
+      "id": "http://dbpedia.org/resource/Gene_Hackman"
+    },
+    "http://dbpedia.org/resource/Ann-Margret": {
+      "name": "Ann-Margret",
+      "birthDate": "1941-04-28",
+      "origin": "Valsjöbyn, Jämtland County, Sweden",
+      "id": "http://dbpedia.org/resource/Ann-Margret"
+    },
+    "http://dbpedia.org/resource/Emma_Roberts": {
+      "name": "Emma Roberts",
+      "birthDate": "1991-02-10",
+      "origin": "Rhinebeck, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Emma_Roberts"
+    },
+    "http://dbpedia.org/resource/JoJo_(singer)": {
+      "name": "JoJo",
+      "birthDate": "1990-12-20",
+      "origin": "Brattleboro, Vermont, U.S.",
+      "id": "http://dbpedia.org/resource/JoJo_(singer)"
+    },
+    "http://dbpedia.org/resource/Sara_Paxton": {
+      "name": "Sara Paxton",
+      "birthDate": "1988-04-25",
+      "origin": "Los Angeles, California, U.S.",
+      "id": "http://dbpedia.org/resource/Sara_Paxton"
+    },
+    "http://dbpedia.org/resource/Anthony_Wong_(Hong_Kong_actor)": {
+      "name": "Anthony Wong",
+      "birthDate": "1961-09-02",
+      "origin": "http://dbpedia.org/resource/British_Hong_Kong",
+      "id": "http://dbpedia.org/resource/Anthony_Wong_(Hong_Kong_actor)"
+    },
+    "http://dbpedia.org/resource/Michael_Moriarty": {
+      "name": "Michael Moriarty",
+      "birthDate": "1941-04-05",
+      "origin": "Detroit, Michigan, U.S.",
+      "id": "http://dbpedia.org/resource/Michael_Moriarty"
+    },
+    "http://dbpedia.org/resource/Venkatesh_(actor)": {
+      "name": "Venkatesh",
+      "birthDate": "1960-12-13",
+      "origin": "Madras , Tamil Nadu, India",
+      "id": "http://dbpedia.org/resource/Venkatesh_(actor)"
+    },
+    "http://dbpedia.org/resource/Genelia_D'Souza": {
+      "name": "Genelia D'Souza",
+      "birthDate": "1987-08-05",
+      "origin": "http://dbpedia.org/resource/Maharashtra",
+      "id": "http://dbpedia.org/resource/Genelia_D'Souza"
+    },
+    "http://dbpedia.org/resource/Shriya_Saran": {
+      "name": "Shriya Saran",
+      "birthDate": "1982-09-11",
+      "origin": "Haridwar, Uttar Pradesh, , India",
+      "id": "http://dbpedia.org/resource/Shriya_Saran"
+    },
+    "http://dbpedia.org/resource/Shreyas_Talpade": {
+      "name": "Shreyas Talpade",
+      "birthDate": "1976-01-27",
+      "origin": "http://dbpedia.org/resource/Mumbai",
+      "id": "http://dbpedia.org/resource/Shreyas_Talpade"
+    },
+    "http://dbpedia.org/resource/Akshay_Kumar": {
+      "name": "Akshay Kumar",
+      "birthDate": "1967-09-09",
+      "origin": "Amritsar, Punjab, India",
+      "id": "http://dbpedia.org/resource/Akshay_Kumar"
+    },
+    "http://dbpedia.org/resource/Sonakshi_Sinha": {
+      "name": "Sonakshi Sinha",
+      "birthDate": "1987-06-02",
+      "origin": "Patna, Bihar, India",
+      "id": "http://dbpedia.org/resource/Sonakshi_Sinha"
+    },
+    "http://dbpedia.org/resource/Minissha_Lamba": {
+      "name": "Minissha Lamba",
+      "birthDate": "1985-01-18",
+      "origin": "http://dbpedia.org/resource/India",
+      "id": "http://dbpedia.org/resource/Minissha_Lamba"
+    },
+    "http://dbpedia.org/resource/Emily_Mortimer": {
+      "name": "Emily Mortimer",
+      "birthDate": "1971-10-06",
+      "origin": "Hammersmith, London, England",
+      "id": "http://dbpedia.org/resource/Emily_Mortimer"
+    },
+    "http://dbpedia.org/resource/Steve_Martin": {
+      "name": "Steve Martin",
+      "birthDate": "1945-08-14",
+      "origin": "Waco, Texas, U.S.",
+      "id": "http://dbpedia.org/resource/Steve_Martin"
+    },
+    "http://dbpedia.org/resource/Jean_Reno": {
+      "name": "Jean Reno",
+      "birthDate": "1948-07-30",
+      "origin": "http://dbpedia.org/resource/Casablanca",
+      "id": "http://dbpedia.org/resource/Jean_Reno"
+    },
+    "http://dbpedia.org/resource/Paul_Ford": {
+      "name": "Paul Ford",
+      "birthDate": "1901-11-02",
+      "origin": "http://dbpedia.org/resource/United_States",
+      "id": "http://dbpedia.org/resource/Paul_Ford"
+    },
+    "http://dbpedia.org/resource/Peter_Ustinov": {
+      "name": "Peter Ustinov",
+      "birthDate": "1921-04-16",
+      "origin": "Belsize Park, London, England",
+      "id": "http://dbpedia.org/resource/Peter_Ustinov"
+    },
+    "http://dbpedia.org/resource/Richard_Burton": {
+      "name": "Richard Burton",
+      "birthDate": "1925-11-10",
+      "origin": "Pontrhydyfen, Wales",
+      "id": "http://dbpedia.org/resource/Richard_Burton"
+    },
+    "http://dbpedia.org/resource/Elizabeth_Taylor": {
+      "name": "Elizabeth Taylor",
+      "birthDate": "1932-02-27",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Elizabeth_Taylor"
+    },
+    "http://dbpedia.org/resource/Lillian_Gish": {
+      "name": "Lillian Gish",
+      "birthDate": "1893-10-14",
+      "origin": "Springfield, Ohio, U.S.",
+      "id": "http://dbpedia.org/resource/Lillian_Gish"
+    },
+    "http://dbpedia.org/resource/Rick_Cassidy": {
+      "name": "Rick Cassidy",
+      "birthDate": "1943-07-22",
+      "origin": "Lackawanna County, Pennsylvania, U.S.",
+      "id": "http://dbpedia.org/resource/Rick_Cassidy"
+    },
+    "http://dbpedia.org/resource/Massimo_Boldi": {
+      "name": "Massimo Boldi",
+      "birthDate": "1945-07-23",
+      "origin": "Luino, Italy",
+      "id": "http://dbpedia.org/resource/Massimo_Boldi"
+    },
+    "http://dbpedia.org/resource/Christian_De_Sica": {
+      "name": "Christian De Sica",
+      "birthDate": "1951-01-05",
+      "origin": "Rome, Italy",
+      "id": "http://dbpedia.org/resource/Christian_De_Sica"
+    },
+    "http://dbpedia.org/resource/Enzo_Salvi": {
+      "name": "Enzo Salvi",
+      "birthDate": "1963-08-16",
+      "origin": "Rome, Italy",
+      "id": "http://dbpedia.org/resource/Enzo_Salvi"
+    },
+    "http://dbpedia.org/resource/Brian_Donlevy": {
+      "name": "Brian Donlevy",
+      "birthDate": "1901-02-09",
+      "origin": "Cleveland, Ohio, U.S.",
+      "id": "http://dbpedia.org/resource/Brian_Donlevy"
+    },
+    "http://dbpedia.org/resource/Dean_Jagger": {
+      "name": "Dean Jagger",
+      "birthDate": "1903-11-07",
+      "origin": "Columbus Grove or Lima, Ohio, U.S.",
+      "id": "http://dbpedia.org/resource/Dean_Jagger"
+    },
+    "http://dbpedia.org/resource/Linda_Darnell": {
+      "name": "Linda Darnell",
+      "birthDate": "1923-10-16",
+      "origin": "Dallas, Texas, U.S.",
+      "id": "http://dbpedia.org/resource/Linda_Darnell"
+    },
+    "http://dbpedia.org/resource/Tyrone_Power": {
+      "name": "Tyrone Power",
+      "birthDate": "1914-05-05",
+      "origin": "Cincinnati, Ohio, U.S.",
+      "id": "http://dbpedia.org/resource/Tyrone_Power"
+    },
+    "http://dbpedia.org/resource/Bashy": {
+      "name": "Ashley Thomas",
+      "birthDate": "1985-02-04",
+      "origin": "Hammersmith, London, England",
+      "id": "http://dbpedia.org/resource/Bashy"
+    },
+    "http://dbpedia.org/resource/David_Ajala": {
+      "name": "David Ajala",
+      "birthDate": "1986-05-21",
+      "origin": "http://dbpedia.org/resource/England",
+      "id": "http://dbpedia.org/resource/David_Ajala"
+    },
+    "http://dbpedia.org/resource/Noel_Clarke": {
+      "name": "Noel Clarke",
+      "birthDate": "1975-12-06",
+      "origin": "Notting Hill, London, England",
+      "id": "http://dbpedia.org/resource/Noel_Clarke"
+    },
+    "http://dbpedia.org/resource/Jason_Maza": {
+      "name": "Jason Maza",
+      "birthDate": "1986-04-24",
+      "origin": "London, England",
+      "id": "http://dbpedia.org/resource/Jason_Maza"
+    },
+    "http://dbpedia.org/resource/Barry_Foster_(actor)": {
+      "name": "Barry Foster",
+      "birthDate": "1927-08-21",
+      "origin": "Beeston, Nottinghamshire, England",
+      "id": "http://dbpedia.org/resource/Barry_Foster_(actor)"
+    },
+    "http://dbpedia.org/resource/Billie_Whitelaw": {
+      "name": "Billie Whitelaw",
+      "birthDate": "1932-06-06",
+      "origin": "Coventry, Warwickshire, England",
+      "id": "http://dbpedia.org/resource/Billie_Whitelaw"
+    },
+    "http://dbpedia.org/resource/Denholm_Elliott": {
+      "name": "Denholm Elliott",
+      "birthDate": "1922-05-31",
+      "origin": "Kensington, Middlesex, England",
+      "id": "http://dbpedia.org/resource/Denholm_Elliott"
+    },
+    "http://dbpedia.org/resource/Hugh_Grant": {
+      "name": "Hugh Grant",
+      "birthDate": "1960-09-09",
+      "origin": "Hammersmith, London, England",
+      "id": "http://dbpedia.org/resource/Hugh_Grant"
+    },
+    "http://dbpedia.org/resource/Cate_Blanchett": {
+      "name": "Cate Blanchett",
+      "birthDate": "1969-05-14",
+      "origin": "Melbourne, Victoria, Australia",
+      "id": "http://dbpedia.org/resource/Cate_Blanchett"
+    },
+    "http://dbpedia.org/resource/Billy_Boyd_(actor)": {
+      "name": "Billy Boyd",
+      "birthDate": "1968-08-28",
+      "origin": "Glasgow, Scotland",
+      "id": "http://dbpedia.org/resource/Billy_Boyd_(actor)"
+    },
+    "http://dbpedia.org/resource/Hugo_Weaving": {
+      "name": "Hugo Weaving",
+      "birthDate": "1960-04-04",
+      "origin": "http://dbpedia.org/resource/British_Nigeria",
+      "id": "http://dbpedia.org/resource/Hugo_Weaving"
+    },
+    "http://dbpedia.org/resource/John_Rhys-Davies": {
+      "name": "John Rhys-Davies",
+      "birthDate": "1944-05-05",
+      "origin": "Salisbury, Wiltshire, England",
+      "id": "http://dbpedia.org/resource/John_Rhys-Davies"
+    },
+    "http://dbpedia.org/resource/Moe_Howard": {
+      "name": "Moe Howard",
+      "birthDate": "1897-06-19",
+      "origin": "Brooklyn, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Moe_Howard"
+    },
+    "http://dbpedia.org/resource/Lynton_Brent": {
+      "name": "Lynton Brent",
+      "birthDate": "1897-08-02",
+      "origin": "Chicago, Illinois, United States",
+      "id": "http://dbpedia.org/resource/Lynton_Brent"
+    },
+    "http://dbpedia.org/resource/Bud_Jamison": {
+      "name": "Bud Jamison",
+      "birthDate": "1894-02-15",
+      "origin": "Vallejo, California, U.S.",
+      "id": "http://dbpedia.org/resource/Bud_Jamison"
+    },
+    "http://dbpedia.org/resource/Curly_Howard": {
+      "name": "Curly Howard",
+      "birthDate": "1903-10-22",
+      "origin": "Brooklyn, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Curly_Howard"
+    },
+    "http://dbpedia.org/resource/Larry_Fine": {
+      "name": "Larry Fine",
+      "birthDate": "1902-10-05",
+      "origin": "Philadelphia, Pennsylvania, U.S.",
+      "id": "http://dbpedia.org/resource/Larry_Fine"
+    },
+    "http://dbpedia.org/resource/Jon_Hamm": {
+      "name": "Jon Hamm",
+      "birthDate": "1971-03-10",
+      "origin": "St. Louis, Missouri, U.S.",
+      "id": "http://dbpedia.org/resource/Jon_Hamm"
+    },
+    "http://dbpedia.org/resource/Josh_Lucas": {
+      "name": "Josh Lucas",
+      "birthDate": "1971-06-20",
+      "origin": "Little Rock, Arkansas, U.S.",
+      "id": "http://dbpedia.org/resource/Josh_Lucas"
+    },
+    "http://dbpedia.org/resource/James_Van_Der_Beek": {
+      "name": "James Van Der Beek",
+      "birthDate": "1977-03-08",
+      "origin": "Cheshire, Connecticut, U.S.",
+      "id": "http://dbpedia.org/resource/James_Van_Der_Beek"
+    },
+    "http://dbpedia.org/resource/Patsy_Kelly": {
+      "name": "Patsy Kelly",
+      "birthDate": "1910-01-12",
+      "origin": "Brooklyn, New York, U.S.",
+      "id": "http://dbpedia.org/resource/Patsy_Kelly"
+    },
+    "http://dbpedia.org/resource/Barbara_Harris_(actress)": {
+      "name": "Barbara Harris",
+      "birthDate": "1935-07-25",
+      "origin": "Evanston, Illinois, U.S.",
+      "id": "http://dbpedia.org/resource/Barbara_Harris_(actress)"
+    },
+    "http://dbpedia.org/resource/Charlene_Tilton": {
+      "name": "Charlene Tilton",
+      "birthDate": "1958-12-01",
+      "origin": "San Diego, California, U.S.",
+      "id": "http://dbpedia.org/resource/Charlene_Tilton"
+    },
+    "http://dbpedia.org/resource/Juliet_Stevenson": {
+      "name": "Juliet Stevenson",
+      "birthDate": "1956-10-30",
+      "origin": "Kelvedon, Essex, England",
+      "id": "http://dbpedia.org/resource/Juliet_Stevenson"
+    },
+    "http://dbpedia.org/resource/Toni_Collette": {
+      "name": "Toni Collette",
+      "birthDate": "1972-11-01",
+      "origin": "Sydney, New South Wales, Australia",
+      "id": "http://dbpedia.org/resource/Toni_Collette"
+    },
+    "http://dbpedia.org/resource/Alan_Cumming": {
+      "name": "Alan Cumming",
+      "birthDate": "1965-01-27",
+      "origin": "Aberfeldy, Perthshire, Scotland",
+      "id": "http://dbpedia.org/resource/Alan_Cumming"
+    },
+    "http://dbpedia.org/resource/Ewan_McGregor": {
+      "name": "Ewan McGregor",
+      "birthDate": "1971-03-31",
+      "origin": "http://dbpedia.org/resource/Scotland",
+      "id": "http://dbpedia.org/resource/Ewan_McGregor"
+    },
+    "http://dbpedia.org/resource/Greta_Scacchi": {
+      "name": "Greta Scacchi",
+      "birthDate": "1960-02-18",
+      "origin": "Milan, Lombardy, Italy",
+      "id": "http://dbpedia.org/resource/Greta_Scacchi"
+    }
+  },
+  "movies": [
+    {
+      "id": "http://dbpedia.org/resource/A_Walk_to_Remember",
+      "title": "A Walk to Remember: Music from the Motion Picture",
+      "origin": "United States",
+      "producer": "Denise Di Novi",
+      "abstract": "A Walk to Remember is a 2002 American coming-of-age romantic drama film directed by Adam Shankman and written by Karen Janszen, based on Nicholas Sparks' 1999 novel of the same name. The film stars Shane West, Mandy Moore, Peter Coyote and Daryl Hannah, and was produced by Denise Di Novi and Hunt Lowry for Warner Bros. Pictures. The novel's 1950s setting was changed to the 1990s to early 2000s for the film, as the producers were concerned it might not appeal to teenage audiences. The film was shot in the summer of 2001 for 39 days in Wilmington, North Carolina, with many of the sets borrowed from the television series Dawson's Creek. The film, as with the book, is dedicated to Sparks' sister Danielle, whose cancer-afflicted life inspired the story. A Walk to Remember was theatrically released on January 25, 2002, and was a box office success, grossing $47.5 million against its $11.8 million budget. The film received generally negative reviews from critics, most of whom criticized its blandness and predictability, while others praised its sincerity and the lead actors' performances. The film was released on DVD in July 2002, and a \"Family-Edited Version\" was later released in December.",
+      "starring": [
+        "http://dbpedia.org/resource/Peter_Coyote",
+        "http://dbpedia.org/resource/Mandy_Moore",
+        "http://dbpedia.org/resource/Daryl_Hannah",
+        "http://dbpedia.org/resource/Shane_West"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Isabel_(film)",
+      "title": "Isabel",
+      "origin": "Canada",
+      "producer": "Paul Almond",
+      "abstract": "Isabel is a 1968 Canadian film written, directed and produced by Paul Almond.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Today_(2014_film)",
+      "title": "Today",
+      "origin": "Iran",
+      "producer": "Reza Mirkarimi",
+      "abstract": "Today is a 2014 Iranian drama film directed by Reza Mirkarimi. It was screened in the Contemporary World Cinema section at the 2014 Toronto International Film Festival. It was selected as the Iranian entry for the Best Foreign Language Film at the 87th Academy Awards, but was not nominated.",
+      "starring": [
+        "http://dbpedia.org/resource/Parviz_Parastui",
+        "http://dbpedia.org/resource/Soheila_Golestani"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Above_the_Rim",
+      "title": "Above the Rim",
+      "origin": "United States",
+      "producer": "Jeff Pollack",
+      "abstract": "Above the Rim is a 1994 American sports drama film co-written and directed by Jeff Pollack in his directorial debut. The screenplay was written by Barry Michael Cooper, adapted from a story by Benny Medina. The film stars Duane Martin, Tupac Shakur, Leon and Marlon Wayans. Considered the conclusion to Cooper's \"Harlem Trilogy\" (the preceding films being New Jack City (1991) and Sugar Hill (1994)), the film tells the story about a promising New York City high school basketball star and his relationships with a drug dealer and a former basketball star, now employed as a security guard at the high school he was a promising young star at years ago. The film mostly took place in Harlem, with various scenes filmed at the Manhattan Center for Science and Mathematics in East Harlem. Some of the basketball scenes were filmed at Samuel J. Tilden High School in Brooklyn, New York.",
+      "starring": [
+        "http://dbpedia.org/resource/Bernie_Mac",
+        "http://dbpedia.org/resource/Leon_Robinson",
+        "http://dbpedia.org/resource/Tonya_Pinkins",
+        "http://dbpedia.org/resource/Tupac_Shakur",
+        "http://dbpedia.org/resource/Duane_Martin"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Woman's_Heart_(film)",
+      "title": "A Woman's Heart",
+      "origin": "United States",
+      "producer": "Joe Rock",
+      "abstract": "A Woman's Heart is a 1926 American silent melodrama film directed by Phil Rosen and starring Enid Bennett, Gayne Whitman, and Edward Earle. It was released on September 15, 1926.",
+      "starring": [
+        "http://dbpedia.org/resource/Edward_Earle",
+        "http://dbpedia.org/resource/Enid_Bennett",
+        "http://dbpedia.org/resource/Gayne_Whitman"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Interstellar_(film)",
+      "title": "Interstellar",
+      "origin": "",
+      "producer": "Lynda Obst Productions",
+      "abstract": "Interstellar is a 2014 epic science-fiction film co-written, directed, and produced by Christopher Nolan. It stars Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, Matt Damon, and Michael Caine. Set in a dystopian future where humanity is struggling to survive, the film follows a group of astronauts who travel through a wormhole near Saturn in search of a new home for mankind. Brothers Christopher and Jonathan Nolan wrote the screenplay, which had its origins in a script Jonathan developed in 2007. Christopher produced Interstellar with his wife, Emma Thomas, through their production company Syncopy, and with Lynda Obst through Lynda Obst Productions. Caltech theoretical physicist and 2017 Nobel laureate in Physics Kip Thorne was an executive producer, acted as a scientific consultant, and wrote a tie-in book, The Science of Interstellar. Paramount Pictures, Warner Bros. Pictures, and Legendary Pictures co-financed the film. Cinematographer Hoyte van Hoytema shot it on 35 mm movie film in the Panavision anamorphic format and IMAX 70 mm. Principal photography began in late 2013 and took place in Alberta, Iceland and Los Angeles. Interstellar uses extensive practical and miniature effects and the company Double Negative created additional digital effects. Interstellar premiered on October 26, 2014, in Los Angeles, California. In the United States, it was first released on film stock, expanding to venues using digital projectors. The film had a worldwide gross over $677 million (and $773 million with subsequent re-releases), making it the tenth-highest grossing film of 2014. It received acclaim for its performances, direction, screenplay, musical score, visual effects, ambition, themes, and emotional weight. It has also received praise from many astronomers for its scientific accuracy and portrayal of theoretical astrophysics. Since its premiere, Interstellar gained a cult following, and now is regarded by many sci-fi experts as one of the best science-fiction movies of all time. Interstellar was nominated for five awards at the 87th Academy Awards, winning Best Visual Effects, and received numerous other accolades.",
+      "starring": [
+        "http://dbpedia.org/resource/Bill_Irwin",
+        "http://dbpedia.org/resource/Matthew_McConaughey",
+        "http://dbpedia.org/resource/Ellen_Burstyn",
+        "http://dbpedia.org/resource/Anne_Hathaway",
+        "http://dbpedia.org/resource/Jessica_Chastain"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Common_Man_(film)",
+      "title": "A Common Man",
+      "origin": "Sri Lanka",
+      "producer": "Chandran Rutnam",
+      "abstract": "A Common Man is a 2013 Sri Lankan thriller film directed by Sri Lankan filmmaker Chandran Rutnam, starring Ben Kingsley and Ben Cross. The film is an official remake of the Indian film, A Wednesday! (2008). A Common Man won Best Picture, Best Director and Best Actor awards at the Madrid International Film Festival and bronze medal in the Feature Films category at the New York Festivals’ International Television and Film Awards, three of the 119 Gold World Medals, 145 Silver, 104 Bronze, and 327 Finalist Certificates awarded that day.",
+      "starring": [
+        "http://dbpedia.org/resource/Ben_Cross",
+        "http://dbpedia.org/resource/Ben_Kingsley",
+        "http://dbpedia.org/resource/Wilson_Gunaratne"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Rose_(film)",
+      "title": "The Rose",
+      "origin": "United States",
+      "producer": "Aaron Russo",
+      "abstract": "The Rose is a 1979 American drama film directed by Mark Rydell, and starring Bette Midler, Alan Bates, Frederic Forrest, Harry Dean Stanton, Barry Primus, and David Keith. Loosely based on the life of Janis Joplin, the film follows a self-destructive rock star in the late 1960s, who struggles to cope with the pressures of her career and the demands of her ruthless business manager. Originally titled Pearl (after Janis Joplin's nickname, which was also the title of her last album), the film's screenplay was revised and fictionalized after her family declined to allow the producers the rights to her story. The Rose was nominated for four Academy Awards including Best Actress in a Leading Role (Bette Midler, in her screen debut), Best Actor in a Supporting Role (Frederic Forrest), Best Film Editing and Best Sound. Midler performed the soundtrack album for the film, and its title track became one of her biggest hit singles.",
+      "starring": [
+        "http://dbpedia.org/resource/Bette_Midler",
+        "http://dbpedia.org/resource/Frederic_Forrest",
+        "http://dbpedia.org/resource/Alan_Bates"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Elysium_(film)",
+      "title": "Elysium",
+      "origin": "United States",
+      "producer": "Simon Kinberg",
+      "abstract": "Elysium is a 2013 American dystopian science fiction action film written, produced, and directed by Neill Blomkamp. It stars Matt Damon, Jodie Foster, Alice Braga, and Sharlto Copley. The film takes place on both a ravaged Earth and a luxurious artificial world (Stanford torus design, one of the proposed NASA designs) called Elysium. The film itself offers deliberate social commentary that explores political and sociological themes such as immigration, overpopulation, transhumanism, health care, worker exploitation, the justice system, and social class issues. The film was released on August 9, 2013, by Sony Pictures Releasing through the TriStar Pictures label, in both conventional and IMAX Digital theaters. It received generally positive reviews from critics, even though many considered it a disappointment after Blomkamp's first film District 9, and was a modest box office success. Elysium was released on DVD and Blu-ray on December 17, 2013.",
+      "starring": [
+        "http://dbpedia.org/resource/Matt_Damon",
+        "http://dbpedia.org/resource/Wagner_Moura",
+        "http://dbpedia.org/resource/William_Fichtner",
+        "http://dbpedia.org/resource/Alice_Braga",
+        "http://dbpedia.org/resource/Jodie_Foster"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Aileen_Wuornos:_American_Boogeywoman",
+      "title": "Aileen Wuornos: American Boogeywoman",
+      "origin": "United States",
+      "producer": "Meadow Williams",
+      "abstract": "Aileen Wuornos: American Boogeywoman is a 2021 American horror thriller film written and directed by Daniel Farrands. It is a fictionalized biography of serial killer Aileen Wuornos. It stars Peyton List as a young Wuornos, with a supporting cast including Tobin Bell, Lydia Hearst, Nick Vallelonga, Swen Temmel, and Andrew Biernat. The film was released on video-on-demand services on October 8, 2021, and on DVD on October 15, 2021, via Dark Star Pictures.",
+      "starring": [
+        "http://dbpedia.org/resource/Peyton_List_(actress,_born_1998)",
+        "http://dbpedia.org/resource/Lydia_Hearst",
+        "http://dbpedia.org/resource/Tobin_Bell",
+        "http://dbpedia.org/resource/Nick_Vallelonga"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Miracles_(1989_film)",
+      "title": "Miracles",
+      "origin": "Hong Kong",
+      "producer": "Raymond Chow Man-wai",
+      "abstract": "Miracles (Chinese: 奇蹟; pinyin: qí jī; Jyutping: kei zik; released under for several territories worldwide) is a 1989 Hong Kong action film starring and directed by Jackie Chan. The film is set in 1930s Hong Kong and is a variation of Frank Capra's Lady for a Day (1933) and Pocketful of Miracles (1961), which in turn were based on \"Madame La Gimp\", a 1929 short story by Damon Runyon. The film is written by Edward Tang with inputs from Chan. Miracles features many well-known Hong Kong actors, including Anita Mui and Wu Ma, and is considered one of Jackie Chan's most sophisticated directorial efforts. Chan is an ardent fan of Hollywood musicals, and Miracles pays a tribute to that genre. According to his autobiography, Chan stated that this was one of his favorite films he has made. The film was remade in Hindi as Singh Is Kinng with Akshay Kumar and Katrina Kaif.",
+      "starring": [
+        "http://dbpedia.org/resource/Bill_Tung",
+        "http://dbpedia.org/resource/Richard_Ng",
+        "http://dbpedia.org/resource/Gloria_Yip",
+        "http://dbpedia.org/resource/Anita_Mui",
+        "http://dbpedia.org/resource/Gua_Ah-leh"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Love_Songs_(2007_film)",
+      "title": "Love Songs",
+      "origin": "France",
+      "producer": "Paulo Branco",
+      "abstract": "Love Songs (French: Les Chansons d'amour) is a 2007 French musical film directed by Christophe Honoré, starring Louis Garrel, Ludivine Sagnier, Clotilde Hesme and Chiara Mastroianni. It was one of the 20 films selected for the main competition at the 2007 Cannes Film Festival.",
+      "starring": [
+        "http://dbpedia.org/resource/Clotilde_Hesme",
+        "http://dbpedia.org/resource/Louis_Garrel",
+        "http://dbpedia.org/resource/Ludivine_Sagnier",
+        "http://dbpedia.org/resource/Chiara_Mastroianni"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Mirror_Mirror_(film)",
+      "title": "Mirror Mirror",
+      "origin": "United States",
+      "producer": "Brett Ratner",
+      "abstract": "Mirror Mirror is a 2012 American fantasy comedy film based on the fairy tale \"Snow White\" collected by the Brothers Grimm. It is directed by Tarsem Singh and produced by Ryan Kavanaugh, Bernie Goldmann, Brett Ratner and Kevin Misher. It was written by Marc Klein and Jason Keller, with music by Alan Menken. It stars Lily Collins, Julia Roberts, Armie Hammer, Nathan Lane, Mare Winningham, Michael Lerner, and Sean Bean. It was released theatrically by Relativity Media on March 30, 2012. The film received an Academy Award nomination for Best Costume Design and earned $183 million on an $85–100 million budget but received generally mixed reviews from critics. Mirror Mirror was released on DVD and Blu-ray by 20th Century Fox Home Entertainment on June 26, 2012.",
+      "starring": [
+        "http://dbpedia.org/resource/Julia_Roberts",
+        "http://dbpedia.org/resource/Lily_Collins",
+        "http://dbpedia.org/resource/Armie_Hammer",
+        "http://dbpedia.org/resource/Mare_Winningham",
+        "http://dbpedia.org/resource/Michael_Lerner_(actor)"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Secret_Life_of_Words",
+      "title": "The Secret Life of Words",
+      "origin": "Ireland",
+      "producer": "Jaume Roures",
+      "abstract": "The Secret Life of Words is a 2005 Spanish-Irish drama film written and directed by Isabel Coixet and starring Sarah Polley, Tim Robbins, Javier Cámara and Julie Christie. It was released on 15 December 2006.",
+      "starring": [
+        "http://dbpedia.org/resource/Sarah_Polley",
+        "http://dbpedia.org/resource/Julie_Christie",
+        "http://dbpedia.org/resource/Tim_Robbins",
+        "http://dbpedia.org/resource/Javier_Cámara"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Changeling_(film)",
+      "title": "Changeling",
+      "origin": "United States",
+      "producer": "Ron Howard",
+      "abstract": "Changeling is a 2008 American mystery crime drama film directed, produced, and scored by Clint Eastwood and written by J. Michael Straczynski. The story was based on real-life events, specifically the 1928 Wineville Chicken Coop murders in Mira Loma, California. It stars Angelina Jolie as a woman united with a boy who she realizes is not her missing son. When she tries to demonstrate this to the police and city authorities, she is vilified as delusional, labeled as an unfit mother and confined to a psychiatric ward. The film explores themes of child endangerment, female disempowerment, political corruption, mistreatment of mental health patients and the repercussions of violence. Working in 1983 as a special correspondent for the now defunct TV-Cable Week magazine, Straczynski first encountered the story of Christine Collins and her son from a Los Angeles City Hall contact. Over the ensuing years he kept researching the story but never felt he was ready to tackle it. Out of television writing for several years and practically blacklisted in the industry because he was considered difficult to work with, he returned to researching and then finally writing the story in 2006. Almost all of the film's script was drawn from thousands of pages of documentation. His first draft became the shooting script; it was his first film screenplay to be produced. Ron Howard had intended to direct the film, but scheduling conflicts led to his replacement by Eastwood. Howard and his Imagine Entertainment partner Brian Grazer produced Changeling alongside Malpaso Productions' Robert Lorenz and Eastwood. Universal Pictures financed and distributed the film. Several actors campaigned for the leading role; ultimately, Eastwood decided that Jolie's face would suit the 1920s period setting. The film also stars Jeffrey Donovan, Jason Butler Harner, John Malkovich, Michael Kelly and Amy Ryan. While some characters are composites, most are based on actual people. Principal photography, which began on October 15, 2007 and concluded a few weeks later in December, took place in Los Angeles and other locations in southern California. Actors and crew noted that Eastwood's low-key direction resulted in a calm set and short working days. In post production, scenes were supplemented with computer-generated skylines, backgrounds, vehicles and people. Changeling premiered to critical acclaim at the 61st Cannes Film Festival on May 20, 2008. Additional festival screenings preceded a limited release in the United States on October 24, 2008, followed by a general release in North America on October 31, 2008; in the United Kingdom on November 26, 2008; and in Australia on February 5, 2009. Critical reaction was more mixed than at Cannes. While the acting and story were generally praised, the film's \"conventional staging\" and \"lack of nuance\" were criticized. Changeling earned $113 million in box-office revenue worldwide—of which $35.7 million came from the United States and Canada—and received nominations in three Oscar and eight BAFTA Award categories.",
+      "starring": [
+        "http://dbpedia.org/resource/Colm_Feore",
+        "http://dbpedia.org/resource/Angelina_Jolie",
+        "http://dbpedia.org/resource/Amy_Ryan",
+        "http://dbpedia.org/resource/Jeffrey_Donovan",
+        "http://dbpedia.org/resource/John_Malkovich"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Piece_of_Cake_(film)",
+      "title": "A Piece of Cake",
+      "origin": "United Kingdom",
+      "producer": "John Croydon",
+      "abstract": "A Piece of Cake is a 1948 British fantasy comedy film directed by John Irwin and starring and co-written by the husband and wife team of Cyril Fletcher and Betty Astell as well as Laurence Naismith and Jon Pertwee. It was made at Highbury Studios as a second feature for release by the Rank Organisation.",
+      "starring": [
+        "http://dbpedia.org/resource/Betty_Astell",
+        "http://dbpedia.org/resource/Jon_Pertwee",
+        "http://dbpedia.org/resource/Cyril_Fletcher",
+        "http://dbpedia.org/resource/Laurence_Naismith"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Life_(2015_film)",
+      "title": "Life",
+      "origin": "",
+      "producer": "Emile Sherman",
+      "abstract": "Life is a 2015 biographical drama film directed by Anton Corbijn and written by Luke Davies. It is based on the friendship of Life photographer Dennis Stock and American actor James Dean, starring Robert Pattinson as Stock and Dane DeHaan as Dean. The film is an American, British, German, Canadian and Australian co-production, produced by Iain Canning and Emile Sherman from See-Saw Films and Christina Piovesan from First Generation Films with co-financed by Barry Films Production. Production took place from February to April 2014 in Toronto and Los Angeles. The film had its premiere at 65th Berlin International Film Festival, at Berlinale Special Gala at the Zoo Palast on 9 February 2015. In the United States, it was released through a simultaneous limited theatrical release and video on demand on 4 December 2015 by Cinedigm.",
+      "starring": [
+        "http://dbpedia.org/resource/Robert_Pattinson",
+        "http://dbpedia.org/resource/Ben_Kingsley",
+        "http://dbpedia.org/resource/Alessandra_Mastronardi",
+        "http://dbpedia.org/resource/Dane_DeHaan",
+        "http://dbpedia.org/resource/Joel_Edgerton"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Charlie_(2015_Malayalam_film)",
+      "title": "Charlie",
+      "origin": "India",
+      "producer": "Joju George",
+      "abstract": "Charlie is a 2015 Indian Malayalam-language adventure drama film directed by Martin Prakkat and written by Prakkat and Unni R. Produced by Prakkat, Joju George and Shebin Becker, the film stars Dulquer Salmaan and Parvathy. The music is composed by Gopi Sundar, while Jomon T. John handles the cinematography. The film released on 24 December. It won 8 awards at the 46th Kerala State Film Awards, including Best Actor, Best Actress, Best Director and Best Cinematography. It was remade into Marathi and Tamil as Deva and Maara, respectively.",
+      "starring": [
+        "http://dbpedia.org/resource/Aparna_Gopinath",
+        "http://dbpedia.org/resource/Dulquer_Salmaan",
+        "http://dbpedia.org/resource/Parvathy_Thiruvothu",
+        "http://dbpedia.org/resource/Soubin_Shahir",
+        "http://dbpedia.org/resource/Nedumudi_Venu"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Akeelah_and_the_Bee",
+      "title": "Akeelah and the Bee",
+      "origin": "United States",
+      "producer": "Laurence Fishburne",
+      "abstract": "Akeelah and the Bee is a 2006 American drama film written and directed by Doug Atchison. It tells the story of Akeelah Anderson (Keke Palmer), an 11-year-old girl who participates in the Scripps National Spelling Bee, her mother (Angela Bassett), her schoolmates, and her coach, Dr. Joshua Larabee (Laurence Fishburne). The cast also features Curtis Armstrong, J.R. Villarreal, Sean Michael Afable, Erica Hubbard, Lee Thompson Young, Julito McCullum, Sahara Garey, Eddie Steeples, and Tzi Ma. The film was developed over a period of 10 years by Atchison, who came up with the initial concept after seeing the 1994 Scripps National Spelling Bee and noting that a majority of the competitors came from well-off socioeconomic backgrounds. After completing the script in 1999, Atchison won one of the Nicholl Fellowships in Screenwriting in 2000, which attracted producers Sid Ganis and Nancy Hult Ganis. After an initial inability to secure funding, the project got a second wind as a result of the success of the 2002 documentary film Spellbound. Lionsgate Films undertook the production in 2004 and in the following year it was filmed in South Los Angeles on a budget of over $6 million. Atchison remarked that his theme for the film, deemed an inspirational film, was about overcoming obstacles despite difficult challenges along the way. He also said that he wanted to portray African Americans in a manner that was not stereotypical and tried to show how African-American children incorporate some stereotypes. The film alludes to the importance of community as well as to problems black communities face. It also deals with esteem and stigma in school while criticizing the public school system. Cast members said that although the film was aimed at children, they considered it had important lessons for the parents as well. Released in the United States on April 28, 2006, Akeelah and the Bee was positively received by critics and audiences. Reviewers praised its storyline and cast, lauding Palmer's performance, although a few critics panned the story as familiar and formulaic, and were critical of the portrayal of Asian-American characters. The film grossed $19 million, and received a number of awards and nominations, including the Black Reel Awards and the NAACP Image Awards. Film critics highly praised it for avoiding African-American stereotypes common in Hollywood films, while scholars were less favorable, even saying it reinforces some clichés.",
+      "starring": [
+        "http://dbpedia.org/resource/Angela_Bassett",
+        "http://dbpedia.org/resource/Curtis_Armstrong",
+        "http://dbpedia.org/resource/Keke_Palmer",
+        "http://dbpedia.org/resource/Laurence_Fishburne"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Cinderella_(1899_film)",
+      "title": "Cinderella",
+      "origin": "France",
+      "producer": "Georges Méliès",
+      "abstract": "Cinderella (French: Cendrillon) is an 1899 French film directed by Georges Méliès, based on the fairy tale by Charles Perrault. It was released by Méliès's Star Film Company and is numbered 219–224 in its catalogues, where it is advertised as a grande féerie extraordinaire en 20 tableaux.",
+      "starring": [
+        "http://dbpedia.org/resource/Jeanne_d'Alcy",
+        "http://dbpedia.org/resource/Bleuette_Bernon",
+        "http://dbpedia.org/resource/Georges_Méliès",
+        "http://dbpedia.org/resource/Mlle_Barral"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Bo_(film)",
+      "title": "Bo",
+      "origin": "Belgium",
+      "producer": "Frank Van Passel",
+      "abstract": "Bo is a 2010 Belgian film directed by Hans Herbots based on the novel by the Belgian author Dirk Bracke. It tells the story of a fifteen-year-old girl, Deborah (played by Ella-June Henrard), who, in an attempt to escape from the triviality of her life in the suburbs of Antwerp, becomes involved in high-end prostitution.",
+      "starring": [
+        "http://dbpedia.org/resource/Ella-June_Henrard",
+        "http://dbpedia.org/resource/Ina_Geerts",
+        "http://dbpedia.org/resource/Kalina_Malehounova",
+        "http://dbpedia.org/resource/Thomas_Ryckewaert"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Dominique_(1978_film)",
+      "title": "Dominique",
+      "origin": "United Kingdom",
+      "producer": "Andrew Donally",
+      "abstract": "Dominique (also known as Dominique Is Dead) is a 1979 British horror film starring Cliff Robertson and directed by Michael Anderson. The film is based on the 1948 short story \"What Beckoning Ghost\" by Harold Lawlor.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Bharatham",
+      "title": "Bharatham",
+      "origin": "India",
+      "producer": "Mohanlal",
+      "abstract": "Bharatham is a 1991 Indian Malayalam-language musical drama film written by A. K. Lohithadas and directed by Sibi Malayil. It stars Mohanlal, Urvashi, Nedumudi Venu, Lakshmi, and Murali. The film was produced by Mohanlal through his production house Pranavam Arts. The film features original songs composed by Raveendran and a background score by Johnson. Bharatham is interpreted as a modern-day adaptation of the Ramayana from Bharatha's perspective. How, in the absence of his elder brother, Gopinathan takes the responsibility of the family and hides his griefs is the core of the story. The film was a critical and commercial success, running for 125 days in theatres. Bharatham is also noted for its music that is largely Carnatic classical and semi-classical. The film won three National Film Awards—Best Actor for Mohanlal, Best Male Playback Singer for K. J. Yesudas for the song \"Rama Katha Ganalayam\", and Special Mention for Raveendran's music, and five Kerala State Film Awards. On the centenary of Indian cinema in 2013, Forbes India included Mohanlal's performance in the film on its list of \"25 Greatest Acting Performances of Indian Cinema\". It was remade in Tamil as Seenu by P. Vasu in 2000.",
+      "starring": [
+        "http://dbpedia.org/resource/Urvashi_(actress)",
+        "http://dbpedia.org/resource/Mohanlal",
+        "http://dbpedia.org/resource/Murali_(Malayalam_actor)",
+        "http://dbpedia.org/resource/Lakshmi_(actress)",
+        "http://dbpedia.org/resource/Nedumudi_Venu"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Joysticks_(film)",
+      "title": "Joysticks",
+      "origin": "United States",
+      "producer": "Greydon Clark",
+      "abstract": "Joysticks is a 1983 American comedy film directed by Greydon Clark.",
+      "starring": [
+        "http://dbpedia.org/resource/Leif_Green",
+        "http://dbpedia.org/resource/Joe_Don_Baker"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Serena_(2014_film)",
+      "title": "Serena",
+      "origin": "France",
+      "producer": "Susanne Bier",
+      "abstract": "Serena is a 2014 drama film based on the 2008 novel of the same name by American author Ron Rash. Directed by Susanne Bier, the film stars Jennifer Lawrence and Bradley Cooper as newlyweds running a timber business in 1930s North Carolina.",
+      "starring": [
+        "http://dbpedia.org/resource/Bradley_Cooper",
+        "http://dbpedia.org/resource/David_Dencik",
+        "http://dbpedia.org/resource/Rhys_Ifans",
+        "http://dbpedia.org/resource/Toby_Jones",
+        "http://dbpedia.org/resource/Ana_Ularu"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Raid_(1991_film)",
+      "title": "The Raid",
+      "origin": "Hong Kong",
+      "producer": "Tsui Hark",
+      "abstract": "The Raid (Cantonese: 財叔之橫掃千軍 Coi Suk Zi Waang Sou Cin Gwan = \"Uncle's Sweeping Thousands\") is a 1991 Hong Kong action film directed by Tsui Hark and Ching Siu-tung and based on the Hong Kong manhua, Uncle Choi, published by Michael Hui from 1958 to the mid-1970s. The film stars Dean Shek, who also served as the film's presenter, as the titular protagonist, while also co-starring Jacky Cheung, Tony Leung, Joyce Godenzi, Fennie Yuen, Paul Chu and Corey Yuen. The Raid is also Shek's final acting role before retiring from the film industry.",
+      "starring": [
+        "http://dbpedia.org/resource/Dean_Shek",
+        "http://dbpedia.org/resource/Joyce_Godenzi",
+        "http://dbpedia.org/resource/Tony_Leung_Ka-fai",
+        "http://dbpedia.org/resource/Jacky_Cheung"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Crash_(1996_film)",
+      "title": "Crash",
+      "origin": "",
+      "producer": "David Cronenberg",
+      "abstract": "Crash is a 1996 psychological drama film written, produced and directed by David Cronenberg, based on J. G. Ballard's 1973 novel of the same name. Starring James Spader, Deborah Kara Unger, Elias Koteas, Holly Hunter and Rosanna Arquette, it follows a film producer who, after surviving a car crash, becomes involved with a group of symphorophiliacs who are aroused by car crashes, and tries to rekindle his sexual relationship with his wife. The film premiered at the Cannes Film Festival, where it received the Special Jury Prize, a unique award that is distinct from the Jury Prize as it is not given annually, but only at the request of the official jury (for example, the previous year, both a Jury Prize and a Special Jury Prize were awarded). When then-jury president Francis Ford Coppola announced the award \"for originality, for daring and for audacity\", he stated that it had been a controversial choice and that certain jury members \"did abstain very passionately\". It continued to receive various accolades, including six Genie Awards from the Academy of Canadian Cinema and Television, including awards for Cronenberg as director and screenwriter; the film was also nominated in two further categories, including Best Picture. The film's initial release was met with intense controversy and opened to highly divergent reactions from critics; some praised the film for its daring premise and originality, others aimed criticism for having such a strange premise filled with graphic violence. It has since developed a cult following among Cronenberg fans.",
+      "starring": [
+        "http://dbpedia.org/resource/Rosanna_Arquette",
+        "http://dbpedia.org/resource/Deborah_Kara_Unger",
+        "http://dbpedia.org/resource/Holly_Hunter",
+        "http://dbpedia.org/resource/Elias_Koteas",
+        "http://dbpedia.org/resource/James_Spader"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Amira_(film)",
+      "title": "Amira",
+      "origin": "Jordan",
+      "producer": "Moez Masoud",
+      "abstract": "Amira (Arabic: أميرة, romanized: ʾAmīra) is a 2021 Arabic drama film directed by Egyptian filmmaker Mohamed Diab. The film is produced by Mohamed Hefzy for Film Clinic, Mona Abdelwahab for Agora Audiovisuals, Moez Masoud for Acamedia Pictures in co-production with Youssef El Taher for Taher Media Production and Rula Nasser for The Imaginarium Films. The film stars Tara Abboud in the titular role, whereas Saba Mubarak, and Ali Suliman made supportive roles. The film revolves around Amira, a 17-year-old Palestinian, who is told that she was conceived with the smuggled sperm of her imprisoned father, Nawar. This is the first film by an Egyptian director set in Palestine. The film had its world premiere at Venice International Film Festival on September 3, 2021, and competed within the Orizzonti competition. At the festival, the film won two awards: the Lanterna Magica Award and the Interfilm Award. In August, the film was selected to compete at the Feature Narrative Competition in the fifth edition of Egypt's El Gouna Film Festival (GFF), which marked its first Arab world premiere. It was selected as the Jordanian entry for the Best International Feature Film at the 94th Academy Awards, but it was withdrawn by the Royal Film Commission due to controversy surrounding the film's subject matter. The film, which centers on a Palestinian girl who learns her real father was an Israeli prison guard rather than a Palestinian prisoner, was criticised by prisoners' rights organisations and withdrawn \"out of respect to the feelings of the prisoners and their families.\"",
+      "starring": [
+        "http://dbpedia.org/resource/Saba_Mubarak",
+        "http://dbpedia.org/resource/Ali_Suliman"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Community_Speaks",
+      "title": "A Community Speaks",
+      "origin": "America",
+      "producer": "Bruce Campbell",
+      "abstract": "A Community Speaks is a 2004 feature-length documentary about modern-day land stewardship. The documentary was produced and directed by Bruce Campbell and his wife, Ida Gearon.",
+      "starring": [
+        "http://dbpedia.org/resource/Bruce_Campbell"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Jane_Eyre_(1910_film)",
+      "title": "Jane Eyre",
+      "origin": "United States",
+      "producer": "Thanhouser Company",
+      "abstract": "Jane Eyre is a 1910 American silent short classic drama produced by the Thanhouser Film Corporation. Adapted from Charlotte Brontë's 1847 novel, Jane Eyre, the film mirrors the events and plot of the original book. The writer of the scenario is unknown, but Lloyd Lonergan probably adapted the work. The film's director is often and erroneously claimed to be Theodore Marston, but Barry O'Neil or Lloyd B. Carleton are possible candidates. The cast of the film was credited, an act rare and unusual in the era. This was the first American, first English language and second or third worldwide movie adaptation, of at least 27 film and television versions – of the novel. Such repeated dissemination has made the Brontë sisters' two major works ubiquitous. The single reel film, approximately 1000 feet long, was released on May 6, 1910. It was later credited by Edwin Thanhouser as marking the assured success of the company. The popularity of the production resulted in the production of additional copies, so the Thanhouser company had more orders than could be filled. Critical reception to the film was generally positive, but with some minor criticisms. The film is presumed lost.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Channa_Mereya_(film)",
+      "title": "Channa Mereya",
+      "origin": "India",
+      "producer": "Manmord Sidhu",
+      "abstract": "Channa Mereya (transl. The light of my soul) is a 2017 Indian Punjabi-language romance film directed by Pankaj Batra. It is a remake of the Marathi film Sairat (2016). The film follows Kainat (Payal Rajput), a girl from a wealthy family who falls in love with her poor classmate Jagat (Ninja). They start seeing each other secretly, but when their relationship is exposed, they face trouble from Kainat's brother Balli (Amrit Maan) and father (Yograj Singh). The film received mixed reviews from critics.",
+      "starring": [
+        "http://dbpedia.org/resource/Payal_Rajput",
+        "http://dbpedia.org/resource/Ninja_(singer)"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Gunslinger_(film)",
+      "title": "Gunslinger",
+      "origin": "United States",
+      "producer": "Roger Corman",
+      "abstract": "Gunslinger is a 1956 American Western film starring Beverly Garland as Rose Hood, the widow of a slain town marshal who inherits his job. Directed by Roger Corman from a screenplay by Mark Hanna and Charles B. Griffith, the film, shot in colour, also features Allison Hayes as Erica Page, the owner of a saloon, who hires a gunslinger assassin (John Ireland) to kill Rose. The film began production in February 1956, as director Corman wanted to shoot one final film in six days before a change in union contracts meant that actors were limited to working only five days a week. Filming of Gunslinger was marred by several inconveniences; rain caused the filming location to become muddy, and the two lead actresses were both injured on set. Eventually, Gunslinger was released to mixed reviews, and, in 1993, was featured in a fifth-season episode of the film-mocking comedy television series Mystery Science Theater 3000.",
+      "starring": [
+        "http://dbpedia.org/resource/Beverly_Garland",
+        "http://dbpedia.org/resource/Allison_Hayes",
+        "http://dbpedia.org/resource/John_Ireland_(actor)"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Lonely_Boy_(film)",
+      "title": "Lonely Boy",
+      "origin": "Canada",
+      "producer": "Roman Kroitor",
+      "abstract": "Lonely Boy is a 1962 cinéma vérité documentary about the former teen sensation Paul Anka. The film takes its name from Anka's hit song, \"Lonely Boy\", which he performs to screaming fans in the film. This short documentary makes use of hand-held cameras to record intimate backstage moments. Co-directed by Roman Kroitor and Wolf Koenig, this National Film Board of Canada production won a Canadian Film Award as Film of the Year at the 15th Canadian Film Awards, and was nominated at the BAFTA Awards for its best short film prize.",
+      "starring": [
+        "http://dbpedia.org/resource/Paul_Anka"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Volcano_(1950_film)",
+      "title": "Volcano",
+      "origin": "Italy",
+      "producer": "William Dieterle",
+      "abstract": "Volcano (Italian title Vulcano) is a 1950 Italian drama film directed by William Dieterle and starring Anna Magnani, Rossano Brazzi, and Geraldine Brooks. It was filmed on location on Salina Island, in the Aeolian Islands, and in the city of Messina on Sicily. Vulcano has been seen by some as a vehicle of revenge by Anna Magnani against her estranged lover at the time, Italian film director Roberto Rossellini, who had chosen Ingrid Bergman to star in his film series about marriage, instead of her. Rossellini made his film Stromboli on the nearby volcanic island of Stromboli at the same time as Volcano was being made on Salina. Both films were shot simultaneously in similar locales in the Aeolian Islands, only 40 km apart; both actresses played independent-minded roles in a neorealist fashion. Life magazine wrote, \"... in an atmosphere crackling with rivalry... Reporters were accredited, like war correspondents, to one or the other of the embattled camps.... Partisanship infected the Via Veneto (boulevard in Rome), where Magnaniacs and Bergmaniacs clashed frequently.\" However, Magnani still considered Rossellini the \"greatest director she ever acted for\".",
+      "starring": [
+        "http://dbpedia.org/resource/Anna_Magnani"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Mama_(2013_film)",
+      "title": "Mama",
+      "origin": "Spain",
+      "producer": "Guillermo del Toro",
+      "abstract": "Mama is a 2013 supernatural horror film directed and co-written by Andy Muschietti in his directorial debut and based on his 2008 Argentine short film Mamá. The film stars Jessica Chastain, Nikolaj Coster-Waldau, Megan Charpentier, Isabelle Nélisse, Daniel Kash, and Javier Botet as the title character. The film follows two young girls abandoned in a forest cabin, fostered by an unknown entity that they fondly call \"Mama\", which eventually follows them to their new suburban home led by two adults after their uncle retrieves them. It was produced by J. Miles Dale and co-writer Barbara Muschietti, with Guillermo del Toro serving as executive producer. The film was theatrically released in theaters on 18 January 2013, by Universal Pictures. Mama received mixed reviews from critics, with many praising the performances and atmosphere, with criticism for plot and writing. The film was a box office success, grossing $146 million against a $15 million budget.",
+      "starring": [
+        "http://dbpedia.org/resource/Nikolaj_Coster-Waldau",
+        "http://dbpedia.org/resource/Javier_Botet",
+        "http://dbpedia.org/resource/Jessica_Chastain"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Fair_Game_(2010_film)",
+      "title": "Fair Game",
+      "origin": "",
+      "producer": "Jez Butterworth",
+      "abstract": "Fair Game is a 2010 biographical political drama film directed by Doug Liman and starring Naomi Watts and Sean Penn. It is based on Valerie Plame's 2007 memoir Fair Game and Joseph C. Wilson's 2004 memoir The Politics of Truth. Watts stars as Plame and Penn as her husband, Joseph C. Wilson. It was released in 2010 and was one of the official selections competing for the Palme d'Or at the 2010 Cannes Film Festival. The film won the \"Freedom of Expression Award\" from the National Board of Review. The film marked Watts' and Penn's third collaboration, having previously co-starred in the films 21 Grams and The Assassination of Richard Nixon.",
+      "starring": [
+        "http://dbpedia.org/resource/Naomi_Watts",
+        "http://dbpedia.org/resource/Sean_Penn"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Sun_Children",
+      "title": "Sun Children",
+      "origin": "Iran",
+      "producer": "Majid Majidi",
+      "abstract": "Sun Children (Persian: خورشید, romanized: Khoršid), also known as The Sun, is a 2020 Iranian drama film co-produced, co-written and directed by Majid Majidi. It was presented in competition at the 77th Venice International Film Festival, where child actor Rouhollah Zamani won the Marcello Mastroianni Award. It was selected as the Iranian entry for the Best International Feature Film at the 93rd Academy Awards, making the shortlist of fifteen films.",
+      "starring": [
+        "http://dbpedia.org/resource/Rouhollah_Zamani",
+        "http://dbpedia.org/resource/Ali_Nassirian",
+        "http://dbpedia.org/resource/Javad_Ezzati"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/On_the_Road_(2012_film)",
+      "title": "On the Road",
+      "origin": "Brazil",
+      "producer": "Francis Ford Coppola",
+      "abstract": "On The Road (French: Sur la route) is a 2012 adventure drama film directed by Walter Salles. It is an adaptation of Jack Kerouac's 1957 novel On the Road and stars an ensemble cast featuring Garrett Hedlund, Sam Riley, Kristen Stewart, Alice Braga, Amy Adams, Tom Sturridge, Danny Morgan, Elisabeth Moss, Kirsten Dunst, and Viggo Mortensen. The executive producers were Francis Ford Coppola, Patrick Batteux, Jerry Leider, and Tessa Ross. Filming began on August 4, 2010, in Montreal, Quebec, with a $25 million budget. The story is based on the years Kerouac spent travelling the United States in the late 1940s with his friend Neal Cassady and several other Beat Generation figures who would go on to fame in their own right, including William S. Burroughs and Allen Ginsberg. On May 23, 2012, the film premiered in competition for the Palme d'Or at the 2012 Cannes Film Festival. The film received mixed early reviews after it premiered at the film festival. The film also premiered at the 2012 Toronto International Film Festival in September.",
+      "starring": [
+        "http://dbpedia.org/resource/Sam_Riley",
+        "http://dbpedia.org/resource/Viggo_Mortensen",
+        "http://dbpedia.org/resource/Elisabeth_Moss",
+        "http://dbpedia.org/resource/Garrett_Hedlund",
+        "http://dbpedia.org/resource/Tom_Sturridge"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Accepted",
+      "title": "Accepted",
+      "origin": "United States",
+      "producer": "Tom Shadyac",
+      "abstract": "Accepted is a 2006 American comedy film directed by Steve Pink (in his directorial debut) and written by Adam Cooper, Bill Collage and Mark Perez. The plot follows a group of high school graduates who create their own fake college after being rejected from the colleges to which they applied. The story takes place in Wickliffe and a fictitious college town called Harmon in Ohio.",
+      "starring": [
+        "http://dbpedia.org/resource/Blake_Lively",
+        "http://dbpedia.org/resource/Anthony_Heald",
+        "http://dbpedia.org/resource/Lewis_Black",
+        "http://dbpedia.org/resource/Justin_Long"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Carlito's_Way",
+      "title": "Carlito's Way",
+      "origin": "United States",
+      "producer": "Martin Bregman",
+      "abstract": "Carlito's Way is a 1993 American crime drama film directed by Brian De Palma, based on the novels Carlito's Way (1975) and After Hours (1979) by Judge Edwin Torres. The film adaptation was scripted by David Koepp. It stars Al Pacino, Sean Penn, Penelope Ann Miller, Luis Guzman, John Leguizamo, Jorge Porcel, Joseph Siravo, and Viggo Mortensen. The film stars Pacino as Carlito Brigante, a Nuyorican criminal who vows to go straight and to retire in paradise. However, his criminal past proves difficult to escape, and he unwittingly ends up being dragged into the same activities that got him imprisoned in the first place. The film is based mainly on After Hours, but used the title of the first novel to avoid it being confused with Martin Scorsese's 1985 film of the same name. This is the second film collaboration between Pacino and De Palma, after 1983's film, Scarface. Carlito's Way received a positive response from critics, with a lukewarm result at the box office, but has subsequently become a cult film. Both Penn and Miller received Golden Globe nominations for their performances. A prequel titled Carlito's Way: Rise to Power, based on the first novel, was released direct-to-video in 2005.",
+      "starring": [
+        "http://dbpedia.org/resource/Penelope_Ann_Miller",
+        "http://dbpedia.org/resource/Al_Pacino",
+        "http://dbpedia.org/resource/Sean_Penn"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Control_(2007_film)",
+      "title": "Control",
+      "origin": "United Kingdom",
+      "producer": "Tony Wilson",
+      "abstract": "Control is a 2007 British biographical film about the life of Ian Curtis, singer of the late-1970s English post-punk band Joy Division. It is the first feature film directed by Anton Corbijn, who had worked with Joy Division as a photographer. The screenplay by Matt Greenhalgh, was based on the biography Touching from a Distance by Curtis's widow Deborah, who served as a co-producer on the film. Tony Wilson, who released Joy Division's records through his Factory Records label, also served as a co-producer. Curtis' bandmates Bernard Sumner, Peter Hook, and Stephen Morris provided incidental music for the soundtrack via their post-Joy Division incarnation New Order. Control was filmed partly on location in Nottingham, Manchester, and Macclesfield, including areas where Curtis lived, and was shot in colour and then printed to black-and-white. Its title comes from the Joy Division song \"She's Lost Control\", and alludes to the fact that much of the plot deals with the notion that Curtis tried to remain in control of his own life, and yet had no control over his epilepsy and pharmaceutical side effects. Sam Riley and Samantha Morton star as Ian and Deborah Curtis, and the film portrays the events of the couple's lives from 1973 to 1980, focusing on their marriage, the formation and career of Joy Division, Ian's struggle with epilepsy, and his extramarital affair with Belgian journalist Annik Honoré, culminating in his May 1980 suicide. Alexandra Maria Lara plays Honoré, while James Anthony Pearson, Joe Anderson, and Harry Treadaway play Sumner, Hook, and Morris, respectively. The film also features Toby Kebbell as band manager Rob Gretton and Craig Parkinson as Tony Wilson. Control premiered at the Cannes Film Festival on 17 May 2007 where it won several awards including the Director's Fortnight, the CICAE Art & Essai prize for best film, the Regards Jeunes Prize for best first/second directed feature film, and the Europa Cinemas Label prize for best European film in the sidebar. It also received a special mention for the Caméra d'Or prize for best debut feature film. It went on to win five British Independent Film Awards including Best Film, Best Director for Corbijn, Most Promising Newcomer for Riley, and Best Supporting Actor for Kebbell. It was named Best Film at the 2007 Evening Standard British Film Awards, and Greenhalgh was given the Carl Foreman award for outstanding achievement in his first feature film at the 61st British Academy Film Awards.",
+      "starring": [
+        "http://dbpedia.org/resource/Sam_Riley",
+        "http://dbpedia.org/resource/Samantha_Morton",
+        "http://dbpedia.org/resource/Alexandra_Maria_Lara"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/East/West",
+      "title": "East/West",
+      "origin": "Russia",
+      "producer": "Alexander Rodnyansky",
+      "abstract": "East/West (French: Est-Ouest; Russian: Восток-Запад, romanized: Vostok-Zapad) is a 1999 drama film directed by Régis Wargnier, starring Sandrine Bonnaire, Oleg Menshikov, Catherine Deneuve and Sergei Bodrov Jr. It received generally positive reviews from critics.",
+      "starring": [
+        "http://dbpedia.org/resource/Sandrine_Bonnaire",
+        "http://dbpedia.org/resource/Bohdan_Stupka",
+        "http://dbpedia.org/resource/Hubert_Saint-Macary",
+        "http://dbpedia.org/resource/Catherine_Deneuve",
+        "http://dbpedia.org/resource/Tatyana_Dogileva"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Chaplin_(film)",
+      "title": "Chaplin",
+      "origin": "United Kingdom",
+      "producer": "Lord Attenborough",
+      "abstract": "Chaplin is a 1992 American biographical comedy-drama film about the life of English comedian Charlie Chaplin. It was produced and directed by Richard Attenborough and stars Robert Downey Jr., Marisa Tomei, Dan Aykroyd, Penelope Ann Miller and Kevin Kline. It also features Charlie Chaplin's own daughter, Geraldine Chaplin, in the role of his mother, Hannah Chaplin. The film was adapted by William Boyd, Bryan Forbes and William Goldman from Chaplin's 1964 book My Autobiography and the 1985 book Chaplin: His Life and Art by film critic David Robinson. Associate producer Diana Hawkins got a story credit. The original music score was composed by John Barry. The film received mixed reviews; Downey's titular performance, however, garnered critical acclaim and won him the BAFTA Award for Best Actor along with nominations for the Academy Award for Best Actor and Golden Globe Award for Best Actor – Motion Picture Drama.",
+      "starring": [
+        "http://dbpedia.org/resource/John_Thaw",
+        "http://dbpedia.org/resource/Paul_Rhys",
+        "http://dbpedia.org/resource/Penelope_Ann_Miller",
+        "http://dbpedia.org/resource/Robert_Downey_Jr.",
+        "http://dbpedia.org/resource/Geraldine_Chaplin"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Daughter_of_the_Law",
+      "title": "A Daughter of the Law",
+      "origin": "United States",
+      "producer": "Carl Laemmle",
+      "abstract": "A Daughter of the Law is a 1921 American silent crime film directed by Jack Conway and starring Carmel Myers, John B. O'Brien and Fred Kohler.",
+      "starring": [
+        "http://dbpedia.org/resource/Carmel_Myers",
+        "http://dbpedia.org/resource/Fred_Kohler",
+        "http://dbpedia.org/resource/John_B._O'Brien"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Dragonfly_(2002_film)",
+      "title": "Dragonfly",
+      "origin": "Germany",
+      "producer": "Gary Barber",
+      "abstract": "Dragonfly is a 2002 supernatural thriller film directed by Tom Shadyac from a screenplay by Brandon Camp, Mike Thompson, and David Seltzer based on a story by Camp and Thompson. It was produced by Gary Barber, Roger Birnbaum, Mark Johnson, and Shadyac. It starred Kevin Costner in the title role. It is about a grieving doctor being contacted by his late wife through his patients' near-death experiences. It was panned by critics and a box office failure, grossing $52.3 million against its $60 million production budget.",
+      "starring": [
+        "http://dbpedia.org/resource/Ron_Rifkin",
+        "http://dbpedia.org/resource/Linda_Hunt",
+        "http://dbpedia.org/resource/Joe_Morton",
+        "http://dbpedia.org/resource/Kathy_Bates",
+        "http://dbpedia.org/resource/Kevin_Costner"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Grimsby_(film)",
+      "title": "Grimsby",
+      "origin": "United States",
+      "producer": "Peter Baynham",
+      "abstract": "Grimsby (released in the United States and Canada as The Brothers Grimsby) is a 2016 spy action comedy film directed by Louis Leterrier and written by Sacha Baron Cohen, Phil Johnston, and Peter Baynham. The film stars Baron Cohen, Mark Strong, Rebel Wilson, Isla Fisher, Annabelle Wallis, Gabourey Sidibe, Penélope Cruz, and Ian McShane. It was co-produced by Columbia Pictures, LStar Capital, Village Roadshow Pictures, Four By Two Films, Big Talk Productions and Working Title Films. Grimsby was released by Sony Pictures Releasing on 24 February 2016 in the United Kingdom and 11 March 2016 in the United States. It received mixed reviews and proved to be a box-office failure, ultimately not recouping its budget.",
+      "starring": [
+        "http://dbpedia.org/resource/Penélope_Cruz",
+        "http://dbpedia.org/resource/Sacha_Baron_Cohen",
+        "http://dbpedia.org/resource/Gabourey_Sidibe",
+        "http://dbpedia.org/resource/Isla_Fisher",
+        "http://dbpedia.org/resource/Mark_Strong"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Water_(1985_film)",
+      "title": "Water",
+      "origin": "United Kingdom",
+      "producer": "Dick Clement and Ian La Frenais biography and credits",
+      "abstract": "Water is a 1985 British comedy film directed by Dick Clement and starring Michael Caine. It was scripted by Clement and Ian La Frenais. The plot spoofs elements of the comedies Carlton-Browne of the F.O. (1958) and Passport to Pimlico (1948) and the then-recent invasions of the Falkland Islands and Grenada. Caine plays Baxter Thwaites, a Governor who has 'gone native' (similar to his role in The Honorary Consul), and Billy Connolly as local biracial activist Delgado, supported by the last performance of Leonard Rossiter, as Sir Malcolm Leveridge, and one of the last performances of Fulton Mackay.",
+      "starring": [
+        "http://dbpedia.org/resource/Billy_Connolly",
+        "http://dbpedia.org/resource/Brenda_Vaccaro",
+        "http://dbpedia.org/resource/Ringo_Starr",
+        "http://dbpedia.org/resource/Valerie_Perrine",
+        "http://dbpedia.org/resource/George_Harrison"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Relentless_(1989_film)",
+      "title": "Relentless",
+      "origin": "United States",
+      "producer": "Paul Hertzberg",
+      "abstract": "Relentless is a 1989 American crime thriller film directed by William Lustig and starring Judd Nelson, Robert Loggia and Leo Rossi. The film follows two LAPD officers on a hunt for a serial killer. Relentless was the first in a series of four films starring Leo Rossi as detective Sam Dietz trying to stop a serial killer. The three sequels were all filmed and released within three consecutive years from 1992 to 1994.",
+      "starring": [
+        "http://dbpedia.org/resource/Robert_Loggia",
+        "http://dbpedia.org/resource/Judd_Nelson",
+        "http://dbpedia.org/resource/Leo_Rossi",
+        "http://dbpedia.org/resource/Meg_Foster"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Ghosts_(2006_film)",
+      "title": "Ghosts",
+      "origin": "United Kingdom",
+      "producer": "Nick Broomfield",
+      "abstract": "Ghosts is a 2006 drama film directed by Nick Broomfield, based on the 2004 Morecambe Bay cockling disaster. The title is a reference to the Cantonese slang term Gweilo (鬼佬), meaning \"ghost man\", used for white people.",
+      "starring": [
+        "http://dbpedia.org/resource/Ai_Qin_Lin",
+        "http://dbpedia.org/resource/Zhe_Wei"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Tempest_(1958_film)",
+      "title": "Tempest",
+      "origin": "Yugoslavia",
+      "producer": "Dino De Laurentiis",
+      "abstract": "La tempesta (internationally released as Tempest) is a 1958 Italian drama film directed by Alberto Lattuada. It is based on A History of Pugachev (1834) and the 1836 novel The Captain's Daughter, both by Alexander Pushkin. For this film Lattuada was awarded a David di Donatello for Best Director.",
+      "starring": [
+        "http://dbpedia.org/resource/Van_Heflin",
+        "http://dbpedia.org/resource/Viveca_Lindfors",
+        "http://dbpedia.org/resource/Geoffrey_Horne",
+        "http://dbpedia.org/resource/Silvana_Mangano"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Unknown_(1913_film)",
+      "title": "The Unknown",
+      "origin": "USA",
+      "producer": "Siegmund Lubin",
+      "abstract": "The Unknown is a 1913 silent film drama short directed, written by and starring Romaine Fielding with costars Mary Ryan and Robyn Adair. It was produced by the Lubin Manufacturing Company and released by General Film Company.",
+      "starring": [
+        "http://dbpedia.org/resource/Romaine_Fielding",
+        "http://dbpedia.org/resource/Mary_Ryan_(actress;_1885-1948)"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Shaft_(2019_film)",
+      "title": "Shaft",
+      "origin": "United States",
+      "producer": "John Davis",
+      "abstract": "Shaft is a 2019 American action comedy film directed by Tim Story and written by Kenya Barris and Alex Barnow. The film stars Samuel L. Jackson, Jessie T. Usher, Regina Hall, and Richard Roundtree. It is the fifth film in the Shaft series and a direct sequel to the 2000 film with the same title. The film was released theatrically in the United States on June 14, 2019, by Warner Bros. Pictures, and digitally in global markets on June 28, 2019, by Netflix. It received mixed reviews from critics and underperformed at the box office.",
+      "starring": [
+        "http://dbpedia.org/resource/Samuel_L._Jackson",
+        "http://dbpedia.org/resource/Regina_Hall",
+        "http://dbpedia.org/resource/Richard_Roundtree",
+        "http://dbpedia.org/resource/Alexandra_Shipp",
+        "http://dbpedia.org/resource/Jessie_Usher"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Cropsey_(film)",
+      "title": "Cropsey",
+      "origin": "United States",
+      "producer": "Joshua Zeman",
+      "abstract": "Cropsey is a 2009 American documentary film written and directed by Joshua Zeman and Barbara Brancaccio. The film initially begins as an examination of \"Cropsey\", a boogeyman-like figure from New York City urban legend, before segueing into the story of Andre Rand, a convicted child kidnapper from Staten Island. In 2009, Cropsey premiered at the Tribeca Film Festival, where programmer David Kwok stated; “the eeriness of the mystery pulsates through the film as they journey into the underbelly… as more information and clues unravel, Zeman and Brancaccio become more immersed in shocking surprises and revelations. The reality they uncover in this uniquely hair-raising documentary is more terrifying than any urban legend.”",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Afraid_to_Die",
+      "title": "Afraid to Die",
+      "origin": "Japan",
+      "producer": "Masaichi Nagata",
+      "abstract": "Afraid to Die (からっ風野郎, Karakkaze Yarō, A Man Blown by the Wind) is a 1960 Japanese yakuza film directed by Yasuzo Masumura and starring Yukio Mishima.",
+      "starring": [
+        "http://dbpedia.org/resource/Keizo_Kawasaki",
+        "http://dbpedia.org/resource/Yukio_Mishima",
+        "http://dbpedia.org/resource/Ayako_Wakao"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Body_and_Soul_(1981_film)",
+      "title": "Body and Soul",
+      "origin": "United States",
+      "producer": "Yoram Globus",
+      "abstract": "Body and Soul is a 1981 American sports drama film written by and starring Leon Isaac Kennedy and co-starring Jayne Kennedy. Directed by George Bowers, it is a remake of the 1947 film of the same name.",
+      "starring": [
+        "http://dbpedia.org/resource/Leon_Isaac_Kennedy"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/My_Best_Friend's_Girl_(1983_film)",
+      "title": "My Best Friend's Girl",
+      "origin": "France",
+      "producer": "Claude Berri",
+      "abstract": "My Best Friend's Girl (French: La Femme de mon pote) is a 1983 French comedy film directed by Bertrand Blier and starring Isabelle Huppert.",
+      "starring": [
+        "http://dbpedia.org/resource/Isabelle_Huppert"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Favourite",
+      "title": "The Favourite",
+      "origin": "",
+      "producer": "Yorgos Lanthimos",
+      "abstract": "The Favourite is a 2018 period black comedy film co-produced and directed by Yorgos Lanthimos, from a screenplay by Deborah Davis and Tony McNamara. Set in early 18th century Great Britain, the film's plot examines the relationship between cousins Sarah Churchill, Duchess of Marlborough (Rachel Weisz), and Abigail Masham (Emma Stone) as they vie to be court favourite of Queen Anne (Olivia Colman). Principal photography for the British-Irish-American production lasted from March to May 2017 and took place at Hatfield House in Hertfordshire and at Hampton Court Palace. The film premiered on 30 August 2018 at the 75th Venice International Film Festival, where it won the Grand Jury Prize and the Volpi Cup for Best Actress for Colman. It was theatrically released in the United States on 23 November 2018 by Fox Searchlight Pictures, and in the United Kingdom and Ireland on 1 January 2019. Produced at a cost of $15 million, the film was a box office success, grossing $95 million worldwide. The Favourite received widespread critical acclaim, especially for the performances of the three leads and Lanthimos' direction, and it won or was nominated for numerous awards, including ten Academy Award nominations, tying Roma for the most nominations of any film at that year's ceremony. It won ten British Independent Film Awards, seven BAFTA Awards, and eight European Film Awards, and Colman won Best Actress at each of those ceremonies, as well as the Academy Awards, the Golden Globes, and others. The American Film Institute named the film one of the top ten films of 2018.",
+      "starring": [
+        "http://dbpedia.org/resource/Emma_Stone",
+        "http://dbpedia.org/resource/Olivia_Colman",
+        "http://dbpedia.org/resource/Rachel_Weisz"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Carmen_of_the_North",
+      "title": "A Carmen of the North",
+      "origin": "Netherlands",
+      "producer": "Maurits Binger",
+      "abstract": "A Carmen of the North (Dutch: Een Carmen van het Noorden) is a 1919 Dutch silent romantic drama film directed by Maurits Binger.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Nobody_(1921_film)",
+      "title": "Nobody",
+      "origin": "United States",
+      "producer": "Roland West",
+      "abstract": "Nobody is a 1921 American silent mystery film directed by Roland West and starring Jewel Carmen, William B. Davidson and Kenneth Harlan.",
+      "starring": [
+        "http://dbpedia.org/resource/William_B._Davidson",
+        "http://dbpedia.org/resource/Jewel_Carmen",
+        "http://dbpedia.org/resource/Kenneth_Harlan"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Virus_(1999_film)",
+      "title": "Virus",
+      "origin": "Germany",
+      "producer": "Gale Anne Hurd",
+      "abstract": "Virus is a 1999 science fiction horror film directed by visual effects artist John Bruno and starring Jamie Lee Curtis, William Baldwin and Donald Sutherland. Based on the comic book of the same name by Chuck Pfarrer, it tells the story of a ship beset by a malevolent extraterrestrial entity that seeks to turn humanity into cyborg slaves. The film was promoted with a line of action figures and a tie-in video game. It turned out to be a critical and commercial flop, but over time gained a cult following.",
+      "starring": [
+        "http://dbpedia.org/resource/William_Baldwin",
+        "http://dbpedia.org/resource/Jamie_Lee_Curtis",
+        "http://dbpedia.org/resource/Joanna_Pacuła",
+        "http://dbpedia.org/resource/Donald_Sutherland",
+        "http://dbpedia.org/resource/Marshall_Bell"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Darling_(2015_Indian_film)",
+      "title": "Darling",
+      "origin": "India",
+      "producer": "Studio Green",
+      "abstract": "Darling is a 2015 Indian Tamil-language horror comedy film directed by Sam Anton and produced by Allu Aravind and K. E. Gnanavel Raja. The film features composer and acting debut G. V. Prakash Kumar, Nikki Galrani in her Tamil debut in the lead roles, with the former also composing the film's music. A remake of the 2013 Telugu film Prema Katha Chitram, the film was released in theaters on 15 January 2015. It was a blockbuster at Box office.",
+      "starring": [
+        "http://dbpedia.org/resource/G._V._Prakash_Kumar",
+        "http://dbpedia.org/resource/Nikki_Galrani"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Perfect_Strangers_(2022_film)",
+      "title": "Perfect Strangers",
+      "origin": "United Arab Emirates",
+      "producer": "Mohamed Hefzy",
+      "abstract": "Perfect Strangers (Arabic: أصحاب… ولا أعزّ, romanized: As'hab… wa'la a'az, lit. 'Friends… and no dearer') is a 2022 Arabic comedy-drama film, produced by Dubai-based Front Row Filmed Entertainment with Yalla Yalla, Beirut-based Empire Entertainment, and Cairo-based Film Clinic. It is an Arab remake of the 2016 Italian film Perfetti sconosciuti, and is the first Arabic-language Netflix original film made purely by Arab production companies. The film was directed by Wissam Smayra, his debut film in the director's seat, and stars Mona Zaki, Nadine Labaki, , Adel Karam, Georges Khabbaz, , and . The film had a red carpet premiere in Dubai on 17 January 2022, and was released worldwide via Netflix on 20 January 2022.",
+      "starring": [
+        "http://dbpedia.org/resource/Georges_Khabbaz",
+        "http://dbpedia.org/resource/Mona_Zaki",
+        "http://dbpedia.org/resource/Nadine_Labaki",
+        "http://dbpedia.org/resource/Adel_Karam",
+        "http://dbpedia.org/resource/Diamand_Bou_Abboud"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Victoria_(1972_film)",
+      "title": "Victoria",
+      "origin": "Mexico",
+      "producer": "Julissa",
+      "abstract": "Victoria is a 1972 Mexican drama film directed by and starring Julissa, Guillermo Murray and Enrique Álvarez Félix. It is an adaptation of Henry James' 1880 novel Washington Square.",
+      "starring": [
+        "http://dbpedia.org/resource/Julissa",
+        "http://dbpedia.org/resource/Enrique_Álvarez_Félix",
+        "http://dbpedia.org/resource/Guillermo_Murray"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Dutch_(film)",
+      "title": "Dutch",
+      "origin": "United States",
+      "producer": "John Hughes",
+      "abstract": "Dutch (released as Driving Me Crazy outside the US) is a 1991 American road comedy-drama film directed by Peter Faiman (his second and last theatrical film, after \"Crocodile\" Dundee) and written by John Hughes. The film stars Ed O'Neill (in the title role) and Ethan Embry, co-starring JoBeth Williams, Christopher McDonald, Ari Meyers, and E. G. Daily. The original music score was composed by Alan Silvestri. The film was poorly received critically and was a box office bomb, although it gained a minor cult following after its home video release. O'Neill and Embry would later reunite as Joe Friday and Frank Smith in the 2003 version of the television series Dragnet.",
+      "starring": [
+        "http://dbpedia.org/resource/Ed_O'Neill",
+        "http://dbpedia.org/resource/Ethan_Embry",
+        "http://dbpedia.org/resource/JoBeth_Williams"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Azadi_(film)",
+      "title": "Azadi",
+      "origin": "Australia",
+      "producer": "Scott McDonald",
+      "abstract": "Azadi is a 2005 Australian short film written and directed by Anthony Maras, and produced in association with the Australian Film Commission, the Adelaide Film Festival Investment Fund and the South Australian Film Corporation. The film has earned numerous accolades on the international festival circuit and has screened on broadcast television, festivals and at human rights events.",
+      "starring": [
+        "http://dbpedia.org/resource/Rodney_Afif",
+        "http://dbpedia.org/resource/Seleman_Haider"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/3_for_Bedroom_C",
+      "title": "Three for Bedroom \"C\"",
+      "origin": "United States",
+      "producer": "Edward L. Alperson",
+      "abstract": "Three for Bedroom \"C\" (sometimes written as 3 for Bedroom \"C\") is a 1952 American comedy film released by Warner Brothers. It was directed by Milton H. Bren, who also wrote the screenplay. The film stars Gloria Swanson as an aging movie star. Music by Heinz Roemheld.",
+      "starring": [
+        "http://dbpedia.org/resource/Fred_Clark",
+        "http://dbpedia.org/resource/Gloria_Swanson",
+        "http://dbpedia.org/resource/Hans_Conried",
+        "http://dbpedia.org/resource/James_Warren_(actor)",
+        "http://dbpedia.org/resource/Margaret_Dumont"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Torque_(film)",
+      "title": "Torque",
+      "origin": "United States",
+      "producer": "Neal H. Moritz",
+      "abstract": "Torque is a 2004 American action film directed by Joseph Kahn (in his feature film directorial debut), written by Matt Johnson and produced by Neal H. Moritz. The film stars Adam Scott, Martin Henderson, Ice Cube, Monet Mazur, Jaime Pressly, Will Yun Lee, Jay Hernandez, Matt Schulze, Max Beesley, Fredro Starr and Christina Milian. The film tells the story of biker Cary Ford (Martin Henderson) and how he discovers some motorcycles filled with crystal meth, he stows them away. But it turns out that villainous gangster Henry James (Matt Schulze) has plans to recover his drugs. James frames Ford for the murder of Junior (Fredro Starr), the brother of Trey (Ice Cube), who heads the Reapers, a notoriously malicious biker gang. Ford goes on the run in an attempt to clear his name, while the FBI and multiple groups of motorcycle-mounted marauders chase after him. Torque was theatrically released on January 16, 2004 in the United States. The film under-performed at the box office, grossing $46.5 million worldwide against production budget of $40 million, and received generally negative reviews with common criticisms regarding the performances, writing and direction, though some critics praised the action sequences. It was nominated for several Taurus Awards for its stunts.",
+      "starring": [
+        "http://dbpedia.org/resource/Matt_Schulze",
+        "http://dbpedia.org/resource/Monet_Mazur",
+        "http://dbpedia.org/resource/Adam_Scott_(actor)",
+        "http://dbpedia.org/resource/Jaime_Pressly",
+        "http://dbpedia.org/resource/Jay_Hernandez"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Absolute_Deception",
+      "title": "Absolute Deception",
+      "origin": "United States",
+      "producer": "Brian Trenchard-Smith",
+      "abstract": "Absolute Deception (also known as Deception) is a 2013 Australian/Canadian international co-production action-thriller film directed by Brian Trenchard-Smith and starring Cuba Gooding Jr. and Emmanuelle Vaugier. The film was released on direct-to-DVD in the United States on June 11, 2013.",
+      "starring": [
+        "http://dbpedia.org/resource/Emmanuelle_Vaugier",
+        "http://dbpedia.org/resource/Cuba_Gooding_Jr."
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Night_at_the_Opera_(film)",
+      "title": "A Night at the Opera",
+      "origin": "United States",
+      "producer": "Irving Thalberg",
+      "abstract": "A Night at the Opera is a 1935 American comedy film starring the Marx Brothers (Groucho Marx, Harpo Marx and Chico Marx), and featuring Kitty Carlisle, Allan Jones, Margaret Dumont, Sig Ruman, and Walter Woolf King. It was the first of five films the Marx Brothers made under contract for Metro-Goldwyn-Mayer after their departure from Paramount Pictures, and the first after Zeppo left the act. The film was written by George S. Kaufman and Morrie Ryskind from a story by James Kevin McGuinness, with additional uncredited dialogue by Al Boasberg. The film was directed by Sam Wood. One of MGM's biggest hits at the 1935 box office, A Night at the Opera was selected in 1993 for preservation in the National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\". It is also included in the 2007 update of AFI's 100 Years... 100 Movies, at number 85; and previously in AFI's 100 Years...100 Laughs 2000 showing, at number 12.",
+      "starring": [
+        "http://dbpedia.org/resource/Groucho_Marx",
+        "http://dbpedia.org/resource/Harpo_Marx",
+        "http://dbpedia.org/resource/Chico_Marx"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/WarGames",
+      "title": "WarGames",
+      "origin": "United States",
+      "producer": "Bruce McNall",
+      "abstract": "WarGames is a 1983 American science fiction techno-thriller film written by Lawrence Lasker and Walter F. Parkes and directed by John Badham. The film, which stars Matthew Broderick, Dabney Coleman, John Wood, and Ally Sheedy, follows David Lightman (Broderick), a young hacker who unwittingly accesses a United States military supercomputer programmed to simulate, predict and execute nuclear war against the Soviet Union. WarGames was a critical and box-office success, costing $12 million and grossing $125 million worldwide. The film was nominated for three Academy Awards.",
+      "starring": [
+        "http://dbpedia.org/resource/John_Wood_(English_actor)",
+        "http://dbpedia.org/resource/Matthew_Broderick",
+        "http://dbpedia.org/resource/Ally_Sheedy",
+        "http://dbpedia.org/resource/Dabney_Coleman"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/To_Kill_a_Mockingbird_(film)",
+      "title": "To Kill a Mockingbird",
+      "origin": "United States",
+      "producer": "Alan J. Pakula",
+      "abstract": "To Kill a Mockingbird is a 1962 American drama film directed by Robert Mulligan. The screenplay by Horton Foote is based on Harper Lee's 1960 Pulitzer Prize–winning novel of the same name. The film stars Gregory Peck as Atticus Finch and Mary Badham as Scout. It marked the film debut of Robert Duvall, William Windom and Alice Ghostley. It gained overwhelmingly positive reception from both the critics and the public; a box-office success, it earned more than six times its budget. The film won three Academy Awards, including Best Actor for Peck, and was nominated for eight, including Best Picture. In 1995, the film was selected by the Library of Congress for preservation in the National Film Registry as \"culturally, historically, or aesthetically significant\". In 2003, the American Film Institute named Atticus Finch the greatest movie hero of the 20th century. In 2007, the film ranked twenty-fifth on the AFI's 10th anniversary list of the greatest American movies of all time. In 2020, the British Film Institute included it in their list of the 50 films you should see by the age of 15. The film was restored and released on Blu-ray and DVD in 2012, as part of the 100th anniversary of Universal Pictures.",
+      "starring": [
+        "http://dbpedia.org/resource/Paul_Fix",
+        "http://dbpedia.org/resource/Ruth_White_(actress)",
+        "http://dbpedia.org/resource/Frank_Overton",
+        "http://dbpedia.org/resource/Brock_Peters",
+        "http://dbpedia.org/resource/Gregory_Peck"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Tuesday_(2008_film)",
+      "title": "Tuesday",
+      "origin": "United Kingdom",
+      "producer": "Sacha Bennett",
+      "abstract": "Tuesday (rendered as Tu£sday) is a low-budget 2008 British heist film set in the 1980s. Directed by Sacha Bennett, it stars John Simm, Philip Glenister, Ashley Walters and Kevin McNally as jewel thieves. The film was released in the United Kingdom on 10 October 2008.",
+      "starring": [
+        "http://dbpedia.org/resource/John_Simm",
+        "http://dbpedia.org/resource/Cristian_Solimeno",
+        "http://dbpedia.org/resource/Linal_Haft",
+        "http://dbpedia.org/resource/Ashley_Walters_(actor)",
+        "http://dbpedia.org/resource/Alex_Macqueen"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Aayirathil_Oruvan_(1965_film)",
+      "title": "Aayirathil Oruvan",
+      "origin": "India",
+      "producer": "B. R. Panthulu",
+      "abstract": "Aayirathil Oruvan (transl. One in a Thousand) is a 1965 Indian Tamil-language swashbuckler film produced and directed by B. R. Panthulu. The film stars M. G. Ramachandran and Jayalalithaa, with M. N. Nambiar, Manohar, Nagesh, S. V. Ramadas, Vijayalakshmi and Madhavi in supporting roles. It revolves around a doctor who is sold into slavery for rebelling against the dictator of his nation, and later forced into a life of piracy. Aayirathil Oruvan was inspired by many pirate films, particularly Captain Blood (1935), and was Ramachandran's first with Panthulu. It was also the first of many collaborations between Ramachandran and Jayalalithaa. The story and screenplay were written by K. J. Mahadevan, and the dialogues by R. K. Shanmugham. The cinematography was handled by V. Ramamoorthy, and editing by R. Devarajan. The film was shot primarily in Karwar. Aayirathil Oruvan was released on 9 July 1965. The film emerged a critical and commercial success, running for more than 150 days in theatres. It was a milestone for both Ramachandran and Jayalalithaa, cementing the former's image as a \"do-gooder\" among the general public, and helping the latter enter politics. A digitised version of the film was released in 2014 and also became a success, running for over 175 days.",
+      "starring": [
+        "http://dbpedia.org/resource/M._G._Ramachandran",
+        "http://dbpedia.org/resource/J._Jayalalithaa"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Café_de_Flore_(film)",
+      "title": "Café de Flore",
+      "origin": "Canada",
+      "producer": "Pierre Even",
+      "abstract": "Café de Flore is a Canadian drama film, released in 2011. Directed, written, and edited by Jean-Marc Vallée, the film garnered 13 nominations for the 2012 Genie Awards. The film's title refers not to the café on Boulevard Saint-Germain in Paris, but to a Matthew Herbert song of the same name which the film uses to represent its musical current.",
+      "starring": [
+        "http://dbpedia.org/resource/Vanessa_Paradis",
+        "http://dbpedia.org/resource/Evelyne_Brochu",
+        "http://dbpedia.org/resource/Hélène_Florent",
+        "http://dbpedia.org/resource/Kevin_Parent"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Afghan_Star_(film)",
+      "title": "Afghan Star",
+      "origin": "United Kingdom",
+      "producer": "Mike Lerner",
+      "abstract": "Afghan Star is a 2009 British documentary film following four contestants in the Afghan music competition Afghan Star. Afghan Star was directed by Havana Marking and is distributed by Zeitgeist Films. The film was acclaimed by critics.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Twice_in_a_Lifetime_(film)",
+      "title": "Twice in a Lifetime",
+      "origin": "United Kingdom",
+      "producer": "Bud Yorkin",
+      "abstract": "Twice in a Lifetime is a 1985 drama film directed by Bud Yorkin and starring Gene Hackman as a married steelworker in a mid-life crisis who becomes attracted to another woman, played by Ann-Margret. Ellen Burstyn, Amy Madigan, Ally Sheedy, and Brian Dennehy co-star. Paul McCartney composed and performed the theme song to the film, heard over the end credits. It remained commercially unavailable as a recording until 1993 when it was included as a bonus track on a reissue of McCartney's album Pipes of Peace.",
+      "starring": [
+        "http://dbpedia.org/resource/Brian_Dennehy",
+        "http://dbpedia.org/resource/Ellen_Burstyn",
+        "http://dbpedia.org/resource/Gene_Hackman",
+        "http://dbpedia.org/resource/Ann-Margret",
+        "http://dbpedia.org/resource/Ally_Sheedy"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Aquamarine_(film)",
+      "title": "Aquamarine",
+      "origin": "United States",
+      "producer": "Susan Cartsonis",
+      "abstract": "Aquamarine is a 2006 American teen fantasy romantic comedy film directed by Elizabeth Allen, loosely based on the 2001 young adult novel of the same name by Alice Hoffman. It stars Emma Roberts, Joanna \"JoJo\" Levesque, and Sara Paxton. The film was released in the United States on March 3, 2006, by 20th Century Fox.",
+      "starring": [
+        "http://dbpedia.org/resource/Emma_Roberts",
+        "http://dbpedia.org/resource/JoJo_(singer)",
+        "http://dbpedia.org/resource/Sara_Paxton"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Sunny_Side_of_the_Street_(film)",
+      "title": "The Sunny Side of the Street",
+      "origin": "Hong Kong",
+      "producer": "Vinod Sekhar",
+      "abstract": "The Sunny Side of the Street (Chinese: 白日青春) is a 2022 Hong Kong drama film written and directed by Lau Kok-rui. The feature debut of Malaysia-born Lau Kok-rui, the film tells the story of a Hong Kong-born Pakistani refugee boy who forms an unexpected bond with a local taxi driver.",
+      "starring": [
+        "http://dbpedia.org/resource/Anthony_Wong_(Hong_Kong_actor)"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Full_Fathom_Five_(film)",
+      "title": "Full Fathom Five",
+      "origin": "United States",
+      "producer": "Rodman Flender",
+      "abstract": "Full Fathom Five is a 1990 action film, written by and directed by Carl Franklin, starring Michael Moriarty, , and Diego Bertie. It was shot in Peru.",
+      "starring": [
+        "http://dbpedia.org/resource/Diego_Bertie",
+        "http://dbpedia.org/resource/Michael_Moriarty",
+        "http://dbpedia.org/resource/Maria_Rangel"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Skin_So_Soft",
+      "title": "A Skin So Soft",
+      "origin": "Canada",
+      "producer": "Denis Côté",
+      "abstract": "A Skin So Soft (French: Ta peau si lisse) is a 2017 documentary film, directed by Canadian director Denis Côté. A Canadian, French and Swiss coproduction, the film chronicles the daily monotonous routines of a select few men whose lives revolve around extreme bodybuilding. The film premiered at the Locarno International Film Festival in August 2017, and is slated to have its Canadian premiere at the 2017 Toronto International Film Festival. The movie was originally produced in French and some have noted that the title's translation to English has produced a linguistic chasm. The direct translation of the French title, Ta peau si lisse being \"a skin so smooth\", which upon initial examination flows more easily with the images that come to mind when one thinks of the over pumped and well-maintained muscles of the Canadian bodybuilders featured, than the delicate title A Skin So Soft.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Day_in_the_Life_of_America",
+      "title": "A Day in the Life of America",
+      "origin": "United States",
+      "producer": "Jared Leto",
+      "abstract": "A Day in the Life of America is a 2019 American documentary film directed by Jared Leto. Shot over the course of 2017 Independence Day, the film depicts glimpses into the diversity and division of the United States. It was conceived as a companion piece to America (2018), the fifth studio album by Leto's rock band Thirty Seconds to Mars. The film was inspired by the Day in the Life photography books, a series of works by photographer David Elliot Cohen who documented subjects over the course of a single day. To capture footage for the documentary, Leto sent 92 crews to all fifty States of America, plus Washington D.C. and Puerto Rico, in addition to user-submitted clips from July 4, 2017. Leto produced the film with Emma Ludbrook, through their production company Paradox, and with Matt Benson through Interscope Films. A Day in the Life of America premiered at the 2019 Tribeca Film Festival to critical acclaim. It had its broadcast premiere on PBS as part of Independent Lens on January 11, 2021.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Subash_Chandra_Bose_(film)",
+      "title": "Subash Chandra Bose",
+      "origin": "India",
+      "producer": "Swapna Dutt",
+      "abstract": "Subash Chandra Bose is a 2005 Telugu-language historical action drama film, produced by C.Ashwini Dutt on Vyjayanthi Movies banner, directed by veteran director K. Raghavendra Rao in his 101st film. Starring Venkatesh, Shriya Saran, Genelia D'Souza and music composed by Mani Sharma.",
+      "starring": [
+        "http://dbpedia.org/resource/Venkatesh_(actor)",
+        "http://dbpedia.org/resource/Genelia_D'Souza",
+        "http://dbpedia.org/resource/Shriya_Saran"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Joker_(2012_film)",
+      "title": "Joker",
+      "origin": "India",
+      "producer": "Farah Khan Kunder",
+      "abstract": "Joker is a 2012 Indian Hindi-language science fiction comedy film directed by Shirish Kunder and also his second directorial venture after Jaan-E-Mann. The film stars Akshay Kumar and Sonakshi Sinha in lead roles. This was the second film in which Sinha paired opposite Kumar after Rowdy Rathore (2012). The film released worldwide on 31 August 2012, and received mixed to negative response upon release. The film was declared a \"Disaster\" at box office. The trailer of the film revealed on 11 July 2012, and also in cinemas along with Cocktail.",
+      "starring": [
+        "http://dbpedia.org/resource/Shreyas_Talpade",
+        "http://dbpedia.org/resource/Akshay_Kumar",
+        "http://dbpedia.org/resource/Sonakshi_Sinha",
+        "http://dbpedia.org/resource/Minissha_Lamba"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Pink_Panther_(2006_film)",
+      "title": "The Pink Panther",
+      "origin": "United States",
+      "producer": "Robert Simonds",
+      "abstract": "The Pink Panther is a 2006 American comedy-mystery film and a reboot of The Pink Panther franchise, marking the tenth installment in the series. It is also the first Pink Panther film to be released since Son of the Pink Panther released in 1993. In this film, Inspector Jacques Clouseau is assigned to solve the murder of a famous football coach and the theft of the famous Pink Panther diamond. The film was directed by Shawn Levy, stars Steve Martin as Clouseau and also co-stars Kevin Kline, Jean Reno, Emily Mortimer, and Beyoncé Knowles. The film received mostly negative reviews but was a commercial success, earning $164 million worldwide. The Pink Panther was released theatrically on February 10, 2006, and was released on DVD and Blu-ray on June 13, 2006. A sequel was released on February 6, 2009.",
+      "starring": [
+        "http://dbpedia.org/resource/Beyoncé_Knowles",
+        "http://dbpedia.org/resource/Emily_Mortimer",
+        "http://dbpedia.org/resource/Steve_Martin",
+        "http://dbpedia.org/resource/Henry_Czerny",
+        "http://dbpedia.org/resource/Jean_Reno"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Comedians_(1967_film)",
+      "title": "The Comedians",
+      "origin": "United States",
+      "producer": "Peter Glenville",
+      "abstract": "The Comedians is a 1967 American political drama film directed and produced by Peter Glenville, based on the 1966 novel of the same name by Graham Greene, who also wrote the screenplay. The stars were Richard Burton, Elizabeth Taylor, Peter Ustinov, and Alec Guinness. Paul Ford and Lillian Gish had supporting roles as a presidential candidate and wife, as did James Earl Jones as an island doctor. The role played by Elizabeth Taylor was originally intended for Sophia Loren. Set in Haiti during the Papa Doc Duvalier regime, it was filmed in Dahomey (Benin since 1975). The film tells the story of a sardonic white hotel owner and his encroaching fatalism as he watches Haiti sink into barbarism and squalor.",
+      "starring": [
+        "http://dbpedia.org/resource/Paul_Ford",
+        "http://dbpedia.org/resource/Peter_Ustinov",
+        "http://dbpedia.org/resource/Richard_Burton",
+        "http://dbpedia.org/resource/Elizabeth_Taylor",
+        "http://dbpedia.org/resource/Lillian_Gish"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Auditions_(film)",
+      "title": "Auditions",
+      "origin": "United States",
+      "producer": "Charles Band",
+      "abstract": "Auditions is a 1978 American erotic pseudo-documentary directed by Harry Hurwitz (credited as Harry Tampa). It was written by Albert Band and Charles Band, and stars Bonnie Werchan, Rick Cassidy and Linnea Quigley. Hurwitz also appears in the film as the director, although he is not credited. The film follows the process of casting actors and actresses for a pornographic film. Although several actual porn stars are in the film, it does not depict any actual sexual acts. It was remade in 1999 as Auditions from Beyond.",
+      "starring": [
+        "http://dbpedia.org/resource/Rick_Cassidy",
+        "http://dbpedia.org/resource/Linnea_Quigley"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Merry_Christmas_(2001_film)",
+      "title": "Merry Christmas",
+      "origin": "Italy",
+      "producer": "Aurelio De Laurentiis",
+      "abstract": "Merry Christmas is a 2001 Italian Cinepanettone comedy film directed by Neri Parenti.",
+      "starring": [
+        "http://dbpedia.org/resource/Massimo_Boldi",
+        "http://dbpedia.org/resource/Christian_De_Sica",
+        "http://dbpedia.org/resource/Enzo_Salvi",
+        "http://dbpedia.org/resource/Fichi_d'India"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Amico_(film)",
+      "title": "Amico",
+      "origin": "West Germany",
+      "producer": "Hans Domnick",
+      "abstract": "Amico is a 1949 West German comedy film directed by Gerhard T. Buchholz and starring Otto Wernicke, Margarete Haagen, and Kirsten Heiberg. The film's sets were designed by the art director Walter Haag.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Rose_(film)",
+      "title": "The Rose",
+      "origin": "United States",
+      "producer": "Marvin Worth",
+      "abstract": "The Rose is a 1979 American drama film directed by Mark Rydell, and starring Bette Midler, Alan Bates, Frederic Forrest, Harry Dean Stanton, Barry Primus, and David Keith. Loosely based on the life of Janis Joplin, the film follows a self-destructive rock star in the late 1960s, who struggles to cope with the pressures of her career and the demands of her ruthless business manager. Originally titled Pearl (after Janis Joplin's nickname, which was also the title of her last album), the film's screenplay was revised and fictionalized after her family declined to allow the producers the rights to her story. The Rose was nominated for four Academy Awards including Best Actress in a Leading Role (Bette Midler, in her screen debut), Best Actor in a Supporting Role (Frederic Forrest), Best Film Editing and Best Sound. Midler performed the soundtrack album for the film, and its title track became one of her biggest hit singles.",
+      "starring": [
+        "http://dbpedia.org/resource/Bette_Midler",
+        "http://dbpedia.org/resource/Frederic_Forrest",
+        "http://dbpedia.org/resource/Alan_Bates"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Brigham_Young_(film)",
+      "title": "Brigham Young",
+      "origin": "United States",
+      "producer": "Darryl F. Zanuck",
+      "abstract": "Brigham Young (also known as Brigham Young – Frontiersman) is a 1940 American biographical film starring Tyrone Power, Linda Darnell and Dean Jagger that describes Young's succession to the presidency of the Church of Jesus Christ of Latter-day Saints after founder Joseph Smith was assassinated in 1844. The supporting cast features Brian Donlevy, Jane Darwell, John Carradine, Mary Astor, Vincent Price and Tully Marshall.",
+      "starring": [
+        "http://dbpedia.org/resource/Brian_Donlevy",
+        "http://dbpedia.org/resource/Dean_Jagger",
+        "http://dbpedia.org/resource/Linda_Darnell",
+        "http://dbpedia.org/resource/Tyrone_Power"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Brotherhood_(2016_film)",
+      "title": "Brotherhood",
+      "origin": "United Kingdom",
+      "producer": "Noel Clarke",
+      "abstract": "Brotherhood (stylised as BrOTHERHOOD) is a 2016 British crime drama film written, produced directed by and starring Noel Clarke. It is the sequel to 2006's Kidulthood and 2008's Adulthood, and is the third and final instalment of The Hood Trilogy. It stars Clarke, Jason Maza (who also co-produced the film), Arnold Oceng, Stormzy, Cornell John, David Ajala, Shanika Warren-Markland and Adjoa Andoh. Brotherhood follows Sam (Clarke), now a married man of two children, being driven back to his criminal lifestyle. Clarke initially did not want to make a third film but eventually, it was announced in November 2015 that Clarke would be returning to write, direct and star in the third film of his Hood Trilogy. Filming began in London in November 2015. Brotherhood was screened in the Special Presentations section at the 2016 Toronto International Film Festival and was released on 29 August 2016. The film received mixed reviews from critics but grossed over £28.7 million in the UK, becoming the highest-grossing film in the trilogy.",
+      "starring": [
+        "http://dbpedia.org/resource/Bashy",
+        "http://dbpedia.org/resource/David_Ajala",
+        "http://dbpedia.org/resource/Noel_Clarke",
+        "http://dbpedia.org/resource/Jason_Maza"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Polar_Bear_(film)",
+      "title": "Polar Bear",
+      "origin": "United States",
+      "producer": "Alastair Fothergill",
+      "abstract": "Polar Bear is a 2022 American nature documentary film about polar bears directed by Alastair Fothergill and Jeff Wilson. Narrated by Catherine Keener, it is the sixteenth nature documentary to be released under the Disneynature label. The film was released as a Disney+ exclusive on Earth Day April 22, 2022.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Maurice_(film)",
+      "title": "Maurice",
+      "origin": "United Kingdom",
+      "producer": "Ismail Merchant",
+      "abstract": "Maurice is a 1987 British romantic drama film directed by James Ivory, based on the 1971 novel Maurice by E. M. Forster. The film stars James Wilby as Maurice, Hugh Grant as Clive and Rupert Graves as Alec. The supporting cast includes Denholm Elliott as Dr Barry, Simon Callow as Mr Ducie, Billie Whitelaw as Mrs Hall, and Ben Kingsley as Lasker-Jones. The film was produced by Ismail Merchant via Merchant Ivory Productions and Film Four International, and written by Ivory and Kit Hesketh-Harvey, with cinematography by Pierre Lhomme. It is a tale of gay love in the restrictive and repressed culture of Edwardian England. The story follows its main character, Maurice Hall, through university, a tumultuous relationship, struggling to fit into society, and ultimately being united with his life partner.",
+      "starring": [
+        "http://dbpedia.org/resource/Barry_Foster_(actor)",
+        "http://dbpedia.org/resource/Ben_Kingsley",
+        "http://dbpedia.org/resource/Billie_Whitelaw",
+        "http://dbpedia.org/resource/Denholm_Elliott",
+        "http://dbpedia.org/resource/Hugh_Grant"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/The_Lord_of_the_Rings_(film_series)",
+      "title": "The Lord of the Rings",
+      "origin": "",
+      "producer": "Tim Sanders",
+      "abstract": "The Lord of the Rings is a series of three epic fantasy adventure films directed by Peter Jackson, based on the novel The Lord of the Rings by J. R. R. Tolkien. The films are subtitled The Fellowship of the Ring (2001), The Two Towers (2002), and The Return of the King (2003). Produced and distributed by New Line Cinema with the co-production of WingNut Films, the series is an international venture between New Zealand and the United States. The films feature an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Christopher Lee, Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Andy Serkis and Sean Bean. Set in the fictional world of Middle-earth, the films follow the hobbit Frodo Baggins as he and the Fellowship embark on a quest to destroy the One Ring, to ensure the destruction of its maker, the Dark Lord Sauron. The Fellowship eventually splits up and Frodo continues the quest with his loyal companion Sam and the treacherous Gollum. Meanwhile, Aragorn, heir in exile to the throne of Gondor, along with the elf Legolas, the dwarf Gimli, Merry, Pippin, and the wizard Gandalf, unite to save the Free Peoples of Middle-earth from the forces of Sauron and rally them in the War of the Ring to aid Frodo by distracting Sauron's attention. The three films were shot simultaneously in Jackson's native New Zealand from 11 October 1999 until 22 December 2000, with pick-up shots done from 2001 to 2003. It was one of the biggest and most ambitious film projects ever undertaken, with a budget of $281 million (equivalent to $457 million in 2021). The first film in the series premiered at the Odeon Leicester Square in London on 10 December 2001; the second film premiered at the Ziegfeld Theatre in New York City on 5 December 2002; the third film premiered at the Embassy Theatre in Wellington on 1 December 2003. An extended edition of each film was released on home video a year after its release in cinemas. The Lord of the Rings is widely regarded as one of the greatest and most influential film series ever made. It was a major financial success and is among the highest-grossing film series of all time with $2.991 billion in worldwide receipts. All three films received widespread acclaim from critics and audiences, who lauded the acting, direction, writing, production values, score, ambition, emotional depth, groundbreaking special effects and faithfulness to the source material. The series received numerous accolades, winning 17 Academy Awards out of 30 total nominations, including Best Picture for The Return of the King. In 2021, The Fellowship of the Ring was selected for preservation in the United States National Film Registry by the Library of Congress for being \"culturally, historically, or aesthetically significant\".",
+      "starring": [
+        "http://dbpedia.org/resource/Cate_Blanchett",
+        "http://dbpedia.org/resource/Billy_Boyd_(actor)",
+        "http://dbpedia.org/resource/Hugo_Weaving",
+        "http://dbpedia.org/resource/John_Rhys-Davies",
+        "http://dbpedia.org/resource/Viggo_Mortensen"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/A_Ducking_They_Did_Go",
+      "title": "A Ducking They Did Go",
+      "origin": "United States",
+      "producer": "Jules White",
+      "abstract": "A Ducking They Did Go is a 1939 short subject directed by Del Lord starring American slapstick comedy team The Three Stooges (Moe Howard, Larry Fine and Curly Howard). It is the 38th entry in the series released by Columbia Pictures starring the comedians, who released 190 shorts for the studio between 1934 and 1959.",
+      "starring": [
+        "http://dbpedia.org/resource/Moe_Howard",
+        "http://dbpedia.org/resource/Lynton_Brent",
+        "http://dbpedia.org/resource/Bud_Jamison",
+        "http://dbpedia.org/resource/Curly_Howard",
+        "http://dbpedia.org/resource/Larry_Fine"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Stolen_(2009_American_film)",
+      "title": "Stolen",
+      "origin": "United States",
+      "producer": "Al Corley",
+      "abstract": "Stolen is a 2009 American mystery film directed by Anders Anderson and starring Josh Lucas, Jon Hamm and Rhona Mitra.",
+      "starring": [
+        "http://dbpedia.org/resource/Jon_Hamm",
+        "http://dbpedia.org/resource/Josh_Lucas",
+        "http://dbpedia.org/resource/Rhona_Mitra",
+        "http://dbpedia.org/resource/James_Van_Der_Beek"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/African_Independence",
+      "title": "African Independence",
+      "origin": "United States",
+      "producer": "Tukufu Zuberi",
+      "abstract": "African Independence is a 2013 feature-length documentary film and the directorial debut of sociologist Tukufu Zuberi, who also hosts the film. The film premiered at the San Diego Black Film Festival in January 2013 and in 2015, Zuberi published a companion book through Rowman & Littlefield.",
+      "starring": []
+    },
+    {
+      "id": "http://dbpedia.org/resource/Boris_Godunov_(1954_film)",
+      "title": "Boris Godunov",
+      "origin": "Soviet Union",
+      "producer": "Kinostudiya MosFilm",
+      "abstract": "Boris Godunov (Russian: Борис Годунов) is a 1954 Soviet drama film directed by Vera Stroyeva, based on the 1874 opera of the same name by Modest Mussorgsky and the 1825 play by Alexander Pushkin, which tells the epic story of Tsar Boris Godunov, who reigned over Russia between 1598 and 1605. It was screened out of competition at the 1987 Cannes Film Festival.",
+      "starring": [
+        "http://dbpedia.org/resource/Alexander_Pirogov"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Freaky_Friday_(1976_film)",
+      "title": "Freaky Friday",
+      "origin": "United States",
+      "producer": "Ron W. Miller",
+      "abstract": "Freaky Friday is a 1976 American fantasy-comedy film directed by Gary Nelson, with the screenplay written by Mary Rodgers based on her 1972 novel of the same name. The film stars Barbara Harris and Jodie Foster in the lead roles. John Astin, Patsy Kelly, Dick Van Patten, Sorrell Booke and Charlene Tilton are featured in supporting roles. In the film, a mother and her daughter switch their bodies, and they get a taste of each other's lives. The cause of the switch is left unexplained in this film, but occurs on Friday the 13th, when Ellen and Annabel, in different places, say about each other at the same time, \"I wish I could switch places with her for just one day.\" Rodgers added a water skiing subplot to her screenplay. Freaky Friday was released theatrically in the United States on January 21, 1977, by Buena Vista Distribution. The film received positive reviews from critics with praise for Foster and Harris’s performances and was a box office success, grossing $36 million on a $5 million budget. At the 34th Golden Globe Awards, it received three nominations: Best Actress – Comedy or Musical (for both Foster and Harris), and Best Original Song (\"I'd Like to Be You for a Day\").",
+      "starring": [
+        "http://dbpedia.org/resource/Patsy_Kelly",
+        "http://dbpedia.org/resource/Barbara_Harris_(actress)",
+        "http://dbpedia.org/resource/Charlene_Tilton",
+        "http://dbpedia.org/resource/Jodie_Foster",
+        "http://dbpedia.org/resource/John_Astin"
+      ]
+    },
+    {
+      "id": "http://dbpedia.org/resource/Emma_(1996_theatrical_film)",
+      "title": "Emma",
+      "origin": "United Kingdom",
+      "producer": "Steven Haft",
+      "abstract": "Emma is a 1996 period comedy film based on the 1815 novel of the same name by Jane Austen. Written and directed by Douglas McGrath, the film stars Gwyneth Paltrow, Alan Cumming, Toni Collette, Ewan McGregor, and Jeremy Northam.",
+      "starring": [
+        "http://dbpedia.org/resource/Juliet_Stevenson",
+        "http://dbpedia.org/resource/Toni_Collette",
+        "http://dbpedia.org/resource/Alan_Cumming",
+        "http://dbpedia.org/resource/Ewan_McGregor",
+        "http://dbpedia.org/resource/Greta_Scacchi"
+      ]
+    }
+  ]
+}
