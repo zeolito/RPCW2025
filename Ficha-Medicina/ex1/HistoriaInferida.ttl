@@ -1,0 +1,375 @@
+@prefix : <http://rpcw.di.uminho.pt/2025/HistoriaInferida#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2025/HistoriaInferida> .
+
+<http://rpcw.di.uminho.pt/2025/HistoriaInferida> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva> rdf:type owl:ObjectProperty ;
+                                                                                   owl:equivalentProperty <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende> ;
+                                                                                   owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> ,
+                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> ;
+                                                                                   rdfs:domain [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva> ;
+                                                                                                 owl:someValuesFrom <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa>
+                                                                                               ] .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende> rdf:type owl:ObjectProperty ;
+                                                                                 owl:equivalentProperty [ owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> ;
+                                                                                                          owl:equivalentProperty [ owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor>
+                                                                                                                                 ]
+                                                                                                        ] .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> rdf:type owl:ObjectProperty ;
+                                                                                         owl:equivalentProperty <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> rdf:type owl:ObjectProperty ;
+                                                                                       owl:equivalentProperty [ owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva> ;
+                                                                                                                owl:equivalentProperty [ owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende>
+                                                                                                                                       ]
+                                                                                                              ] .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> rdf:type owl:ObjectProperty ;
+                                                                                    owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/édono> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> ,
+                                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vendeEm
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vendeEm> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> rdf:type owl:ObjectProperty ;
+                                                                                         owl:equivalentProperty <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éFilho
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éFilho> rdf:type owl:ObjectProperty ;
+                                                                                  owl:inverseOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éProgenitor> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éProgenitor
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éProgenitor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/édono
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/édono> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty owl:inverseOf owl:topObjectProperty ;
+                      rdf:type owl:SymmetricProperty ,
+                               owl:TransitiveProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tamanho
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tamanho> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> ;
+                                                                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain owl:Thing ;
+                                                                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> ,
+                                                                                                  [ rdf:type owl:Class ;
+                                                                                                    owl:unionOf ( <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Cão>
+                                                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa>
+                                                                                                                )
+                                                                                                  ] ;
+                                                                                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/usaTrabalhadorTemporário
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/usaTrabalhadorTemporário> rdf:type owl:DatatypeProperty ;
+                                                                                                    rdfs:domain <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor> ;
+                                                                                                    rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor> rdf:type owl:Class ;
+                                                                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva> ;
+                                                                                                            owl:someValuesFrom <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fruta>
+                                                                                                          ] ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Cão
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Cão> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fazenda
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fazenda> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Feira
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Feira> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fruta
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fruta> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Legume
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Legume> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Vila
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Vila> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ana
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ana> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> ,
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> ;
+                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éFilho> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Maria> ;
+                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "Ana" ;
+                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm> "ajudar a mãe a fazer as geleias" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor> ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/alface> ,
+                                                                                                                                                                     <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cenoura> ,
+                                                                                                                                                                     <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tomate> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/alface> ,
+                                                                                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cenoura> ,
+                                                                                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tomate> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vendeEm> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/São_José> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/édono> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/fazenda_carlos> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "Carlos" ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/usaTrabalhadorTemporário> "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor> ,
+                                                                                         <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cultiva> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/banana> ,
+                                                                                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/laranja> ,
+                                                                                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/maçã> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vende> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/banana> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/laranja> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/maçã> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vendeEm> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/São_José> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éProgenitor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ana> ,
+                                                                                                                                                                       <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pedro> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/édono> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Rex> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Trator> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/fazenda_joão> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/galinha> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/porco> ,
+                                                                                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vaca> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "João" ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/usaTrabalhadorTemporário> "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Maria
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Maria> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Agricultor> ,
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> ,
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éProgenitor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ana> ,
+                                                                                                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pedro> ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "Maria" ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm> "Alimentação dos animais" ,
+                                                                                                                                                                       "Colheita" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pedro
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pedro> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> ,
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Pessoa> ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éFilho> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ,
+                                                                                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Maria> ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "Pedro" ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm> "ajudar o pai com animais" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Rex
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Rex> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal> ,
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Cão> ,
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> ;
+                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "Rex" ;
+                                                                               <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm> "Proteger Casa" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/São_José
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/São_José> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Feira> ,
+                                                                                             <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> ;
+                                                                                    <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "São José" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Trator
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Trator> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Ferramenta> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/trabalhaEm> "arar os campos e plantar as sementes" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/alface
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/alface> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Legume> ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "alface" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/banana
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/banana> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fruta> ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "banana" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cenoura
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/cenoura> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Legume> ,
+                                                                                            <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "cenoura" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/fazenda_carlos
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/fazenda_carlos> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fazenda> ,
+                                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> ;
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tamanho> "grande" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/fazenda_joão
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/fazenda_joão> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fazenda> ,
+                                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Localidade> ;
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                        <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tamanho> "pequeno" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/galinha
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/galinha> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/laranja
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/laranja> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fruta> ,
+                                                                                            <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                   <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "laranja" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/maçã
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/maçã> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Fruta> ,
+                                                                                         <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "maçã" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/porco
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/porco> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal> ;
+                                                                                 <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tomate
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/tomate> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Legume> ,
+                                                                                           <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/produto> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éCultivadoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/éVendidoPor> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Carlos> ;
+                                                                                  <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/temNome> "tomate" .
+
+
+###  http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vaca
+<http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/vaca> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/Animal> ;
+                                                                                <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/pertence> <http://www.semanticweb.org/eduardo/ontologies/2025/1/untitled-ontology-2/João> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
