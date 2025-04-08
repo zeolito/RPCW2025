@@ -6,7 +6,7 @@
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
 
-:Ontology a owl:Ontology .
+<http://www.example.org/disease-ontology> rdf:type owl:Ontology .
 
 # Classes
 :Disease a owl:Class .

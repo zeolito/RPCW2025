@@ -1,0 +1,472 @@
+
+@prefix : <http://www.example.org/disease-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+
+<http://www.example.org/disease-ontology> rdf:type owl:Ontology .
+
+# Classes
+:Disease a owl:Class .
+:Symptom a owl:Class .
+:Treatment a owl:Class .
+:Patient a owl:Class .
+
+# Properties
+:hasSymptom a owl:ObjectProperty ;
+    rdfs:domain :Disease ;
+    rdfs:range :Symptom .
+
+:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain :Disease ;
+    rdfs:range xsd:string .
+
+:hasTreatment a owl:ObjectProperty ;
+    rdfs:domain :Disease ;
+    rdfs:range :Treatment .
+
+:exhibitsSymptom a owl:ObjectProperty ;
+    rdfs:domain :Patient ;
+    rdfs:range :Symptom .
+
+:hasDisease a owl:ObjectProperty ;
+    rdfs:domain :Patient ;
+    rdfs:range :Disease .
+
+:receivesTreatment a owl:ObjectProperty ;
+    rdfs:domain :Patient ;
+    rdfs:range :Treatment .
+
+
+:drug_reaction a :Disease ;
+            :hasSymptom :skin_rash, :burning_micturition, :spotting_urination, :itching, :stomach_pain ; 
+            :hasDescription "An adverse drug reaction (ADR) is an injury caused by taking medication. ADRs may occur following a single dose or prolonged administration of a drug or result from the combination of two or more drugs." ; 
+            :hasTreatment :stop_irritation, :stop_taking_drug, :consult_nearest_hospital, :follow_up .
+
+:malaria a :Disease ;
+            :hasSymptom :high_fever, :muscle_pain, :nausea, :vomiting, :headache, :diarrhoea, :sweating, :chills ; 
+            :hasDescription "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type." ; 
+            :hasTreatment :avoid_oily_food, :consult_nearest_hospital, :avoid_non_veg_food, :keep_mosquitos_out .
+
+:allergy a :Disease ;
+            :hasSymptom :watering_from_eyes, :continuous_sneezing, :chills, :shivering ; 
+            :hasDescription "An allergy is an immune system response to a foreign substance that's not typically harmful to your body.They can include certain foods, pollen, or pet dander. Your immune system's job is to keep you healthy by fighting harmful pathogens." ; 
+            :hasTreatment :cover_area_with_bandage, :use_ice_to_compress_itching, :apply_calamine .
+
+:hypothyroidism a :Disease ;
+            :hasSymptom :mood_swings, :lethargy, :dizziness, :weight_gain, :irritability, :swollen_extremeties, :enlarged_thyroid, :depression, :fatigue, :brittle_nails, :puffy_face_and_eyes, :cold_hands_and_feets, :abnormal_menstruation ; 
+            :hasDescription "Hypothyroidism, also called underactive thyroid or low thyroid, is a disorder of the endocrine system in which the thyroid gland does not produce enough thyroid hormone." ; 
+            :hasTreatment :exercise, :eat_healthy, :reduce_stress, :get_proper_sleep .
+
+:psoriasis a :Disease ;
+            :hasSymptom :skin_rash, :skin_peeling, :inflammatory_nails, :small_dents_in_nails, :joint_pain, :silver_like_dusting ; 
+            :hasDescription "Psoriasis is a common skin disorder that forms thick, red, bumpy patches covered with silvery scales. They can pop up anywhere, but most appear on the scalp, elbows, knees, and lower back. Psoriasis can't be passed from person to person. It does sometimes happen in members of the same family." ; 
+            :hasTreatment :consult_doctor, :salt_baths, :wash_hands_with_warm_soapy_water, :stop_bleeding_using_pressure .
+
+:gerd a :Disease ;
+            :hasSymptom :cough, :ulcers_on_tongue, :acidity, :chest_pain, :vomiting, :stomach_pain ; 
+            :hasDescription "Gastroesophageal reflux disease, or GERD, is a digestive disorder that affects the lower esophageal sphincter (LES), the ring of muscle between the esophagus and stomach. Many people, including pregnant women, suffer from heartburn or acid indigestion caused by GERD." ; 
+            :hasTreatment :avoid_lying_down_after_eating, :avoid_fatty_spicy_food, :exercise, :maintain_healthy_weight .
+
+:chronic_cholestasis a :Disease ;
+            :hasSymptom :loss_of_appetite, :yellowing_of_eyes, :nausea, :itching, :vomiting, :abdominal_pain, :yellowish_skin ; 
+            :hasDescription "Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine, which is caused by primary damage to the biliary epithelium in most cases" ; 
+            :hasTreatment :consult_doctor, :anti_itch_medicine, :eat_healthy, :cold_baths .
+
+:hepatitis_a a :Disease ;
+            :hasSymptom :loss_of_appetite, :yellowing_of_eyes, :muscle_pain, :nausea, :vomiting, :abdominal_pain, :dark_urine, :yellowish_skin, :mild_fever, :joint_pain, :diarrhoea ; 
+            :hasDescription "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function." ; 
+            :hasTreatment :medication, :avoid_fatty_spicy_food, :wash_hands_through, :consult_nearest_hospital .
+
+:osteoarthristis a :Disease ;
+            :hasSymptom :knee_pain, :painful_walking, :swelling_joints, :hip_joint_pain, :joint_pain, :neck_pain ; 
+            :hasDescription "Osteoarthritis is the most common form of arthritis, affecting millions of people worldwide. It occurs when the protective cartilage that cushions the ends of your bones wears down over time." ; 
+            :hasTreatment :salt_baths, :acetaminophen, :follow_up, :consult_nearest_hospital .
+
+:vertigo_paroymsal_positional_vertigo a :Disease ;
+            :hasSymptom :loss_of_balance, :nausea, :vomiting, :headache, :spinning_movements, :unsteadiness ; 
+            :hasDescription "Benign paroxysmal positional vertigo (BPPV) is one of the most common causes of vertigo � the sudden sensation that you're spinning or that the inside of your head is spinning. Benign paroxysmal positional vertigo causes brief episodes of mild to intense dizziness." ; 
+            :hasTreatment :avoid_sudden_change_in_body, :avoid_abrupt_head_movment, :relax, :lie_down .
+
+:hypoglycemia a :Disease ;
+            :hasSymptom :blurred_and_distorted_vision, :excessive_hunger, :irritability, :anxiety, :nausea, :fatigue, :vomiting, :drying_and_tingling_lips, :headache, :sweating, :palpitations, :slurred_speech ; 
+            :hasDescription "Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions � many rare � can cause low blood sugar in people who don't have diabetes." ; 
+            :hasTreatment :consult_doctor, :check_in_pulse, :drink_sugary_drinks, :lie_down_on_side .
+
+:acne a :Disease ;
+            :hasSymptom :skin_rash, :scurring, :pus_filled_pimples, :blackheads ; 
+            :hasDescription "Acne vulgaris is the formation of comedones, papules, pustules, nodules, and/or cysts as a result of obstruction and inflammation of pilosebaceous units (hair follicles and their accompanying sebaceous gland). Acne develops on the face and upper trunk. It most often affects adolescents." ; 
+            :hasTreatment :bath_twice, :avoid_fatty_spicy_food, :drink_plenty_of_water, :avoid_too_many_products .
+
+:diabetes a :Disease ;
+            :hasSymptom :polyuria, :lethargy, :blurred_and_distorted_vision, :excessive_hunger, :obesity, :increased_appetite, :fatigue, :weight_loss, :restlessness, :irregular_sugar_level ; 
+            :hasDescription "Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy." ; 
+            :hasTreatment :consult_doctor, :exercise, :follow_up, :have_balanced_diet .
+
+:impetigo a :Disease ;
+            :hasSymptom :skin_rash, :blister, :red_sore_around_nose, :yellow_crust_ooze, :high_fever ; 
+            :hasDescription "Impetigo (im-puh-TIE-go) is a common and highly contagious skin infection that mainly affects infants and children. Impetigo usually appears as red sores on the face, especially around a child's nose and mouth, and on hands and feet. The sores burst and develop honey-colored crusts." ; 
+            :hasTreatment :consult_doctor, :use_antibiotics, :soak_affected_area_in_warm_water, :remove_scabs_with_wet_compressed_cloth .
+
+:hypertension a :Disease ;
+            :hasSymptom :lack_of_concentration, :dizziness, :chest_pain, :headache, :loss_of_balance ; 
+            :hasDescription "Hypertension (HTN or HT), also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated. High blood pressure typically does not cause symptoms." ; 
+            :hasTreatment :meditation, :salt_baths, :reduce_stress, :get_proper_sleep .
+
+:peptic_ulcer_diseae a :Disease ;
+            :hasSymptom :loss_of_appetite, :internal_itching, :vomiting, :abdominal_pain, :passage_of_gases, :indigestion ; 
+            :hasDescription "Peptic ulcer disease (PUD) is a break in the inner lining of the stomach, the first part of the small intestine, or sometimes the lower esophagus. An ulcer in the stomach is called a gastric ulcer, while one in the first part of the intestines is a duodenal ulcer." ; 
+            :hasTreatment :eliminate_milk, :avoid_fatty_spicy_food, :consume_probiotic_food, :limit_alcohol .
+
+:dimorphic_hemorrhoidspiles a :Disease ;
+            :hasSympto ; 
+            :hasDescription "Hemorrhoids, also spelled haemorrhoids, are vascular structures in the anal canal. In their ... Other names, Haemorrhoids, piles, hemorrhoidal disease ." ; 
+            :hasTreatmen .
+
+:common_cold a :Disease ;
+            :hasSymptom :cough, :congestion, :headache, :phlegm, :redness_of_eyes, :malaise, :muscle_pain, :fatigue, :swelled_lymph_nodes, :chest_pain, :continuous_sneezing, :runny_nose, :loss_of_smell, :sinus_pressure, :high_fever, :chills, :throat_irritation ; 
+            :hasDescription "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold." ; 
+            :hasTreatment :keep_fever_in_check, :take_vapour, :drink_vitamin_c_rich_drinks, :avoid_cold_food .
+
+:chicken_pox a :Disease ;
+            :hasSymptom :skin_rash, :loss_of_appetite, :lethargy, :headache, :malaise, :fatigue, :swelled_lymph_nodes, :itching, :red_spots_over_body, :mild_fever, :high_fever ; 
+            :hasDescription "Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy, blister-like rash. The rash first appears on the chest, back, and face, and then spreads over the entire body, causing between 250 and 500 itchy blisters." ; 
+            :hasTreatment :consume_neem_leaves, :avoid_public_places, :take_vaccine, :use_neem_in_bathing .
+
+:cervical_spondylosis a :Disease ;
+            :hasSymptom :dizziness, :back_pain, :loss_of_balance, :neck_pain, :weakness_in_limbs ; 
+            :hasDescription "Cervical spondylosis is a general term for age-related wear and tear affecting the spinal disks in your neck. As the disks dehydrate and shrink, signs of osteoarthritis develop, including bony projections along the edges of bones (bone spurs)." ; 
+            :hasTreatment :take_otc_pain_reliver, :exercise, :use_heating_pad_or_cold_pack, :consult_doctor .
+
+:hyperthyroidism a :Disease ;
+            :hasSymptom :mood_swings, :sweating, :excessive_hunger, :muscle_weakness, :irritability, :fast_heart_rate, :fatigue, :diarrhoea, :weight_loss, :restlessness, :abnormal_menstruation ; 
+            :hasDescription "Hyperthyroidism (overactive thyroid) occurs when your thyroid gland produces too much of the hormone thyroxine. Hyperthyroidism can accelerate your body's metabolism, causing unintentional weight loss and a rapid or irregular heartbeat." ; 
+            :hasTreatment :use_lemon_balm, :eat_healthy, :massage, :take_radioactive_iodine_treatment .
+
+:urinary_tract_infection a :Disease ;
+            :hasSymptom :foul_smell_of_urine, :bladder_discomfort, :burning_micturition, :continuous_feel_of_urine ; 
+            :hasDescription "Urinary tract infection: An infection of the kidney, ureter, bladder, or urethra. Abbreviated UTI. Not everyone with a UTI has symptoms, but common symptoms include a frequent urge to urinate and pain or burning when urinating." ; 
+            :hasTreatment :increase_vitamin_c_intake, :drink_plenty_of_water, :take_probiotics, :drink_cranberry_juice .
+
+:varicose_veins a :Disease ;
+            :hasSymptom :bruising, :prominent_veins_on_calf, :obesity, :swollen_blood_vessels, :fatigue, :swollen_legs, :cramps ; 
+            :hasDescription "A vein that has enlarged and twisted, often appearing as a bulging, blue blood vessel that is clearly visible through the skin. Varicose veins are most common in older adults, particularly women, and occur especially on the legs." ; 
+            :hasTreatment :lie_down_flat_and_raise_the_leg_high, :dont_stand_still_for_long, :use_oinments, :use_vein_compression .
+
+:aids a :Disease ;
+            :hasSymptom :extra_marital_contacts, :patches_in_throat, :muscle_wasting, :high_fever ; 
+            :hasDescription "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease." ; 
+            :hasTreatment :consult_doctor, :follow_up, :avoid_open_cuts, :wear_ppe_if_possible .
+
+:paralysis_brain_hemorrhage a :Disease ;
+            :hasSymptom :vomiting, :weakness_of_one_body_side, :altered_sensorium, :headache ; 
+            :hasDescription "Intracerebral hemorrhage (ICH) is when blood suddenly bursts into brain tissue, causing damage to your brain. Symptoms usually appear suddenly during ICH. They include headache, weakness, confusion, and paralysis, particularly on one side of your body." ; 
+            :hasTreatment :consult_doctor, :exercise, :eat_healthy, :massage .
+
+:typhoid a :Disease ;
+            :hasSymptom :headache, :nausea, :fatigue, :belly_pain, :vomiting, :abdominal_pain, :high_fever, :diarrhoea, :constipation, :chills, :toxic_look_typhos ; 
+            :hasDescription "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe." ; 
+            :hasTreatment :eat_high_calorie_vegitables, :medication, :antiboitic_therapy, :consult_doctor .
+
+:hepatitis_b a :Disease ;
+            :hasSymptom :receiving_unsterile_injections, :loss_of_appetite, :lethargy, :yellowing_of_eyes, :malaise, :itching, :abdominal_pain, :dark_urine, :receiving_blood_transfusion, :yellowish_skin, :fatigue, :yellow_urine ; 
+            :hasDescription "Hepatitis B is an infection of your liver. It can cause scarring of the organ, liver failure, and cancer. It can be fatal if it isn't treated. It's spread when people come in contact with the blood, open sores, or body fluids of someone who has the hepatitis B virus." ; 
+            :hasTreatment :medication, :vaccination, :eat_healthy, :consult_nearest_hospital .
+
+:fungal_infection a :Disease ;
+            :hasSymptom :skin_rash, :itching, :nodal_skin_eruptions, :dischromic_patches ; 
+            :hasDescription "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi." ; 
+            :hasTreatment :bath_twice, :use_clean_cloths, :keep_infected_area_dry, :use_detol_or_neem_in_bathing_water .
+
+:hepatitis_c a :Disease ;
+            :hasSymptom :loss_of_appetite, :yellowing_of_eyes, :nausea, :yellowish_skin, :fatigue, :family_history ; 
+            :hasDescription "Inflammation of the liver due to the hepatitis C virus (HCV), which is usually spread via blood transfusion (rare), hemodialysis, and needle sticks. The damage hepatitis C does to the liver can lead to cirrhosis and its complications as well as cancer." ; 
+            :hasTreatment :medication, :vaccination, :eat_healthy, :consult_nearest_hospital .
+
+:migraine a :Disease ;
+            :hasSymptom :visual_disturbances, :blurred_and_distorted_vision, :excessive_hunger, :irritability, :depression, :acidity, :stiff_neck, :headache, :indigestion ; 
+            :hasDescription "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities." ; 
+            :hasTreatment :meditation, :use_poloroid_glasses_in_sun, :consult_doctor, :reduce_stress .
+
+:bronchial_asthma a :Disease ;
+            :hasSymptom :cough, :breathlessness, :fatigue, :high_fever, :mucoid_sputum, :family_history ; 
+            :hasDescription "Bronchial asthma is a medical condition which causes the airway path of the lungs to swell and narrow. Due to this swelling, the air path produces excess mucus making it hard to breathe, which results in coughing, short breath, and wheezing. The disease is chronic and interferes with daily working." ; 
+            :hasTreatment :get_away_from_trigger, :switch_to_loose_cloothing, :take_deep_breaths, :seek_help .
+
+:alcoholic_hepatitis a :Disease ;
+            :hasSymptom :swelling_of_stomach, :history_of_alcohol_consumption, :vomiting, :abdominal_pain, :yellowish_skin, :distention_of_abdomen, :fluid_overload ; 
+            :hasDescription "Alcoholic hepatitis is a diseased, inflammatory condition of the liver caused by heavy alcohol consumption over an extended period of time. It's also aggravated by binge drinking and ongoing alcohol use. If you develop this condition, you must stop drinking alcohol" ; 
+            :hasTreatment :consult_doctor, :medication, :stop_alcohol_consumption, :follow_up .
+
+:jaundice a :Disease ;
+            :hasSymptom :fatigue, :itching, :vomiting, :dark_urine, :abdominal_pain, :yellowish_skin, :high_fever, :weight_loss ; 
+            :hasDescription "Yellow staining of the skin and sclerae (the whites of the eyes) by abnormally high blood levels of the bile pigment bilirubin. The yellowing extends to other tissues and body fluids. Jaundice was once called the morbus regius (the regal disease) in the belief that only the touch of a king could cure it" ; 
+            :hasTreatment :medication, :drink_plenty_of_water, :consume_milk_thistle, :eat_fruits_and_high_fiberous_food .
+
+:hepatitis_e a :Disease ;
+            :hasSymptom :loss_of_appetite, :coma, :stomach_bleeding, :yellowing_of_eyes, :nausea, :acute_liver_failure, :vomiting, :abdominal_pain, :dark_urine, :yellowish_skin, :fatigue, :joint_pain, :high_fever ; 
+            :hasDescription "A rare form of liver inflammation caused by infection with the hepatitis E virus (HEV). It is transmitted via food or drink handled by an infected person or through infected water supplies in areas where fecal matter may get into the water. Hepatitis E does not cause chronic liver disease." ; 
+            :hasTreatment :consult_doctor, :medication, :stop_alcohol_consumption, :rest .
+
+:dengue a :Disease ;
+            :hasSymptom :skin_rash, :high_fever, :loss_of_appetite, :headache, :malaise, :muscle_pain, :nausea, :back_pain, :vomiting, :red_spots_over_body, :fatigue, :joint_pain, :chills, :pain_behind_the_eyes ; 
+            :hasDescription "an acute infectious disease caused by a flavivirus (species Dengue virus of the genus Flavivirus), transmitted by aedes mosquitoes, and characterized by headache, severe joint pain, and a rash. � called also breakbone fever, dengue fever." ; 
+            :hasTreatment :drink_papaya_leaf_juice, :avoid_fatty_spicy_food, :keep_hydrated, :keep_mosquitos_away .
+
+:hepatitis_d a :Disease ;
+            :hasSymptom :loss_of_appetite, :yellowing_of_eyes, :nausea, :vomiting, :abdominal_pain, :dark_urine, :yellowish_skin, :fatigue, :joint_pain ; 
+            :hasDescription "Hepatitis D, also known as the hepatitis delta virus, is an infection that causes the liver to become inflamed. This swelling can impair liver function and cause long-term liver problems, including liver scarring and cancer. The condition is caused by the hepatitis D virus (HDV)." ; 
+            :hasTreatment :consult_doctor, :medication, :eat_healthy, :follow_up .
+
+:heart_attack a :Disease ;
+            :hasSymptom :vomiting, :sweating, :breathlessness, :chest_pain ; 
+            :hasDescription "The death of heart muscle due to the loss of blood supply. The loss of blood supply is usually caused by a complete blockage of a coronary artery, one of the arteries that supplies blood to the heart muscle." ; 
+            :hasTreatment :call_ambulance, :keep_calm, :chew_or_swallow_asprin .
+
+:pneumonia a :Disease ;
+            :hasSymptom :cough, :breathlessness, :phlegm, :malaise, :rusty_sputum, :fatigue, :chest_pain, :fast_heart_rate, :high_fever, :sweating, :chills ; 
+            :hasDescription "Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe." ; 
+            :hasTreatment :consult_doctor, :medication, :follow_up, :rest .
+
+:arthritis a :Disease ;
+            :hasSymptom :muscle_weakness, :swelling_joints, :movement_stiffness, :stiff_neck, :painful_walking ; 
+            :hasDescription "Arthritis is the swelling and tenderness of one or more of your joints. The main symptoms of arthritis are joint pain and stiffness, which typically worsen with age. The most common types of arthritis are osteoarthritis and rheumatoid arthritis." ; 
+            :hasTreatment :use_hot_and_cold_therapy, :exercise, :try_acupuncture, :massage .
+
+:gastroenteritis a :Disease ;
+            :hasSymptom :diarrhoea, :vomiting, :sunken_eyes, :dehydration ; 
+            :hasDescription "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach, and large and small intestines. Viral and bacterial gastroenteritis are intestinal infections associated with symptoms of diarrhea , abdominal cramps, nausea , and vomiting ." ; 
+            :hasTreatment :try_taking_small_sips_of_water, :ease_back_into_eating, :stop_eating_solid_food_for_while, :rest .
+
+:tuberculosis a :Disease ;
+            :hasSymptom :cough, :high_fever, :breathlessness, :loss_of_appetite, :phlegm, :yellowing_of_eyes, :malaise, :chest_pain, :swelled_lymph_nodes, :vomiting, :blood_in_sputum, :mild_fever, :fatigue, :weight_loss, :sweating, :chills ; 
+            :hasDescription "Tuberculosis (TB) is an infectious disease usually caused by Mycobacterium tuberculosis (MTB) bacteria. Tuberculosis generally affects the lungs, but can also affect other parts of the body. Most infections show no symptoms, in which case it is known as latent tuberculosis." ; 
+            :hasTreatment :consult_doctor, :medication, :cover_mouth, :rest .
+
+
+
+:skin_rash a :Symptom .
+:lack_of_concentration a :Symptom .
+:lethargy a :Symptom .
+:congestion a :Symptom .
+:skin_peeling a :Symptom .
+:depression a :Symptom .
+:swollen_blood_vessels a :Symptom .
+:yellow_urine a :Symptom .
+:foul_smell_of_urine a :Symptom .
+:family_history a :Symptom .
+:polyuria a :Symptom .
+:stomach_bleeding a :Symptom .
+:continuous_feel_of_urine a :Symptom .
+:bladder_discomfort a :Symptom .
+:obesity a :Symptom .
+:sinus_pressure a :Symptom .
+:brittle_nails a :Symptom .
+:slurred_speech a :Symptom .
+:mood_swings a :Symptom .
+:belly_pain a :Symptom .
+:blood_in_sputum a :Symptom .
+:patches_in_throat a :Symptom .
+:headache a :Symptom .
+:chills a :Symptom .
+:cold_hands_and_feets a :Symptom .
+:malaise a :Symptom .
+:anxiety a :Symptom .
+:nausea a :Symptom .
+:swelling_joints a :Symptom .
+:constipation a :Symptom .
+:painful_walking a :Symptom .
+:palpitations a :Symptom .
+:abnormal_menstruation a :Symptom .
+:pus_filled_pimples a :Symptom .
+:dizziness a :Symptom .
+:redness_of_eyes a :Symptom .
+:increased_appetite a :Symptom .
+:movement_stiffness a :Symptom .
+:dehydration a :Symptom .
+:burning_micturition a :Symptom .
+:breathlessness a :Symptom .
+:coma a :Symptom .
+:sunken_eyes a :Symptom .
+:inflammatory_nails a :Symptom .
+:abdominal_pain a :Symptom .
+:muscle_wasting a :Symptom .
+:nodal_skin_eruptions a :Symptom .
+:toxic_look_typhos a :Symptom .
+:yellowing_of_eyes a :Symptom .
+:irritability a :Symptom .
+:swelled_lymph_nodes a :Symptom .
+:vomiting a :Symptom .
+:red_spots_over_body a :Symptom .
+:red_sore_around_nose a :Symptom .
+:passage_of_gases a :Symptom .
+:joint_pain a :Symptom .
+:unsteadiness a :Symptom .
+:pain_behind_the_eyes a :Symptom .
+:history_of_alcohol_consumption a :Symptom .
+:shivering a :Symptom .
+:fast_heart_rate a :Symptom .
+:drying_and_tingling_lips a :Symptom .
+:loss_of_balance a :Symptom .
+:weakness_in_limbs a :Symptom .
+:silver_like_dusting a :Symptom .
+:knee_pain a :Symptom .
+:internal_itching a :Symptom .
+:swollen_extremeties a :Symptom .
+:receiving_blood_transfusion a :Symptom .
+:dischromic_patches a :Symptom .
+:high_fever a :Symptom .
+:mucoid_sputum a :Symptom .
+:restlessness a :Symptom .
+:distention_of_abdomen a :Symptom .
+:cramps a :Symptom .
+:visual_disturbances a :Symptom .
+:blurred_and_distorted_vision a :Symptom .
+:continuous_sneezing a :Symptom .
+:stomach_pain a :Symptom .
+:yellowish_skin a :Symptom .
+:spotting_urination a :Symptom .
+:phlegm a :Symptom .
+:muscle_weakness a :Symptom .
+:weight_gain a :Symptom .
+:rusty_sputum a :Symptom .
+:small_dents_in_nails a :Symptom .
+:itching a :Symptom .
+:runny_nose a :Symptom .
+:dark_urine a :Symptom .
+:mild_fever a :Symptom .
+:indigestion a :Symptom .
+:fluid_overload a :Symptom .
+:watering_from_eyes a :Symptom .
+:blister a :Symptom .
+:scurring a :Symptom .
+:prominent_veins_on_calf a :Symptom .
+:loss_of_smell a :Symptom .
+:fatigue a :Symptom .
+:swollen_legs a :Symptom .
+:weight_loss a :Symptom .
+:cough a :Symptom .
+:enlarged_thyroid a :Symptom .
+:hip_joint_pain a :Symptom .
+:stiff_neck a :Symptom .
+:weakness_of_one_body_side a :Symptom .
+:extra_marital_contacts a :Symptom .
+:spinning_movements a :Symptom .
+:puffy_face_and_eyes a :Symptom .
+:loss_of_appetite a :Symptom .
+:swelling_of_stomach a :Symptom .
+:acidity a :Symptom .
+:back_pain a :Symptom .
+:diarrhoea a :Symptom .
+:sweating a :Symptom .
+:receiving_unsterile_injections a :Symptom .
+:altered_sensorium a :Symptom .
+:blackheads a :Symptom .
+:bruising a :Symptom .
+:acute_liver_failure a :Symptom .
+:yellow_crust_ooze a :Symptom .
+:throat_irritation a :Symptom .
+:ulcers_on_tongue a :Symptom .
+:excessive_hunger a :Symptom .
+:muscle_pain a :Symptom .
+:chest_pain a :Symptom .
+:neck_pain a :Symptom .
+:irregular_sugar_level a :Symptom .
+
+
+:wash_hands_with_warm_soapy_water a :Treatment .
+:wear_ppe_if_possible a :Treatment .
+:use_heating_pad_or_cold_pack a :Treatment .
+:use_poloroid_glasses_in_sun a :Treatment .
+:keep_mosquitos_away a :Treatment .
+:take_vaccine a :Treatment .
+:take_otc_pain_reliver a :Treatment .
+:exercise a :Treatment .
+:wash_hands_through a :Treatment .
+:antiboitic_therapy a :Treatment .
+:avoid_cold_food a :Treatment .
+:eliminate_milk a :Treatment .
+:have_balanced_diet a :Treatment .
+:avoid_lying_down_after_eating a :Treatment .
+:cold_baths a :Treatment .
+:massage a :Treatment .
+:eat_healthy a :Treatment .
+:stop_alcohol_consumption a :Treatment .
+:try_taking_small_sips_of_water a :Treatment .
+:avoid_abrupt_head_movment a :Treatment .
+:drink_plenty_of_water a :Treatment .
+:try_acupuncture a :Treatment .
+:drink_sugary_drinks a :Treatment .
+:use_detol_or_neem_in_bathing_water a :Treatment .
+:vaccination a :Treatment .
+:use_neem_in_bathing a :Treatment .
+:follow_up a :Treatment .
+:drink_papaya_leaf_juice a :Treatment .
+:take_vapour a :Treatment .
+:anti_itch_medicine a :Treatment .
+:use_lemon_balm a :Treatment .
+:get_proper_sleep a :Treatment .
+:keep_hydrated a :Treatment .
+:avoid_too_many_products a :Treatment .
+:avoid_open_cuts a :Treatment .
+:take_deep_breaths a :Treatment .
+:chew_or_swallow_asprin a :Treatment .
+:increase_vitamin_c_intake a :Treatment .
+:reduce_stress a :Treatment .
+:rest a :Treatment .
+:acetaminophen a :Treatment .
+:relax a :Treatment .
+:stop_taking_drug a :Treatment .
+:ease_back_into_eating a :Treatment .
+:apply_calamine a :Treatment .
+:avoid_sudden_change_in_body a :Treatment .
+:keep_mosquitos_out a :Treatment .
+:use_ice_to_compress_itching a :Treatment .
+:medication a :Treatment .
+:take_probiotics a :Treatment .
+:drink_cranberry_juice a :Treatment .
+:consume_neem_leaves a :Treatment .
+:keep_calm a :Treatment .
+:remove_scabs_with_wet_compressed_cloth a :Treatment .
+:bath_twice a :Treatment .
+:use_antibiotics a :Treatment .
+:get_away_from_trigger a :Treatment .
+:stop_irritation a :Treatment .
+:eat_high_calorie_vegitables a :Treatment .
+:lie_down_flat_and_raise_the_leg_high a :Treatment .
+:eat_fruits_and_high_fiberous_food a :Treatment .
+:meditation a :Treatment .
+:cover_mouth a :Treatment .
+:maintain_healthy_weight a :Treatment .
+:soak_affected_area_in_warm_water a :Treatment .
+:seek_help a :Treatment .
+:consult_doctor a :Treatment .
+:avoid_oily_food a :Treatment .
+:consume_probiotic_food a :Treatment .
+:use_oinments a :Treatment .
+:consult_nearest_hospital a :Treatment .
+:drink_vitamin_c_rich_drinks a :Treatment .
+:stop_bleeding_using_pressure a :Treatment .
+:stop_eating_solid_food_for_while a :Treatment .
+:use_clean_cloths a :Treatment .
+:take_radioactive_iodine_treatment a :Treatment .
+:salt_baths a :Treatment .
+:avoid_public_places a :Treatment .
+:consume_milk_thistle a :Treatment .
+:avoid_non_veg_food a :Treatment .
+:lie_down_on_side a :Treatment .
+:keep_fever_in_check a :Treatment .
+:cover_area_with_bandage a :Treatment .
+:switch_to_loose_cloothing a :Treatment .
+:use_vein_compression a :Treatment .
+:use_hot_and_cold_therapy a :Treatment .
+:lie_down a :Treatment .
+:call_ambulance a :Treatment .
+:avoid_fatty_spicy_food a :Treatment .
+:dont_stand_still_for_long a :Treatment .
+:keep_infected_area_dry a :Treatment .
+:limit_alcohol a :Treatment .
+:check_in_pulse a :Treatment .
