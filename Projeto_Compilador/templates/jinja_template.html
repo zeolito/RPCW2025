@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icon.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='icon16.png') }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Ontology Explorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: rgba(16, 16, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        .nav-tab:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+            color: white;
+        }
+
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+
+        .search-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .search-section.active {
+            display: block;
+        }
+
+        .search-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .search-subtitle {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: #e0e0e0;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .search-input::placeholder {
+            color: #a0a0a0;
+        }
+
+        .sparql-textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            font-family: 'Courier New', monospace;
+            resize: vertical;
+            transition: all 0.3s ease;
+            line-height: 1.5;
+        }
+
+        .sparql-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .sparql-textarea::placeholder {
+            color: #a0a0a0;
+        }
+
+        .search-button {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .search-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 0.9rem;
+            
+            background-color: #58479c;
+        }
+
+        
+
+        .results-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            min-height: 400px;
+        }
+
+        .results-header {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+        }
+
+        .results-count {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            margin-bottom: 1rem;
+        }
+
+        .result-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .result-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .result-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .result-type {
+            font-size: 0.8em;
+            color: #a0a0a0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+
+        .result-details {
+            color: #c0c0c0;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        /* SPARQL Results Table Styles */
+        .sparql-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .sparql-table th {
+            background: rgba(102, 126, 234, 0.3);
+            color: #ffffff;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sparql-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sparql-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .sparql-table tbody tr:hover td {
+            color: #667eea;
+        }
+
+        /* SPARQL Table Container with Horizontal Scroll */
+        .sparql-table-container {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .sparql-scroll-top {
+            width: 100%;
+            height: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px 4px 0 0;
+            margin-bottom: 1px;
+        }
+
+        .sparql-scroll-bar {
+            height: 1px;
+            background: transparent;
+        }
+
+        .sparql-table-main {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: visible;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* Updated SPARQL Table Styles */
+        .sparql-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+            min-width: 100%;
+        }
+
+        .sparql-table th {
+            background: rgba(102, 126, 234, 0.3);
+            color: #ffffff;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            min-width: 120px;
+        }
+
+        .sparql-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+            min-width: 120px;
+            max-width: 250px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sparql-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Clickable cell links */
+        .sparql-cell-link {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .sparql-cell-link:hover {
+            color: #8a9ff7;
+            text-decoration: underline;
+        }
+
+        .sparql-cell-link:visited {
+            color: #9e7ba8;
+        }
+
+        /* Scrollbar styling for webkit browsers */
+        .sparql-scroll-top::-webkit-scrollbar,
+        .sparql-table-main::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .sparql-scroll-top::-webkit-scrollbar-track,
+        .sparql-table-main::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .sparql-scroll-top::-webkit-scrollbar-thumb,
+        .sparql-table-main::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sparql-scroll-top::-webkit-scrollbar-thumb:hover,
+        .sparql-table-main::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #8a9ff7 0%, #9e7ba8 100%);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sparql-table th,
+            .sparql-table td {
+                min-width: 100px;
+                max-width: 200px;
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        /* Detail Modal Styles */
+        .detail-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .detail-modal.active {
+            display: flex;
+        }
+
+        .detail-content {
+            background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 80%;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+
+        .detail-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: #e0e0e0;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .detail-close:hover {
+            background: rgba(255, 107, 107, 0.3);
+            color: #ff6b6b;
+        }
+
+        .detail-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            padding-right: 3rem;
+        }
+
+        .detail-properties {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .detail-property {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .detail-property-name {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-property-value {
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #667eea;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 0.5rem;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #a0a0a0;
+            padding: 3rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: rgba(16, 16, 35, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            color: #a0a0a0;
+        }
+
+        * Quiz-specific styles */
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .quiz-header {
+            margin-bottom: 2rem;
+        }
+
+        .quiz-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .quiz-subtitle {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 0;
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            line-height: 1.4;
+            color: #e0e0e0;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .quiz-option-btn {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: #e0e0e0;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            width: 100%;
+        }
+
+        .quiz-option-btn:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .quiz-option-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .quiz-option-btn.correct {
+            background: rgba(103, 230, 103, 0.2);
+            border-color: #67e667;
+            color: #67e667;
+        }
+
+        .quiz-option-btn.incorrect {
+            background: rgba(255, 107, 107, 0.2);
+            border-color: #ff6b6b;
+            color: #ff6b6b;
+        }
+
+        .quiz-option-btn.correct-answer {
+            background: rgba(103, 230, 103, 0.15);
+            border-color: #67e667;
+            color: #67e667;
+        }
+
+        .quiz-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .quiz-feedback {
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+
+        .feedback-correct {
+            color: #67e667;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .feedback-incorrect {
+            color: #ff6b6b;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .quiz-next-btn {
+            margin-top: 0.5rem !important;
+            padding: 0.8rem 2rem !important;
+            font-size: 1rem !important;
+        }
+
+        .quiz-restart {
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-title {
+                font-size: 2.2rem;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .quiz-stats {
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .quiz-options {
+                max-width: 100%;
+            }
+            
+            .quiz-option-btn {
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-tabs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            .search-input {
+                min-width: unset;
+            }
+
+            .filter-options {
+                justify-content: center;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .detail-content {
+                max-width: 95%;
+                max-height: 90%;
+                padding: 1.5rem;
+            }
+
+            .sparql-table {
+                font-size: 0.9rem;
+            }
+
+            .sparql-table th,
+            .sparql-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🎮 GameOntology</div>
+            <nav class="nav-tabs">
+                <div class="nav-tab active" data-section="search">Search</div>
+                <div class="nav-tab" data-section="advanced">Advanced Search</div>
+                <div class="nav-tab" data-section="quiz">Quiz Mode</div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Basic Search Section -->
+        <section class="search-section active" id="search">
+            <div class="search-container">
+                <div class="search-header">
+                    <h1 class="search-title">Explore Games</h1>
+                    <p class="search-subtitle">Search through our comprehensive video game ontology</p>
+                </div>
+                <form class="search-form" id="searchForm">
+                    <input type="text" class="search-input" id="searchInput" 
+                           placeholder="Search for games, genres, platforms, or any game-related term..." required>
+                    <button type="submit" class="search-button" id="searchButton">
+                        <span id="searchButtonText">Search</span>
+                        <div class="loading" id="searchLoading" style="display: none;"></div>
+                    </button>
+                </form>
+                <div class="filter-options">
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="game">Games</option>
+                        <option value="genre">Genres</option>
+                        <option value="developer">Developers</option>
+                        <option value="platform">Platforms</option>
+                        <option value="series">Series</option>
+                        <option value="gengine">Game Engine</option>
+                    </select>
+                    <select class="filter-select" id="sortFilter">
+                        <option value="name">Sort by Name</option>
+                        <option value="year">Sort by Most Recent</option>
+                        <option value="old">Sort by Oldest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results-container">
+                <h2 class="results-header">Search Results</h2>
+                <div class="results-count" id="resultsCount" style="display: none;"></div>
+                <div id="searchResults">
+                    <div class="no-results">Enter a search term to explore the ontology</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Search Section -->
+        <section class="search-section" id="advanced">
+            <div class="search-container">
+                <div class="search-header">
+                    <h1 class="search-title">SPARQL Query</h1>
+                    <p class="search-subtitle">Execute custom SPARQL queries against the video game ontology</p>
+                </div>
+                <form class="search-form" id="sparqlForm" style="flex-direction: column;">
+                    <textarea class="sparql-textarea" id="sparqlQuery" 
+                              placeholder="Enter your SPARQL query here...
+
+Example:
+SELECT ?game ?title WHERE {
+  ?game a :Game .
+  ?game :Name ?title .
+}"></textarea>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <button type="submit" class="search-button" id="sparqlButton">
+                            <span id="sparqlButtonText">Execute Query</span>
+                            <div class="loading" id="sparqlLoading" style="display: none;"></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="results-container">
+                <h2 class="results-header">Query Results</h2>
+                <div class="results-count" id="sparqlResultsCount" style="display: none;"></div>
+                <div id="sparqlResults">
+                    <div class="no-results">Enter a SPARQL query above to see results</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="search-section" id="quiz">
+            <div class="search-container">
+                <div class="search-header">
+                    <h1 class="search-title">Gaming Quiz</h1>
+                    <p class="search-subtitle">Test your video game knowledge with questions from our ontology</p>
+                </div>
+                <div class="quiz-setup" style="text-align: center;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="questionCount" style="display: block; color: #e0e0e0; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">Number of Questions:</label>
+                        <select id="questionCount" class="filter-select" style="font-size: 1rem; padding: 0.75rem 1.25rem; min-width: 120px; text-align: center;">
+                            <option value="3">3 Questions</option>
+                            <option value="5" selected>5 Questions</option>
+                            <option value="10">10 Questions</option>
+                            <option value="15">15 Questions</option>
+                            <option value="20">20 Questions</option>
+                        </select>
+                    </div>
+                    <button class="search-button" onclick="loadQuizQuestions()">Start Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="credits">
+                <p><strong>Video Game Ontology Explorer</strong></p>
+                <p>Developed by Eduardo Pereira PG53797 & Pedro Parpot PG47560 | Data powered by GraphDB</p>
+                <p>Built with Flask, SPARQL. Data procured from <a href="https://rawg.io/" style="color: #667eea;"> Rawg.io</a> and <a href="https://dbpedia.org/sparql" style="color: #667eea;">DBPedia</a></p>
+                <p>&copy; 2025 - Exploring the semantic relationships in gaming culture</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        const navTabs = document.querySelectorAll('.nav-tab');
+        const sections = document.querySelectorAll('.search-section');
+
+        // Category filter change handler
+        document.getElementById('categoryFilter').addEventListener('change', function() {
+            const selectedCategory = this.value;
+            const sortFilter = document.getElementById('sortFilter');
+            
+            // Show sort dropdown only for 'game' or empty (All Categories)
+            if (selectedCategory === 'game' || selectedCategory === '') {
+                sortFilter.style.display = 'block';
+            } else {
+                sortFilter.style.display = 'none';
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const sortFilter = document.getElementById('sortFilter');
+            
+            // Set initial state based on current selection
+            const selectedCategory = categoryFilter.value;
+            if (selectedCategory === 'game' || selectedCategory === '') {
+                sortFilter.style.display = 'block';
+            } else {
+                sortFilter.style.display = 'none';
+            }
+        });
+
+        navTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetSection = tab.dataset.section;
+                
+                navTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                sections.forEach(s => s.classList.remove('active'));
+                document.getElementById(targetSection).classList.add('active');
+            });
+        });
+
+        // Basic Search functionality
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const query = document.getElementById('searchInput').value.trim();
+            const category = document.getElementById('categoryFilter').value;
+            const sort = document.getElementById('sortFilter').value;
+            
+            if (!query) return;
+            
+            await performSearch(query, category, sort, 'searchResults', 'resultsCount', 'searchButton', 'searchButtonText', 'searchLoading');
+        });
+
+        // Advanced Search functionality
+        document.getElementById('sparqlForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const query = document.getElementById('sparqlQuery').value.trim();
+            
+            await performSparqlQuery(query);
+        });
+
+        async function performSearch(query, category, sort, resultsId, countId, buttonId, buttonTextId, loadingId) {
+            const resultsContainer = document.getElementById(resultsId);
+            const countContainer = document.getElementById(countId);
+            const button = document.getElementById(buttonId);
+            const buttonText = document.getElementById(buttonTextId);
+            const loading = document.getElementById(loadingId);
+            
+            // Show loading state
+            button.disabled = true;
+            buttonText.style.display = 'none';
+            loading.style.display = 'inline-block';
+            resultsContainer.innerHTML = '<div style="text-align: center; padding: 2rem; color: #a0a0a0;">Searching...</div>';
+            
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        category: category,
+                        sort: sort
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(data.error || 'Search failed');
+                }
+                
+                displayResults(data.results, data.total, query, resultsId, countId);
+                
+            } catch (error) {
+                console.error('Search error:', error);
+                showError(resultsId, `Search failed: ${error.message}`);
+                countContainer.style.display = 'none';
+            } finally {
+                // Hide loading state
+                button.disabled = false;
+                buttonText.style.display = 'inline';
+                loading.style.display = 'none';
+            }
+        }
+
+        async function performSparqlQuery(query) {
+            const resultsContainer = document.getElementById('sparqlResults');
+            const countContainer = document.getElementById('sparqlResultsCount');
+            const button = document.getElementById('sparqlButton');
+            const buttonText = document.getElementById('sparqlButtonText');
+            const loading = document.getElementById('sparqlLoading');
+            
+            // Show loading state
+            button.disabled = true;
+            buttonText.style.display = 'none';
+            loading.style.display = 'inline-block';
+            resultsContainer.innerHTML = '<div style="text-align: center; padding: 2rem; color: #a0a0a0;">Executing query...</div>';
+            
+            try {
+                const response = await fetch('/api/sparql-query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(data.error || 'SPARQL query failed');
+                }
+                
+                displaySparqlResults(data.results, countContainer, resultsContainer);
+                
+            } catch (error) {
+                console.error('SPARQL query error:', error);
+                showError('sparqlResults', `Query failed: ${error.message}`);
+                countContainer.style.display = 'none';
+            } finally {
+                // Hide loading state
+                button.disabled = false;
+                buttonText.style.display = 'inline';
+                loading.style.display = 'none';
+            }
+        }
+
+        function displayResults(results, total, query, resultsId, countId) {
+            const resultsContainer = document.getElementById(resultsId);
+            const countContainer = document.getElementById(countId);
+            
+            if (!results || results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        No results found for "${query}". Try different search terms or check your spelling.
+                    </div>
+                `;
+                countContainer.style.display = 'none';
+                return;
+            }
+            
+            // Show results count
+            countContainer.textContent = `Found ${total} result${total !== 1 ? 's' : ''} for "${query}"`;
+            countContainer.style.display = 'block';
+            
+            // Display results
+            resultsContainer.innerHTML = results.map(result => `
+                <div class="result-item">
+                    <a href="${escapeHtml(result.uri)}" style="display:block; text-decoration:none; color:inherit;">
+                        <div class="result-title">
+                            ${escapeHtml(result.title)}
+                            <span class="result-type">${escapeHtml(result.type || 'Unknown')}</span>
+                        </div>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function displaySparqlResults(data, countContainer, resultsContainer) {
+            // Extract headers and rows from the wrapper
+            const variables = data.headers || [];
+            const results   = data.rows    || [];
+
+            // No results?
+            if (!results.length) {
+                countContainer.style.display = 'none';
+                resultsContainer.innerHTML = 
+                    '<div class="no-results">No results returned by the query.</div>';
+                return;
+            }
+
+            // Show results count
+            countContainer.textContent = 
+                `Found ${results.length} result${results.length !== 1 ? 's' : ''}`;
+            countContainer.style.display = 'block';
+
+            // Create table container with horizontal scroll
+            const tableContainer = document.createElement('div');
+            tableContainer.className = 'sparql-table-container';
+            
+            // Add horizontal scroll bar at the top
+            const topScrollContainer = document.createElement('div');
+            topScrollContainer.className = 'sparql-scroll-top';
+            const topScrollBar = document.createElement('div');
+            topScrollBar.className = 'sparql-scroll-bar';
+            topScrollContainer.appendChild(topScrollBar);
+
+            // Build table
+            const table = document.createElement('table');
+            table.className = 'sparql-table';
+
+            // Header row
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            variables.forEach(variable => {
+                const th = document.createElement('th');
+                th.textContent = variable;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Body rows
+            const tbody = document.createElement('tbody');
+            results.forEach(result => {
+                const row = document.createElement('tr');
+
+                variables.forEach(variable => {
+                    const td = document.createElement('td');
+                    const cellData = result[variable];
+                    
+                    if (Array.isArray(cellData) && cellData.length >= 3) {
+                        // Handle tuple format: [value, isClickable, customLink]
+                        const [value, isClickable, customLink] = cellData;
+                        
+                        if (isClickable && customLink) {
+                            const link = document.createElement('a');
+                            link.href = customLink;
+                            link.textContent = value || '';
+                            link.target = '_blank';
+                            link.className = 'sparql-cell-link';
+                            td.appendChild(link);
+                        } else {
+                            td.textContent = value || '';
+                        }
+                    } else {
+                        // Handle simple string format
+                        td.textContent = cellData || '';
+                    }
+                    
+                    row.appendChild(td);
+                });
+
+                tbody.appendChild(row);
+            });
+            table.appendChild(tbody);
+
+            // Sync scroll bars
+            const mainTableContainer = document.createElement('div');
+            mainTableContainer.className = 'sparql-table-main';
+            mainTableContainer.appendChild(table);
+
+            // Sync scrolling between top scroll bar and table
+            topScrollContainer.addEventListener('scroll', () => {
+                mainTableContainer.scrollLeft = topScrollContainer.scrollLeft;
+            });
+
+            mainTableContainer.addEventListener('scroll', () => {
+                topScrollContainer.scrollLeft = mainTableContainer.scrollLeft;
+            });
+
+            // Set scroll width
+            const updateScrollWidth = () => {
+                const tableWidth = table.offsetWidth;
+                const containerWidth = mainTableContainer.offsetWidth;
+                if (tableWidth > containerWidth) {
+                    topScrollBar.style.width = tableWidth + 'px';
+                    topScrollContainer.style.display = 'block';
+                } else {
+                    topScrollContainer.style.display = 'none';
+                }
+            };
+
+            // Append elements
+            tableContainer.appendChild(topScrollContainer);
+            tableContainer.appendChild(mainTableContainer);
+
+            // Replace the container's contents
+            resultsContainer.innerHTML = '';
+            resultsContainer.appendChild(tableContainer);
+
+            // Update scroll width after rendering
+            setTimeout(updateScrollWidth, 0);
+            window.addEventListener('resize', updateScrollWidth);
+        }
+
+
+        function showError(containerId, message) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `
+                <div class="error-message">
+                    <strong>Error:</strong> ${escapeHtml(message)}
+                </div>
+            `;
+        }
+
+        function showResultDetails(title) {
+            // You can implement a modal or detailed view here
+            alert(`Showing details for: ${title}`);
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Quiz functionality
+        async function loadQuizQuestions() {
+            const quizSection = document.getElementById('quiz');
+            
+            // Get the selected number of questions
+            const questionCount = document.getElementById('questionCount').value;
+
+            // Loading state
+            quizSection.innerHTML = `
+                <div class="search-container">
+                    <div class="search-header">
+                        <h1 class="search-title">Gaming Quiz</h1>
+                        <p class="search-subtitle">Loading ${questionCount} questions…</p>
+                    </div>
+                </div>
+            `;
+
+            try {
+                const response = await fetch(`/api/quiz-questions?count=${questionCount}`);
+                const data     = await response.json();
+                if (!response.ok) throw new Error(data.error || 'Failed to load quiz questions');
+
+                const questions = data.questions;
+                let current = 0, score = 0;
+
+                function showQuestion() {
+                    if (current >= questions.length) {
+                        // Final score card with retry option
+                        quizSection.innerHTML = `
+                            <div class="quiz-container">
+                                <div class="quiz-header">
+                                    <h1 class="quiz-title">Quiz Complete!</h1>
+                                    <p class="quiz-subtitle">You scored <strong>${score}</strong> out of <strong>${questions.length}</strong>.</p>
+                                </div>
+                                <div class="quiz-restart">
+                                    <button class="search-button" onclick="resetQuizSection()" style="margin-right: 1rem;">New Quiz</button>
+                                </div>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    const q = questions[current];
+                    quizSection.innerHTML = `
+                        <div class="quiz-container">
+                            
+                            <div class="quiz-question">
+                                <p class="question-text">${q.question}</p>
+                            </div>
+                            
+                            <div class="quiz-options" id="options"></div>
+                            
+                            <div class="quiz-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">${score}</div>
+                                    <div class="stat-label">Correct</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">${current + 1}</div>
+                                    <div class="stat-label">Questions</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">${current === 0 ? 0 : Math.round((score / current) * 100)}%</div>
+                                    <div class="stat-label">Accuracy</div>
+                                </div>
+                            </div>
+                            
+                            <div id="feedback" class="quiz-feedback"></div>
+                        </div>
+                    `;
+
+                    const opts = document.getElementById('options');
+                    q.options.forEach((opt, idx) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'quiz-option-btn';
+                        btn.textContent = opt;
+                        btn.onclick = () => {
+                            // lock buttons
+                            opts.querySelectorAll('button').forEach(b => {
+                                b.disabled = true;
+                                if (b === btn) {
+                                    b.classList.add(idx === q.correct ? 'correct' : 'incorrect');
+                                }
+                                if (q.options.indexOf(b.textContent) === q.correct && b !== btn) {
+                                    b.classList.add('correct-answer');
+                                }
+                            });
+                            
+                            const fb = document.getElementById('feedback');
+                            if (idx === q.correct) {
+                                score++;
+                                fb.innerHTML = `<p class="feedback-correct">✔ Correct!</p>`;
+                            } else {
+                                fb.innerHTML = `<p class="feedback-incorrect">✖ Wrong. The correct answer was: <strong>${q.options[q.correct]}</strong></p>`;
+                            }
+                            
+                            // Update stats immediately
+                            document.querySelector('.quiz-stats .stat-item:first-child .stat-number').textContent = score;
+                            document.querySelector('.quiz-stats .stat-item:last-child .stat-number').textContent = 
+                                Math.round((score / (current + 1)) * 100) + '%';
+                            
+                            // next button
+                            setTimeout(() => {
+                                const next = document.createElement('button');
+                                next.className = 'search-button quiz-next-btn';
+                                next.textContent = current < questions.length - 1 ? 'Next Question' : 'See Final Score';
+                                next.onclick = () => {
+                                    current++;
+                                    showQuestion();
+                                };
+                                fb.appendChild(next);
+                            }, 300);
+                        };
+                        opts.appendChild(btn);
+                    });
+                }
+
+                showQuestion();
+            }
+            catch (err) {
+                quizSection.innerHTML = `
+                    <div class="error-message">
+                        <strong>Error:</strong> ${err.message}
+                    </div>
+                `;
+            }
+        }
+
+
+        function resetQuizSection() {
+            const quizSection = document.getElementById('quiz');
+            quizSection.innerHTML = `
+                <div class="search-container">
+                    <div class="search-header">
+                        <h1 class="search-title">Gaming Quiz</h1>
+                        <p class="search-subtitle">Test your video game knowledge with questions from our ontology</p>
+                    </div>
+                    <div class="quiz-setup" style="text-align: center;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="questionCount" style="display: block; color: #e0e0e0; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">Number of Questions:</label>
+                            <select id="questionCount" class="filter-select" style="font-size: 1rem; padding: 0.75rem 1.25rem; min-width: 120px; text-align: center;">
+                                <option value="3">3 Questions</option>
+                                <option value="5" selected>5 Questions</option>
+                                <option value="10">10 Questions</option>
+                                <option value="15">15 Questions</option>
+                                <option value="20">20 Questions</option>
+                            </select>
+                        </div>
+                        <button class="search-button" onclick="loadQuizQuestions()">Start Quiz</button>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

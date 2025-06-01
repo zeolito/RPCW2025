@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icon.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='icon16.png') }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if entity %}{{ entity.title }}{% else %}Entity Not Found{% endif %} - GameOntology Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: rgba(16, 16, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .back-button {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+
+        .entity-header {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .entity-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .entity-type {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-icon {
+            font-size: 1.2rem;
+        }
+
+        .property-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .property-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .property-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .property-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .property-value {
+            color: #e0e0e0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .property-values {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .value-tag {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .value-tag:hover::before {
+            left: 100%;
+        }
+
+        .clickable-link {
+            color: #e0e0e0;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .value-tag:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.25) 100%);
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .value-tag:hover .clickable-link {
+            color: #ffffff;
+        }
+
+        .value-tag.non-clickable {
+            background: linear-gradient(135deg, rgba(160, 160, 160, 0.15) 0%, rgba(128, 128, 128, 0.15) 100%);
+            border-color: rgba(160, 160, 160, 0.3);
+            color: #e0e0e0;
+        }
+
+        .value-tag.non-clickable:hover {
+            background: linear-gradient(135deg, rgba(160, 160, 160, 0.25) 0%, rgba(128, 128, 128, 0.25) 100%);
+            border-color: rgba(160, 160, 160, 0.5);
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 4px 15px rgba(160, 160, 160, 0.2);
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #a0a0a0;
+            font-style: italic;
+            padding: 2rem;
+        }
+
+        .error-state {
+            text-align: center;
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .error-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: rgba(16, 16, 35, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #667eea;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .entity-title {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .entity-header {
+                padding: 2rem;
+            }
+
+            .property-values {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="{{ url_for('index') }}" class="logo">🎮 GameOntology</a>
+            <a href="javascript:history.back()" class="back-button">
+                ← Back
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        {% if error %}
+            <!-- Error State -->
+            <div class="error-state">
+                <div class="error-title">⚠️ Error</div>
+                <p>{{ error }}</p>
+                <br>
+                <a href="{{ url_for('index') }}" class="clickable-link">← Return to Home</a>
+            </div>
+        {% elif entity %}
+            <!-- Entity Header -->
+            <div class="entity-header">
+                <h1 class="entity-title">{{ entity.title }}</h1>
+                <div class="entity-type">Entity Details</div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Parameters Section -->
+                <div class="section-card">
+                    <h2 class="section-title">
+                        <span class="section-icon"></span>
+                        Parameters
+                    </h2>
+                    {% if entity.params and entity.params|length > 0 %}
+                    <div class="property-list">
+                        {% set grouped_params = {} %}
+                        {% for param in entity.params %}
+                            {% if grouped_params.update({param.value: grouped_params.get(param.value, []) + [param]}) %}{% endif %}
+                        {% endfor %}
+                        
+                        {% for label, params in grouped_params.items() %}
+                        <div class="property-item">
+                            <div class="property-label">{{ label }}</div>
+                            <div class="property-value">
+                                <div class="property-values">
+                                    {% for param in params %}
+                                        {% if param.is_link and param.entity_id %}
+                                            <div class="value-tag">
+                                                <a href="{{ url_for('entity_detail', entity_id=param.entity_id) }}" 
+                                                   class="clickable-link">{{ param.display }}</a>
+                                            </div>
+                                        {% else %}
+                                            <div class="value-tag non-clickable">
+                                                <span>{{ param.display }}</span>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="empty-state">No parameters available</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% else %}
+            <!-- No Data State -->
+            <div class="entity-header">
+                <h1 class="entity-title">No Entity Data</h1>
+                <div class="entity-type">Unknown Entity</div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="section-card">
+                    <div class="empty-state">
+                        <p>No entity data could be loaded.</p>
+                        <br>
+                        <a href="{{ url_for('index') }}" class="clickable-link">← Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="credits">
+                <p><strong>Video Game Ontology Explorer</strong></p>
+                <p>Developed by Eduardo Pereira PG53797 & Pedro Parpot PG47560 | Data powered by GraphDB</p>
+                <p>Built with Flask, SPARQL. Data procured from <a href="https://rawg.io/" style="color: #667eea;"> Rawg.io</a> and <a href="https://dbpedia.org/sparql" style="color: #667eea;">DBPedia</a></p>
+                <p>&copy; 2025 - Exploring the semantic relationships in gaming culture</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced back button functionality
+        const backButton = document.querySelector('.back-button');
+        if (backButton) {
+            backButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = "{{ url_for('index') }}";
+                }
+            });
+        }
+
+        // Add loading state for navigation
+        function showLoading() {
+            document.body.style.cursor = 'wait';
+        }
+
+        // Handle parameter links with loading feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            const paramLinks = document.querySelectorAll('.clickable-link[href*="entity"]');
+            paramLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    showLoading();
+                });
+            });
+
+            // Add hover effects for property items
+            const propertyItems = document.querySelectorAll('.property-item');
+            propertyItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.borderColor = 'rgba(102, 126, 234, 0.3)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

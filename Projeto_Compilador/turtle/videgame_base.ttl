@@ -1,0 +1,182 @@
+@prefix : <http://rpcw.di.uminho.pt/2025/videogames/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2025/videogames/> .
+
+<http://rpcw.di.uminho.pt/2025/videogames> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/videogames#deviceForEngine
+:deviceForEngine rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :engineMadeFor .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames#engineMadeFor
+:engineMadeFor rdf:type owl:ObjectProperty ;
+               rdfs:domain :Engine ;
+               rdfs:range :Device .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/appliesTo
+:appliesTo rdf:type owl:ObjectProperty ;
+           owl:inverseOf :hasGenre .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/availableOn
+:availableOn rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hosts ;
+             rdfs:domain :Game ;
+             rdfs:range :Platform .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/builtOn
+:builtOn rdf:type owl:ObjectProperty ;
+         owl:inverseOf :engineFor ;
+         rdfs:domain :Game ;
+         rdfs:range :Engine .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/developedBy
+:developedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasDeveloped ;
+             rdfs:domain :Game ;
+             rdfs:range :Developer .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/developedDevice
+:developedDevice rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :deviceDevelopedBy ;
+                 rdfs:domain :Developer ;
+                 rdfs:range :Device .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/developedEngine
+:developedEngine rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :engineDevelopedBy .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/deviceDevelopedBy
+:deviceDevelopedBy rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/engineDevelopedBy
+:engineDevelopedBy rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Engine ;
+                   rdfs:range :Developer .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/engineFor
+:engineFor rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/hasDeveloped
+:hasDeveloped rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/hasGenre
+:hasGenre rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Game ;
+          rdfs:range :Genre .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/hosts
+:hosts rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/includes
+:includes rdf:type owl:ObjectProperty ;
+          owl:inverseOf :partOf .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/isDeviceFrom
+:isDeviceFrom rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isPlatformOf ;
+              rdfs:domain :Device ;
+              rdfs:range :Platform .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/isPlatformOf
+:isPlatformOf rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :Game ;
+        rdfs:range :Series .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Abstract
+:Abstract rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/ESRB_Rating
+:ESRB_Rating rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Metacritic
+:Metacritic rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Name
+:Name rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Playtime
+:Playtime rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:float .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Release_Date
+:Release_Date rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Developer
+:Developer rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf :Platform .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Engine
+:Engine rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Game
+:Game rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Genre
+:Genre rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Platform
+:Platform rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/videogames/Series
+:Series rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
